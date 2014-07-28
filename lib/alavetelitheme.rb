@@ -1,13 +1,11 @@
 THEME_NAME = File.split(File.expand_path("../..", __FILE__))[1]
 
 class ActionController::Base
-    # The following prepends the path of the current theme's views to
-    # the "filter_path" that Rails searches when deciding which
-    # template to use for a view.  It does so by creating a method
-    # uniquely named for this theme.
-    path_function_name = "set_view_paths_for_#{THEME_NAME}"
-    before_filter path_function_name.to_sym
-    send :define_method, path_function_name do
+    # Copied from: https://github.com/sebbacon/informatazyrtare-theme/blob/master/lib/alavetelitheme.rb
+    # See also: https://github.com/mysociety/alavetelitheme/issues/20
+    before_filter :set_view_paths
+
+    def set_view_paths
         self.prepend_view_path File.join(File.dirname(__FILE__), "views")
     end
 end
