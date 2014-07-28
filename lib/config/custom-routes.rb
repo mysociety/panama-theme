@@ -2,5 +2,5 @@
 
 Rails.application.routes.draw do
     # Requests stats page
-    match '/request_statistics' => 'general#request_statistics'
+    match '/request_statistics' => 'general#request_statistics', :as => 'request_statistics'
 end

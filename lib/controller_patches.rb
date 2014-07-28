@@ -7,75 +7,80 @@
 Rails.configuration.to_prepare do
     GeneralController.class_eval do
         def request_statistics
-            @overall_total = 200
-            @overall_stats = [
-                {
-                    :label => _('Disclosed'),
-                    :data => 155
-                },
-                {
-                    :label => _('Denied'),
-                    :data => 25
-                },
-                {
-                    :label => _('In progress'),
-                    :data => 10
-                },
-                {
-                    :label => _('Overdue'),
-                    :data => 10
-                }
-            ]
-            @overall_denied_by_reason = [
-                {
-                    :label => _('Reason 1'),
-                    :data => 5
-                },
-                {
-                    :label => _('Reason 2'),
-                    :data => 7
-                },
-                {
-                    :label => _('Reason 3'),
-                    :data => 13
-                }
-            ]
-            if params[:body]
-                # TODO, look this up properly
-                @body = "Geraldine Quango"
-                @body_total = 105
-                @body_overall_stats = [
+            @locale = self.locale_from_params
+            I18n.with_locale(@locale) do
+                @overall_total = 200
+                @overall_stats = [
                     {
                         :label => _('Disclosed'),
-                        :data => 35
+                        :data => 155
                     },
                     {
                         :label => _('Denied'),
-                        :data => 10
+                        :data => 25
                     },
                     {
                         :label => _('In progress'),
-                        :data => 40
+                        :data => 10
                     },
                     {
                         :label => _('Overdue'),
-                        :data => 20
+                        :data => 10
                     }
                 ]
-                @body_denied_by_reason = [
+                @overall_denied_by_reason = [
                     {
                         :label => _('Reason 1'),
-                        :data => 3
+                        :data => 5
                     },
                     {
                         :label => _('Reason 2'),
-                        :data => 3
+                        :data => 7
                     },
                     {
                         :label => _('Reason 3'),
-                        :data => 4
+                        :data => 13
                     }
                 ]
+                @body_options = PublicBody.visible.collect {|p| [ p.name, p.url_name ]}
+                if params[:body]
+                    @body = PublicBody.find_by_url_name(params[:body])
+                    if @body
+                        @body_total = 105
+                        @body_overall_stats = [
+                            {
+                                :label => _('Disclosed'),
+                                :data => 35
+                            },
+                            {
+                                :label => _('Denied'),
+                                :data => 10
+                            },
+                            {
+                                :label => _('In progress'),
+                                :data => 40
+                            },
+                            {
+                                :label => _('Overdue'),
+                                :data => 20
+                            }
+                        ]
+                        @body_denied_by_reason = [
+                            {
+                                :label => _('Reason 1'),
+                                :data => 3
+                            },
+                            {
+                                :label => _('Reason 2'),
+                                :data => 3
+                            },
+                            {
+                                :label => _('Reason 3'),
+                                :data => 4
+                            }
+                        ]
+                    end
+                end
             end
         end
     end

@@ -31,13 +31,17 @@
 
 <h2><%= _('Per-Body') %></h3>
 <p><%= _('Select a body to view') %></p>
-<p>TODO - a form</p>
+<%= form_tag(request_statistics_path, :method => :get) do %>
+    <%= label_tag(:body, _('Body: ')) %>
+    <%= select_tag(:body, options_for_select(@body_options)) %>
+    <input type="submit" value="<%= _('Submit') %>"/>
+<% end %>
 
 <% if @body %>
-<h3><%= @body %></h3>
+<h3><%= @body.name %></h3>
 <h4>Overall</h4>
-<p><%= _('Total requests for {{name_of_body}}: {{number_of_requests}}', :name_of_body => @body, :number_of_requests => @body_total) %></p>
-<p><%= _('All requests for {{name_of_body}} by status of the request', :name_of_body => @body) %></p>
+<p><%= _('Total requests for {{name_of_body}}: {{number_of_requests}}', :name_of_body => @body.name, :number_of_requests => @body_total) %></p>
+<p><%= _('All requests for {{name_of_body}} by status of the request', :name_of_body => @body.name) %></p>
 <div id="body_overall_stats_graph" class="requestsGraph" style="width: 700px; height: 400px" data-graph-stats="<%= @body_overall_stats.to_json %>">
     <table id="body_overall_stats_table">
         <% @body_overall_stats.each do |stat| %>
@@ -50,7 +54,7 @@
 </div>
 
 <h4>Denials</h4>
-<p><%= _('Denied requests for {{name_of_body}} by denial reason', :name_of_body => @body) %></p>
+<p><%= _('Denied requests for {{name_of_body}} by denial reason', :name_of_body => @body.name) %></p>
 <div id="body_denials_stats_graph" class="requestsGraph" style="width: 700px; height: 400px" data-graph-stats="<%= @body_denied_by_reason.to_json %>">
     <table id="body_denials_stats_table">
         <% @body_denied_by_reason.each do |stat| %>
@@ -71,7 +75,6 @@
 (function($) {
     var drawGraph = function drawGraph(index, container) {
         var $container = $(container);
-        console.log($container.data('graphStats'));
         var data = $container.data('graphStats');
         var graphOptions = {
             series: {
