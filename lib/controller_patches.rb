@@ -9,15 +9,15 @@ Rails.configuration.to_prepare do
         def request_statistics
             @stats = [
                 {
-                    :label => 'Successful',
+                    :label => _('Successful'),
                     :data => 75
                 },
                 {
-                    :label => 'Not successful',
+                    :label => _('Not successful'),
                     :data => 20
                 },
                 {
-                    :label => 'Other',
+                    :label => _('Other'),
                     :data => 5
                 }
             ]
