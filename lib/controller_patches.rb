@@ -7,18 +7,37 @@
 Rails.configuration.to_prepare do
     GeneralController.class_eval do
         def request_statistics
-            @stats = [
+            @overall_total = 100
+            @overall_stats = [
                 {
-                    :label => _('Successful'),
-                    :data => 75
+                    :label => _('Disclosed'),
+                    :data => 55
                 },
                 {
-                    :label => _('Not successful'),
+                    :label => _('Denied'),
                     :data => 20
                 },
                 {
-                    :label => _('Other'),
-                    :data => 5
+                    :label => _('In progress'),
+                    :data => 10
+                },
+                {
+                    :label => _('Overdue'),
+                    :data => 10
+                }
+            ]
+            @overall_denied_by_reason = [
+                {
+                    :label => _('Reason 1'),
+                    :data => 55
+                },
+                {
+                    :label => _('Reason 2'),
+                    :data => 20
+                },
+                {
+                    :label => _('Reason 3'),
+                    :data => 10
                 }
             ]
         end

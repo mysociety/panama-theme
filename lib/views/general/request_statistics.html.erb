@@ -2,29 +2,53 @@
 
 <h1><%= _('Request statistics') %></h1>
 
-<h2><%= _('Outcomes') %></h2>
-<div id="placeholder" style="width: 700px; height: 400px">
-    <table id="stats_table">
-        <caption><%= _('Request outcomes') %></caption>
-        <% @stats.each do |stat| %>
+<h2><%= _('Overall') %></h2>
+<p><%= _('Total requests: {{number_of_requests}}', :number_of_requests => @overall_total) %></p>
+<p><%= _('All requests by status of the request') %></p>
+<div id="overall_stats_graph" style="width: 700px; height: 400px">
+    <table id="overall_stats_table">
+        <% @overall_stats.each do |stat| %>
             <tr>
                 <th><%= stat[:label] %></th>
-                <td><%= stat[:data] %>%</td>
+                <td><%= stat[:data] %></td>
             </tr>
         <% end %>
     </table>
 </div>
 
-<%# This is how the body_statistics page does it at the moment %>
+<h3><%= _('Denials') %></h3>
+<p><%= _('Denied requests by denial reason') %></p>
+<div id="denials_stats_graph" style="width: 700px; height: 400px">
+    <table id="denials_stats_table">
+        <% @overall_denied_by_reason.each do |stat| %>
+            <tr>
+                <th><%= stat[:label] %></th>
+                <td><%= stat[:data] %></td>
+            </tr>
+        <% end %>
+    </table>
+</div>
+
 <%= javascript_include_tag 'jquery.flot.js' %>
 <%= javascript_include_tag 'jquery.flot.pie.js' %>
 <!--[if lte IE 8]><%= javascript_include_tag "excanvas.min.js" %><![endif]-->
 
 <script type="text/javascript">
-var data = <%= @stats.to_json.html_safe %>;
+var overallData = <%= @overall_stats.to_json.html_safe %>;
+var overallDenialsData = <%= @overall_denied_by_reason.to_json.html_safe %>;
 $(function(){
     $.plot(
-        '#placeholder', data, {
+        '#overall_stats_graph', overallData, {
+            series: {
+                pie: {
+                    innerRadius: 0.5,
+                    show: true
+                },
+            }
+        }
+    );
+    $.plot(
+        '#denials_stats_graph', overallDenialsData, {
             series: {
                 pie: {
                     innerRadius: 0.5,
