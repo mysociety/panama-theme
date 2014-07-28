@@ -2,8 +2,18 @@
 
 <h1><%= _('Request statistics') %></h1>
 
-<h2>Outcomes</h2>
-<div id="placeholder" style="width: 700px; height: 400px"></div>
+<h2><%= _('Outcomes') %></h2>
+<div id="placeholder" style="width: 700px; height: 400px">
+    <table id="stats_table">
+        <caption><%= _('Request outcomes') %></caption>
+        <% @stats.each do |stat| %>
+            <tr>
+                <th><%= stat[:label] %></th>
+                <td><%= stat[:data] %>%</td>
+            </tr>
+        <% end %>
+    </table>
+</div>
 
 <%# This is how the body_statistics page does it at the moment %>
 <%= javascript_include_tag 'jquery.flot.js' %>
@@ -12,14 +22,16 @@
 
 <script type="text/javascript">
 var data = <%= @stats.to_json.html_safe %>;
-$.plot(
-    '#placeholder', data, {
-        series: {
-            pie: {
-                innerRadius: 0.5,
-                show: true
-            },
+$(function(){
+    $.plot(
+        '#placeholder', data, {
+            series: {
+                pie: {
+                    innerRadius: 0.5,
+                    show: true
+                },
+            }
         }
-    }
-);
+    );
+});
 </script>
