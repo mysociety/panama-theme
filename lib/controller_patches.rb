@@ -7,11 +7,20 @@
 Rails.configuration.to_prepare do
     GeneralController.class_eval do
         def request_statistics
-            @stats = {
-                :successful => 75.0,
-                :not_successful => 20.0,
-                :other => 5.0
-            }
+            @stats = [
+                {
+                    :label => 'Successful',
+                    :data => 75
+                },
+                {
+                    :label => 'Not successful',
+                    :data => 20
+                },
+                {
+                    :label => 'Other',
+                    :data => 5
+                }
+            ]
         end
     end
 end
