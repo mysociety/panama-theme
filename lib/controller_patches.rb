@@ -7,15 +7,15 @@
 Rails.configuration.to_prepare do
     GeneralController.class_eval do
         def request_statistics
-            @overall_total = 100
+            @overall_total = 200
             @overall_stats = [
                 {
                     :label => _('Disclosed'),
-                    :data => 55
+                    :data => 155
                 },
                 {
                     :label => _('Denied'),
-                    :data => 20
+                    :data => 25
                 },
                 {
                     :label => _('In progress'),
@@ -29,17 +29,54 @@ Rails.configuration.to_prepare do
             @overall_denied_by_reason = [
                 {
                     :label => _('Reason 1'),
-                    :data => 55
+                    :data => 5
                 },
                 {
                     :label => _('Reason 2'),
-                    :data => 20
+                    :data => 7
                 },
                 {
                     :label => _('Reason 3'),
-                    :data => 10
+                    :data => 13
                 }
             ]
+            if params[:body]
+                # TODO, look this up properly
+                @body = "Geraldine Quango"
+                @body_total = 105
+                @body_overall_stats = [
+                    {
+                        :label => _('Disclosed'),
+                        :data => 35
+                    },
+                    {
+                        :label => _('Denied'),
+                        :data => 10
+                    },
+                    {
+                        :label => _('In progress'),
+                        :data => 40
+                    },
+                    {
+                        :label => _('Overdue'),
+                        :data => 20
+                    }
+                ]
+                @body_denied_by_reason = [
+                    {
+                        :label => _('Reason 1'),
+                        :data => 3
+                    },
+                    {
+                        :label => _('Reason 2'),
+                        :data => 3
+                    },
+                    {
+                        :label => _('Reason 3'),
+                        :data => 4
+                    }
+                ]
+            end
         end
     end
 end
