@@ -7,6 +7,13 @@
 Rails.configuration.to_prepare do
     GeneralController.class_eval do
         def request_statistics
+            allowed_periods = ['month', 'quarter', 'year', 'all_time']
+            if params[:period] and allowed_periods.include?(params[:period])
+                @period = params[:period]
+            else
+                @period = 'all_time'
+            end
+
             @locale = self.locale_from_params
             I18n.with_locale(@locale) do
                 @overall_total = 200
@@ -42,6 +49,7 @@ Rails.configuration.to_prepare do
                         :data => 13
                     }
                 ]
+
                 @body_options = PublicBody.visible.collect {|p| [ p.name, p.url_name ]}
                 if params[:body]
                     @body = PublicBody.find_by_url_name(params[:body])

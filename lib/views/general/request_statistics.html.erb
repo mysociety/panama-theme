@@ -2,6 +2,13 @@
 
 <h1><%= _('Request statistics') %></h1>
 
+<p><%= _('Select a time period') %></p>
+<%= form_tag(request_statistics_path, :method => :get) do %>
+    <%= label_tag(:period, _('Period: ')) %>
+    <%= select_tag(:period, options_for_select([[_('Month'), 'month'], [_('Quarter'), 'quarter'], [_('Year'), 'year'], [_('All time'), 'all_time']], :selected => @period)) %>
+    <input type="submit" value="<%= _('Submit') %>"/>
+<% end %>
+
 <h2><%= _('Overall') %></h2>
 <p><%= _('Total requests: {{number_of_requests}}', :number_of_requests => @overall_total) %></p>
 <p><%= _('All requests by status of the request') %></p>
