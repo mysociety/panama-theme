@@ -33,7 +33,7 @@
 <p><%= _('Select a body to view') %></p>
 <%= form_tag(request_statistics_path, :method => :get) do %>
     <%= label_tag(:body, _('Body: ')) %>
-    <%= select_tag(:body, options_for_select(@body_options)) %>
+    <%= select_tag(:body, options_for_select(@body_options, :selected => params[:body])) %>
     <input type="submit" value="<%= _('Submit') %>"/>
 <% end %>
 
