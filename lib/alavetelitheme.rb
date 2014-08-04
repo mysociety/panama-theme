@@ -3,13 +3,9 @@ theme_name.gsub!('-', '_')
 THEME_NAME = theme_name
 
 class ActionController::Base
-    # The following prepends the path of the current theme's views to
-    # the "filter_path" that Rails searches when deciding which
-    # template to use for a view.  It does so by creating a method
-    # uniquely named for this theme.
-    path_function_name = "set_view_paths_for_#{THEME_NAME}"
-    before_filter path_function_name.to_sym
-    send :define_method, path_function_name do
+    before_filter :set_view_paths
+
+    def set_view_paths
         self.prepend_view_path File.join(File.dirname(__FILE__), "views")
     end
 end
