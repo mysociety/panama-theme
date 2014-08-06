@@ -1,3 +1,5 @@
 require 'rubygems'
-require 'active_support'
-require 'active_support/test_case'
+require File.expand_path("../../../../../config/environment", __FILE__)
+
+require 'test/unit'
+require 'rails/test_help'

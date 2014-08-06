@@ -5,6 +5,39 @@
 # See http://stackoverflow.com/questions/7072758/plugin-not-reloading-in-development-mode
 #
 Rails.configuration.to_prepare do
-  PublicBody.class_eval  do
-  end
+    User.instance_eval do
+        validate :extra_fields_are_not_blank
+    end
+
+    User.class_eval do
+
+        private
+
+        def extra_fields_are_not_blank
+            if self.user_type.nil? or !["individual", "business"].include?(self.user_type)
+                errors.add(:user_type, _("User type must be 'business' or 'individual'"))
+            end
+            if self.phone_number.nil? or self.phone_number.strip.empty?
+                errors.add(:phone_number, _("Please enter a contact phone number"))
+            end
+            if self.user_type == "individual"
+                if self.national_id_number.nil? or self.national_id_number.strip.empty?
+                    errors.add(:national_id_number, _("Please enter your national ID number"))
+                end
+                if self.address.nil? or self.address.strip.empty?
+                    errors.add(:address, _("Please enter your address"))
+                end
+            else
+                if self.company_name.nil? or self.company_name.strip.empty?
+                    errors.add(:company_name, _("Please enter your company name"))
+                end
+                if self.company_number.nil? or self.company_number.strip.empty?
+                    errors.add(:company_number, _("Please enter your company number"))
+                end
+                if self.incorporation_date.nil?
+                    errors.add(:incorporation_date, _("Please enter your company's incorporation date"))
+                end
+            end
+        end
+    end
 end

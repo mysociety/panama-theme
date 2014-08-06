@@ -1,0 +1,25 @@
+<% @title = _('Change your company incorporation date used on {{site_name}}', :site_name => site_name) %>
+
+<% raise _('internal error') if not @user %>
+
+<div id="change_company_incdate">
+
+<%= form_tag({:action => "signchangecompanyincdate"}, {:id => "signchangecompanyincdate_form"}) do %>
+    <%= foi_error_messages_for :signchangecompanyincdate %>
+
+    <div class="form_note">
+    <h1> <% _('Change your company incorporation date used on {{site_name}}', :site_name => site_name) %></h1>
+    </div>
+
+    <label class="form_label" for="signchangecompanyincdate_new_incorporation_date"> <%= _('New company incorporation date:')%></label>
+    <%= text_field 'signchangecompanyincdate', 'new_incorporation_date', { :size => 20, :value => @user.incorporation_date } %>
+    </p>
+
+    <p>
+    <div class="form_button">
+    <%= hidden_field_tag 'submitted_signchangecompanyincdate_do', 1 %>
+    <%= submit_tag _("Change company incorporation date on {{site_name}}", :site_name=>site_name) %>
+    </div>
+<% end %>
+
+</div>
