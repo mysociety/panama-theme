@@ -1,47 +1,50 @@
-$locale-bg: #333;
-$locale-color: #999999;
-$locale-hover-color: #fff;
-$link-color: #336C86;
+$antai-navy: #1a405b;
+$antai-pale-grey: #e6e6e6;
+$antai-light-teal: #529ca6;
+$antai-dark-teal: #007489;
+$antai-bright-blue: #00c0e9;
+$antai-bright-green: #8cc63e;
+
+$body-bg: #fff;
 $body-font-color: #333;
-$body-bg: #f7eee1;
-$button-bg: #8b9352;
-$button-color: #fff;
-$heading-color: #3d3b38;
-$font-family: "Roboto Slab", Georgia, serif;
-$sans-serif-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$link-color: $antai-navy;
 
-$main_menu-bg: #2c5d74;
-$main_menu-search_text: #333;
+$banner_bg: $antai-navy;
+$banner-link-color: transparentize(#fff, 0.2);
+$banner-link-color-hover: #fff;
+$main_menu-bg: $antai-dark-teal;
 $main_menu-link_text: #fff;
-$main_menu-search_bg: #67848c;
-$banner_bg: #354c56;
-$submenu-color: #9aa6ab;
-
-$main_menu-link_bg: #2c5d74;
-$main_menu-active_link_text: $main_menu-link_bg;
+$main_menu-active_link_text: $main_menu-bg;
 $main_menu-active_link_bg: $body-bg;
 
-$footer-bg: #333;
-$footer-color: #ccc;
+$button-bg: $antai-bright-green;
+$button-color: #fff;
+$heading-color: #3d3b38; // very dark grey
+
+$sans-serif-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family: $sans-serif-font-family;
+
+$footer-bg: $antai-navy;
+$footer-color: mix($antai-navy, #fff, 70%);
 $footer-link-color: #fff;
 
-$incoming-correspondence-color: #8c6673;
-$outgoing-correspondence-color: #6d918d;
+$incoming-correspondence-color: #8c6673; // desaturated burgundy colour
+$outgoing-correspondence-color: #6d918d; // desaturated green colour
 $correspondence-bg: #fff;
-$correspondence-shadow: #d3d3d3;
+$correspondence-shadow: #d3d3d3; // light grey
 
-$status-success: #aab26e;
-$status-failure: #ff7959;
-$status-pending: #e69e5d;
+$status-success: #aab26e; // light olive green colour
+$status-failure: #ff7959; // bright organey peach colour
+$status-pending: #e69e5d; // orange colour
 
-$notice-bg: #D7DABD;
-$notice-border: #839310;
+$notice-bg: #D7DABD; // very pale olive green colour
+$notice-border: #839310; // olive green colour
 
-$error-bg: #ebc3a9;
-$error-border: #a1432c;
+$error-bg: #ebc3a9; // very pale terracotta colour
+$error-border: #a1432c; // dark terracotta colour
 
-$action-bg: #edd3b8;
-$action-border: #d69457;
+$action-bg: #edd3b8; // very pale orange colour
+$action-border: #d69457; // orange colour
 
 /* Mixin styles */
 
@@ -53,46 +56,47 @@ $action-border: #d69457;
 }
 
 /* General styling of nav menu items */
-.menu-item {
+%menu-item {
   text-decoration: none;
-  background-color: $main_menu-link_bg;
+  background-color: transparent;
   color: transparentize($main_menu-link_text, 0.2);
   @include ie8 {
     color: $main_menu-link_text;
   }
-  transition: background-color 0.5s ease-out;
+  transition: background-color 0.2s ease-out, color 0.2s ease-out;
 
-  &:hover{
+  &:hover {
       background-color: darken($main_menu-bg, 5%);
       color: transparentize($main_menu-link_text, 0);
   }
-
 }
 
 /* Selected menu item */
-.selected-menu-item {
+%selected-menu-item {
   font-weight: bold;
   color: $main_menu-active_link_text;
   background-color: $main_menu-active_link_bg;
-  &:hover{
+
+  &:hover {
       background-color: $main_menu-active_link_bg;
   }
 }
 
-/* Styling if not part of the main menu on larger screens */
-.sub-menu-item {
-  @include respond-min( $main_menu-mobile_menu_cutoff ){
-    background-color: $banner_bg;
-    color: $submenu-color;
-    &:hover{
-        background-color: $banner_bg;
-        color: transparentize($main_menu-link_text, 0);
+/* Styling for links outside of main menu on larger screens */
+%banner-menu-item {
+  @include respond-min( $main_menu-mobile_menu_cutoff ) {
+    background-color: transparent;
+    color: $banner-link-color;
+
+    &:hover {
+        background-color: transparent;
+        color: $banner-link-color-hover;
     }
   }
 }
 
 /* General styles */
-body{
+body {
   background-color: $body-bg;
   color: $body-font-color;
 }
@@ -101,7 +105,7 @@ body{
   font-family: $font-family;
 }
 
-a{
+a {
   color: $link-color;
 }
 
@@ -128,11 +132,11 @@ form input[type="number"] {
     border-radius: 0;
     background-color: $main_menu-link_text;
     /* Set a fixed height for text inputs in older IE 8 */
-    @include ie8{
+    @include ie8 {
         height: 2.3125em;
     }
     /* Do the same in px for IE < 7 */
-    @include lte-ie7{
+    @include lte-ie7 {
         height: 22px;
     }
 }
@@ -168,7 +172,7 @@ form input[type=submit], a.link_button_green, a.link_button_green_large {
   }
 }
 
-@include lte-ie7{
+@include lte-ie7 {
 
   a.link_button_green, a.link_button_green_large {
     padding: 0 7px;
@@ -213,14 +217,16 @@ a.link_button_green_large {
   background-color: $main_menu-bg;
 }
 
-#navigation{
+#navigation {
   border-bottom: none;
+
   a {
-    @extend .menu-item;
+    @extend %menu-item;
   }
+
   /* Show which section is currently selected */
-  li.selected a{
-    @extend .selected-menu-item;
+  li.selected a {
+    @extend %selected-menu-item;
   }
 
   /* Vertically align the search box */
@@ -244,15 +250,18 @@ a.link_button_green_large {
     }
   }
 
-  #navigation_search_button{
-    background-color: mix($main_menu-search_bg, $main_menu-bg, 50%);
+  /* The search box (not the button, confusingly) */
+  #navigation_search_button {
+    background-color: mix($main_menu-bg, #fff, 75%);
+    color: $main_menu-link_text;
     border: none;
-    transition: all 0.3s ease-out;
-    color: $main_menu-search_text;
+    transition: all 0.2s ease-out;
     border-radius: 0;
     font-size: inherit;
-    &:focus{
-        background-color: $main_menu-link_text;
+
+    &:focus {
+        background-color: $body-bg;
+        color: $body-font-color;
     }
   }
 }
@@ -299,53 +308,45 @@ a.link_button_green_large {
 }
 
 /* Logged and local options act like submenus */
-#logged_in_bar{
+#logged_in_bar {
   a {
-    @extend .menu-item;
-    @extend .sub-menu-item;
+    @extend %menu-item;
+    @extend %banner-menu-item;
     font-weight: normal;
   }
+
   #logged_in_links {
-    top: 4em;
+    top: auto;
+    bottom: 1em;
+
     .greeting, a {
       font-weight: normal;
+      color: $banner-link-color;
+    }
+
+    a:hover, a:focus {
+      color: $banner-link-color-hover;
     }
   }
 }
 
 #user_locale_switcher {
   @include respond-min( $main_menu-mobile_menu_cutoff ){
-    background-image: image-url('locale-switcher.png');
-    background-repeat: no-repeat;
-    background-position: 0.5em 0.5em;
-    background-color: $locale-bg;
-    border-radius: 0 0 1.25em 1.25em;
-    padding: 0 1em 0 2.5em;
     right: 15px;
   }
+
   a {
-    @extend .menu-item;
-    font-family: $sans-serif-font-family;
+    @extend %menu-item;
+    @extend %banner-menu-item;
     @include respond-min( $main_menu-mobile_menu_cutoff ){
       padding: 0.5em 0.2em;
-      background-color: $locale-bg;
-      border-radius: 0 0 1.25em 1.25em;
-      color: $locale-color;
-      &:hover{
-          background-color: $locale-bg;
-          color: $locale-hover-color;
-      }
+      margin: 0 -0.2em 0 0.8em; // 1em of spacing between links
     }
   }
 }
 
 
 #banner {
-
-  /* locale border */
-  @include respond-min( $main_menu-mobile_menu_cutoff ){
-    border-top: 4px solid $locale-bg;
-  }
 
   /* Hide the greeting on smaller devices */
   .greeting {
