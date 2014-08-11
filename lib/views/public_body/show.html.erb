@@ -39,6 +39,8 @@
         <h2><%= _('ATI Officer')%></h2>
         <% if !@public_body.ati_officer_details.nil? %>
             <%= simple_format(@public_body.ati_officer_details) %><br>
+        <% else %>
+            <%= _("We don't have the ATI Officer details for this authority yet.") %>
         <% end %>
     </div>
 
