@@ -10,6 +10,13 @@ Rails.configuration.to_prepare do
     end
 
     User.class_eval do
+        def is_company?
+            self.user_type != "individual"
+        end
+
+        def is_individual?
+            self.user_type == "individual"
+        end
 
         private
 
@@ -20,7 +27,7 @@ Rails.configuration.to_prepare do
             if self.phone_number.nil? or self.phone_number.strip.empty?
                 errors.add(:phone_number, _("Please enter a contact phone number"))
             end
-            if self.user_type == "individual"
+            if self.is_individual?
                 if self.national_id_number.nil? or self.national_id_number.strip.empty?
                     errors.add(:national_id_number, _("Please enter your national ID number"))
                 end

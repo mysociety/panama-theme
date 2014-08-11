@@ -37,7 +37,7 @@
         <%= link_to _('Change your email'), signchangeemail_path %>
         <%= link_to _('Change your contact number'), signchangephone_path %>
 
-        <% if @display_user.user_type == "individual" %>
+        <% if @display_user.is_individual? %>
             <%= link_to _('Change your national ID number'), signchangenationalid_path %>
             <%= link_to _('Change your address'), signchangeaddress_path %>
         <% else %>

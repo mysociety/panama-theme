@@ -13,6 +13,7 @@ class AlavetelithemeTest
                 }
             )
             assert user.company_name == "Fake Company"
+            assert user.is_company?
 
             user.save
             assert user.errors.messages.keys == [:email, :name, :hashed_password]
@@ -28,6 +29,7 @@ class AlavetelithemeTest
                 }
             )
             assert user.national_id_number == "1"
+            assert user.is_individual?
 
             user.save
             assert user.errors.messages.keys == [:email, :name, :hashed_password]
