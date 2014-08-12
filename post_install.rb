@@ -19,3 +19,6 @@ if !column_exists?(:users, :national_id_number)
     require File.expand_path '../db/migrate/panamatheme_add_extra_fields_to_user', __FILE__
     PanamathemeAddExtraFieldsToUser.up
 end
+
+# Create any necessary global Censor rules
+require File.expand_path(File.dirname(__FILE__) + '/lib/censor_rules')
