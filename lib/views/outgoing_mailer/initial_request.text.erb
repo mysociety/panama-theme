@@ -5,18 +5,18 @@
 <%= _('Please use this email address for all replies to this request:')%>
 <%= @info_request.incoming_email %>
 
-Solicitante:
+<%= _('Requestor') %>:
 <%-# !!!IF YOU CHANGE THE FORMAT OF THE BLOCK BELOW, ADD A NEW CENSOR RULE!!! -%>
 ===================================================================
-# Nombre: <%= @outgoing_message.info_request.user.name %>
-# Número de teléfono: <%= @outgoing_message.info_request.user.phone_number %>
+# <%= _('Name') %>: <%= @outgoing_message.info_request.user.name %>
+# <%= _('Phone number') %>: <%= @outgoing_message.info_request.user.phone_number %>
 <% if @outgoing_message.info_request.user.is_individual? %>
-# Cedula de identidad persona:  <%= @outgoing_message.info_request.user.national_id_number %>
-<%= @outgoing_message.info_request.user.address.gsub(/^/, "# Dirección: ") %>
+# <%= _('National ID number')%>: <%= @outgoing_message.info_request.user.national_id_number %>
+<%= @outgoing_message.info_request.user.address.gsub(/^/, "# #{_('Address')}: ") %>
 <% else %>
-# <%= _('Company name:')%> <%= @outgoing_message.info_request.user.company_name %>
-# <%= _('Company number:')%> <%= @outgoing_message.info_request.user.company_number %>
-# <%= _('Incorporation date:')%> <%= @outgoing_message.info_request.user.incorporation_date %>
+# <%= _('Company name')%>: <%= @outgoing_message.info_request.user.company_name %>
+# <%= _('Company number')%>: <%= @outgoing_message.info_request.user.company_number %>
+# <%= _('Incorporation date')%>: <%= @outgoing_message.info_request.user.incorporation_date %>
 <% end %>
 ===================================================================
 
