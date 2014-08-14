@@ -3,10 +3,33 @@
 <%= render :partial => 'sidebar' %>
 <div id="left_column_flip">
 
-<h1 id="making_requests"><%= @title %> <a href="#making_requests">#</a> </h1>
+<h1 id="making_requests"><%= @title %> <a href="#making_requests">#</a></h1>
+
+<!-- If you add questions/answers to this page,
+     remember to update the Table of Contents. -->
+
+<ol class="table_of_contents">
+  <li><a href="#which_authority">I’m not sure which authority to make my request to, how can I find out?</a></li>
+  <li><a href="#missing_body">You’re missing the public authority that I want to request from!</a></li>
+  <li><a href="#authorities">Why do you include some authorities that aren’t formally subject to FOI?</a></li>
+  <li><a href="#focused">Why must I keep my request focused?</a></li>
+  <li><a href="#fees">Does it cost me anything to make a request?</a></li>
+  <li><a href="#quickly_response">How quickly will I get a response?</a></li>
+  <li><a href="#no_response">What if I never get a response?</a></li>
+  <li><a href="#not_satifised">What if I’m not satisfied with the response?</a></li>
+  <li><a href="#reuse">It says I can’t re-use the information I got!</a></li>
+  <li><a href="#ico_help">Can you tell me more of the nitty gritty about the process of making requests?</a></li>
+  <li><a href="#data_protection">Can I request information about myself?</a></li>
+  <li><a href="#private_requests">I’d like to keep my request secret! (At least until I publish my story)</a></li>
+  <li><a href="#eir">Why can I only request information about the environment from some authorities?</a></li>
+  <li><a href="#multiple">Can I make the same to request to lots of authorities, e.g. all councils?</a></li>
+  <li><a href="#offsite">I made a request off the site, how do I upload it to the archive?</a></li>
+  <li><a href="#moderation">How do you moderate request annotations?</a></li>
+</ol>
+
 <dl>
 
-<dt id="which_authority">I'm not sure which authority to make my request to, how can I find out? <a href="#which_authority">#</a> </dt>
+<dt id="which_authority">I’m not sure which authority to make my request to, how can I find out? <a href="#which_authority">#</a> </dt>
 
 <dd>
 <p>It can be hard to untangle government's complicated structured, and work out
@@ -28,7 +51,7 @@ wrong, they ought to advise you who to make the request to instead.
 
 
 
-<dt id="missing_body">You're missing the public authority that I want to request from! <a href="#missing_body">#</a> </dt>
+<dt id="missing_body">You’re missing the public authority that I want to request from! <a href="#missing_body">#</a></dt>
 
 <dd>
 <p>Please <a href="<%= new_change_request_path %>">contact us</a> with the name of the public authority and,
@@ -40,7 +63,7 @@ to hear from you too.
 
 </dd>
 
-<dt id="authorities">Why do you include some authorities that aren't formally subject to FOI?<a href="#authorities">#</a> </dt>
+<dt id="authorities">Why do you include some authorities that aren’t formally subject to FOI? <a href="#authorities">#</a></dt>
 
 <dd>
 <p><%= site_name %> lets you make requests for information to a range of
@@ -48,11 +71,11 @@ organisations:</p>
 
 <ul>
   <li> Those formally subject to the FOI Act</li>
-  <li> Those formally subject to the Environmental Regulations (a less well  
+  <li> Those formally subject to the Environmental Regulations (a less well
   defined group)</li>
   <li> Those which voluntarily comply with the FOI Act</li>
   <li> Those which aren't subject to the Act but we think should be, on grounds
-  such as them having significant public responsibilities. 
+  such as them having significant public responsibilities.
   </li>
 </ul>
 
@@ -63,7 +86,7 @@ to an FOI request, they can still do so voluntarily.
 
 </dd>
 
-<dt id="focused">Why must I keep my request focused?<a href="#focused">#</a> </dt>
+<dt id="focused">Why must I keep my request focused? <a href="#focused">#</a></dt>
 
 <dd>
 
@@ -98,7 +121,7 @@ annotations after submitting the request).
 
 </dd>
 
-<dt id="fees">Does it cost me anything to make a request?<a href="#fees">#</a> </dt>
+<dt id="fees">Does it cost me anything to make a request? <a href="#fees">#</a></dt>
 
 <dd>
 
@@ -123,7 +146,7 @@ spent on marshmallows in the past year than in the past ten years.
 
 
 
-<dt id="quickly_response">How quickly will I get a response? <a href="#quickly_response">#</a> </dt>
+<dt id="quickly_response">How quickly will I get a response? <a href="#quickly_response">#</a></dt>
 
 <dd>
 <p>By law, public authorities must respond <strong>promptly</strong> to
@@ -141,7 +164,7 @@ are breaking the law.</p>
 
 </dd>
 
-<dt id="no_response">What if I never get a response?<a href="#no_response">#</a> </dt>
+<dt id="no_response">What if I never get a response? <a href="#no_response">#</a></dt>
 
 <dd>
 <p>There are several things you can do if you never get a response.</p>
@@ -151,9 +174,9 @@ are breaking the law.</p>
     checking that they received the request. It was sent to them by email.
     </li>
     <li>If they have not received it, the problem is most likely due to
-    "spam filters". Refer the authority to the measures in the answer 
-    '<a href="/help/officers#spam_problems">I can see a request on <%= site_name %>, but we never got it by email!</a>' 
-    in the FOI officers section of this help. 
+    "spam filters". Refer the authority to the measures in the answer
+    '<a href="/help/officers#spam_problems">I can see a request on <%= site_name %>, but we never got it by email!</a>'
+    in the FOI officers section of this help.
     </li>
     <li>If you're still having no luck, then you can ask for an internal review,
     and then complain to the Information Commissioner about the authority.
@@ -161,14 +184,14 @@ are breaking the law.</p>
 </ul>
 </dd>
 
-<dt id="not_satifised">What if I'm not satisfied with the response? <a href="#not_satifised">#</a> </dt>
+<dt id="not_satifised">What if I’m not satisfied with the response? <a href="#not_satifised">#</a></dt>
 <dd>If you didn't get the information you asked for, or you didn't get it in time,
 then read our page '<a href="/help/unhappy">Unhappy about the response you got?</a>'.
 </dd>
 
-<dt id="reuse">It says I can't re-use the information I got!<a href="#reuse">#</a> </dt>
+<dt id="reuse">It says I can’t re-use the information I got!<a href="#reuse">#</a> </dt>
 <dd>
-<p>Authorities often add legal boilerplate about the 
+<p>Authorities often add legal boilerplate about the
 "<a href="http://www.opsi.gov.uk/si/si2005/20051515">Re-Use of Public Sector
 Information Regulations 2005</a>", which at first glance implies you may not
 be able do anything with the information.
@@ -181,7 +204,7 @@ allowed to do so.  See <a href="/help/officers#copyright">our policy on copyrigh
 
 </dd>
 
-<dt id="ico_help">Can you tell me more of the nitty gritty about the process of making requests? <a href="#ico_help">#</a> </dt>
+<dt id="ico_help">Can you tell me more of the nitty gritty about the process of making requests? <a href="#ico_help">#</a></dt>
 
 <dd>
 <p>Have a look at the
@@ -192,10 +215,10 @@ pages on the Information Commissioner's website.</p>
 the process is very similar. There are differences around time
 limits for compliance.
 See the <a href="http://www.itspublicknowledge.info/nmsruntime/saveasdialog.asp?lID=1858&amp;sID=321">Scottish
-Information Commissioner's guidance</a> for details.</p> 
+Information Commissioner's guidance</a> for details.</p>
 </dd>
 
-<dt id="data_protection">Can I request information about myself? <a href="#data_protection">#</a> </dt>
+<dt id="data_protection">Can I request information about myself? <a href="#data_protection">#</a></dt>
 
 <dd>
 <p>No. Requests made using <%= site_name %> are public, made under the Freedom of
@@ -214,7 +237,7 @@ immediately so we can remove it.</p>
 </dd>
 
 
-<dt id="private_requests">I'd like to keep my request secret! (At least until I publish my story) <a href="#private_requests">#</a> </dt>
+<dt id="private_requests">I’d like to keep my request secret! (At least until I publish my story) <a href="#private_requests">#</a></dt>
 
 <dd><p><%= site_name %> is currently only designed for public requests. All
 responses that we receive are automatically published on the website for anyone
@@ -225,12 +248,12 @@ you manage FOI requests in secret, then <a href="/help/contact">contact us</a>.
 </p>
 </dd>
 
-<dt id="eir">Why can I only request information about the environment from some authorities? <a href="#eir">#</a> </dt>
+<dt id="eir">Why can I only request information about the environment from some authorities? <a href="#eir">#</a></dt>
 
 <dd>
 <p>Some public authorities, such as <a href="http://www.whatdotheyknow.com/body/south_east_water">South East Water</a>,
 don't come under the Freedom of Information Act, but do come under another law called
-the Environmental Information Regulations (EIR). 
+the Environmental Information Regulations (EIR).
 </p>
 
 <p>It's a very similar law, so you make a request
@@ -243,11 +266,11 @@ means. It is quite broad.
 <p>You can, of course, request environmental information from other
 authorities. Just make a Freedom of Information (FOI) request as normal. The
 authority has a duty to work out if the Environmental Information Regulations
-(EIR) is the more appropriate legislation to reply under. 
+(EIR) is the more appropriate legislation to reply under.
 </p>
 </dd>
 
-<dt id="multiple">Can I make the same to request to lots of authorities, e.g. all councils? <a href="#multiple">#</a> </dt>
+<dt id="multiple">Can I make the same to request to lots of authorities, e.g. all councils? <a href="#multiple">#</a></dt>
 
 <dd>We ask you to first send a test version of your request to a few
 authorities. Their responses will help you improve the wording of your request,
@@ -257,7 +280,7 @@ to the other authorities, you must copy and paste it by hand.
 
 </dd>
 
-<dt id="offsite">I made a request off the site, how do I upload it to the archive?<a href="#offsite">#</a> </dt>
+<dt id="offsite">I made a request off the site, how do I upload it to the archive?<a href="#offsite">#</a></dt>
 
 <dd><%= site_name %> is an archive of requests made through the site,
 and does not try to be an archive of all FOI requests. We'll never support uploading
@@ -266,9 +289,9 @@ responses actually came from the authority. If this really matters to you,
 you can always make the same request again via <%= site_name %>.
 </dd>
 
-<dt id="moderation">How do you moderate request annotations? <a href="#moderation">#</a> </dt>
+<dt id="moderation">How do you moderate request annotations? <a href="#moderation">#</a></dt>
 
-<dd> 
+<dd>
 <p>Annotations on <%= site_name %> are to help
 people get the information they want, or to give them pointers to places they
 can go to help them act on it. We reserve the right to remove anything else.
