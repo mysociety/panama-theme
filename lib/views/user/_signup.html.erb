@@ -49,7 +49,8 @@
         <%= text_field 'user_signup', 'phone_number', { :size => 20 } %>
     </p>
     <div class="form_item_note">
-        <%= _('explanatory text goes here') %>
+        <%= _('We will not reveal your phone number to anybody unless you or
+        the law tell us to (<a href="{{url}}">details</a>). ', :url => help_privacy_path) %>
     </div>
 
     <p><%= _('I am a...')%></p>
@@ -64,47 +65,42 @@
 
 
     <div id="user_signup_individual_fields">
+        <div class="form_item_note">
+            <%= _('As a private citizen, you need you to tell us your national ID number and address as this information is required to make a valid ATI request under Panamanian law. This information will only be shared with the authority you are requesting information from.') %><br />
+            <%= link_to _('Read more about making a request.'), help_requesting_path %><br /><br />
+        </div>
+
         <p>
             <label class="form_label" for="user_signup_address"><%= _('Your address:')%></label>
             <%= text_area 'user_signup', 'address', { :cols => 20, :rows => 6 } %>
         </p>
-        <div class="form_item_note">
-            <%= _('explanatory text goes here') %>
-        </div>
 
         <p>
             <label class="form_label" for="user_signup_national_id_number"><%= _('National ID Number:')%></label>
             <%= text_field 'user_signup', 'national_id_number', { :size => 20 } %>
         </p>
-        <div class="form_item_note">
-            <%= _('explanatory text goes here') %>
-        </div>
     </div>
 
     <div id="user_signup_business_fields">
+        <div class="form_item_note">
+            <%= _('To request information on behalf of a company, you need you to tell us your company name, number and incorporation date as this information is required to make a valid ATI request under Panamanian law.') %><br />
+            <%= link_to _('Read more about making a request.'), help_requesting_path %><br /><br />
+        </div>
+
         <p>
             <label class="form_label" for="user_signup_company_name"><%= _('Company Name:')%></label>
             <%= text_field 'user_signup', 'company_name', { :size => 20 } %>
         </p>
-        <div class="form_item_note">
-            <%= _('explanatory text goes here') %>
-        </div>
 
         <p>
             <label class="form_label" for="user_signup_company_number"><%= _('Company number:')%></label>
             <%= text_field 'user_signup', 'company_number', { :size => 20 } %>
         </p>
-        <div class="form_item_note">
-            <%= _('explanatory text goes here') %>
-        </div>
 
         <p>
             <label class="form_label" for="user_incorporation_date"><%= _('Incorporation Date:')%></label>
             <%= text_field 'user_signup', 'incorporation_date', { :size => 20 } %>
         </p>
-        <div class="form_item_note">
-            <%= _('explanatory text goes here') %>
-        </div>
     </div>
 
     <p>
