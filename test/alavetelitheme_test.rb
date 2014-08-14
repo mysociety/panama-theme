@@ -60,12 +60,9 @@ class AlavetelithemeTest
             assert user.errors.messages.keys.include?(:incorporation_date)
         end
 
-        test "missing user_type creates an error" do
-            # may not be correct behaviour - should we default it to
-            # be an indivdual requestor instead?
-            user = User.new()
-            user.save
-            assert user.errors.messages.keys.include?(:user_type)
+        test "user_type should default to individual" do?
+            user = User.new
+            assert 'individual', user.user_type
         end
     end
 
