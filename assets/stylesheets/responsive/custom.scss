@@ -554,14 +554,36 @@ div.controller_help {
       color: $link-color-hover;
     }
   }
-}
 
-dt {
-  color: $heading-color;
-  font-weight: 700;
-  @include respond-min( $main_menu-mobile_menu_cutoff ){
-    font-size: 2em;
-    line-height: 1.1em;
+  dt {
+    color: $heading-color;
+    font-weight: 700;
+
+    @include respond-min( $main_menu-mobile_menu_cutoff ){
+      font-size: 2em;
+      line-height: 1.1em;
+    }
+
+    & + dd {
+      margin: 0;
+      padding-top: 15px;
+    }
+
+    // When user is linked to a specific part
+    // of the help page, highlight it in yellow.
+    &:target {
+      background-color: #ffc;
+      padding: 15px 20px;
+
+      & + dd {
+        background-color: #ffc;
+        padding: 0 20px 15px 20px;
+
+        & > p:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
   }
 }
 
