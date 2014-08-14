@@ -47,4 +47,22 @@ Rails.configuration.to_prepare do
             end
         end
     end
+
+    # A new class for storing alerts that are made to bodies
+    class BodyInfoRequestSentAlert < ActiveRecord::Base
+        belongs_to :public_body
+        belongs_to :info_request
+        belongs_to :info_request_event
+        attr_accessible :alert_type
+
+        validates_inclusion_of :alert_type, :in => [
+            'nearing_overdue_1', # tell body that info request is about to become overdue
+            'overdue_1', # tell body that info request has become overdue
+        ]
+    end
+
+    # Patch InfoRequestEvent to connect it to BodyInfoRequestSentAlert
+    InfoRequestEvent.instance_eval do
+        has_many :body_info_request_sent_alerts
+    end
 end

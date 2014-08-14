@@ -19,3 +19,9 @@ if !column_exists?(:users, :national_id_number)
     require File.expand_path '../db/migrate/panamatheme_add_extra_fields_to_user', __FILE__
     PanamathemeAddExtraFieldsToUser.up
 end
+
+# Add the new table for storing alerts sent to public bodies
+unless ActiveRecord::Base.connection.table_exists? :body_info_request_sent_alerts
+    require File.expand_path '../db/migrate/panamatheme_create_body_info_request_sent_alerts', __FILE__
+    PanamaThemeCreateBodyInfoRequestSentAlerts.change
+end
