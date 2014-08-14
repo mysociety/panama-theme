@@ -5,6 +5,11 @@
 # See http://stackoverflow.com/questions/7072758/plugin-not-reloading-in-development-mode
 #
 Rails.configuration.to_prepare do
+    HelpController.class_eval do
+        def transparency
+        end
+    end
+
     UserController.class_eval do
         def signchangeaddress
             if not authenticated?(
