@@ -1,13 +1,15 @@
 $antai-navy: #1a405b;
 $antai-pale-grey: #e6e6e6;
 $antai-light-teal: #529ca6;
+$antai-mid-teal: #2A93AD;
 $antai-dark-teal: #007489;
 $antai-bright-blue: #00c0e9;
 $antai-bright-green: #8cc63e;
 
 $body-bg: #fff;
 $body-font-color: #333;
-$link-color: $antai-navy;
+$link-color: $antai-mid-teal;
+$link-color-hover: darken($link-color, 10%);
 
 $banner_bg: $antai-navy;
 $banner-link-color: transparentize(#fff, 0.2);
@@ -107,6 +109,10 @@ body {
 
 a {
   color: $link-color;
+
+  &:hover, &:focus, &:active {
+    color: $link-color-hover;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -537,6 +543,18 @@ a.link_to_this {
 }
 
 /* Help pages */
+
+div.controller_help {
+  #right_column_flip > h2:first-child {
+    margin-top: 10px;
+  }
+
+  dt, h1 {
+    &:hover > a {
+      color: $link-color-hover;
+    }
+  }
+}
 
 dt {
   color: $heading-color;
