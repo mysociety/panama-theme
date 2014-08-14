@@ -54,10 +54,12 @@ describe RequestMailer, " when sending nearly overdue alerts to public bodies" d
     second_public_body = PublicBody.last
 
     Time.stub!(:now).and_return(Time.utc(2014, 07, 31, 0, 0, 0))
+
     @new_info_request = FactoryGirl.create(:info_request,
                                            :title => "A new request",
                                            :user => user,
                                            :public_body => public_body)
+
 
     Time.stub!(:now).and_return(Time.utc(2014, 07, 20, 0, 0, 0))
     @nearly_overdue_info_request = FactoryGirl.create(:info_request,
