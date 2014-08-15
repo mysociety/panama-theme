@@ -556,3 +556,7 @@ dt {
     }
 }
 
+#sign_in_reason > :last-child {
+  padding-bottom: 1em;
+  border-bottom: 1px solid $antai-pale-grey;
+}
