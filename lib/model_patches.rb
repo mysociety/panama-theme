@@ -65,4 +65,13 @@ Rails.configuration.to_prepare do
     InfoRequestEvent.instance_eval do
         has_many :body_info_request_sent_alerts
     end
+
+    InfoRequest.class_eval do
+        # Add an extra date calculation method which tells us when a request
+        # is "nearly" overdue - calculated from the config setting
+        # REPLY_NEARLY_LATE_AFTER_DAYS
+        def date_nearly_overdue_by
+            Holiday.due_date_from(self.date_initial_request_last_sent_at, AlaveteliConfiguration::reply_nearly_late_after_days, AlaveteliConfiguration::working_or_calendar_days)
+        end
+    end
 end
