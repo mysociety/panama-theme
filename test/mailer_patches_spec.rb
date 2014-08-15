@@ -200,4 +200,13 @@ describe RequestMailer, " when sending overdue alerts to public bodies" do
     RequestMailer.alert_body_overdue_requests
     assert_equal 1, ActionMailer::Base.deliveries.length
   end
+
+  it "skips over errors with requests" do
+    # Requests with malformed body emails might never have been sent anywhere
+    # and that will cause an error when we process them because our check of
+    # event id's will return nil. Stub that to make it happen in this test
+    InfoRequest.any_instance.stub(:last_event_forming_initial_request).and_return(nil)
+    RequestMailer.alert_body_overdue_requests
+    # Should not blow up
+  end
 end

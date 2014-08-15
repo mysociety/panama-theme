@@ -102,7 +102,14 @@ Rails.configuration.to_prepare do
         :include => [ :public_body ]
       )
       for info_request in info_requests
+        begin
         alert_event_id = info_request.last_event_forming_initial_request.id
+        rescue => e
+          logger.error "An error occured trying to get the last event from: #{info_request}"
+          logger.error e.message
+          logger.error e.backtrace.join("\n")
+          next
+        end
         alert_type = 'overdue_1'
         if info_request.calculate_status == 'waiting_response_overdue'
           sent_already = BodyInfoRequestSentAlert.find(:first, :conditions => [ "alert_type = ?
