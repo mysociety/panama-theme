@@ -25,3 +25,6 @@ if User.new.user_type.nil?
     require File.expand_path '../db/migrate/panamatheme_default_user_type_to_individual', __FILE__
     PanamathemeDefaultUserTypeToIndividual.up
 end
+
+# Create any necessary global Censor rules
+require File.expand_path(File.dirname(__FILE__) + '/lib/censor_rules')
