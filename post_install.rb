@@ -19,3 +19,9 @@ if !column_exists?(:users, :national_id_number)
     require File.expand_path '../db/migrate/panamatheme_add_extra_fields_to_user', __FILE__
     PanamathemeAddExtraFieldsToUser.up
 end
+
+# add the user_type default to User model
+if User.new.user_type.nil?
+    require File.expand_path '../db/migrate/panamatheme_default_user_type_to_individual', __FILE__
+    PanamathemeDefaultUserTypeToIndividual.up
+end
