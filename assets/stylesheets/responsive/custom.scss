@@ -558,6 +558,7 @@ div.controller_help {
   dt {
     color: $heading-color;
     font-weight: 700;
+    font-size: 1.4em;
 
     @include respond-min( $main_menu-mobile_menu_cutoff ){
       font-size: 2em;
@@ -594,6 +595,44 @@ div.controller_help {
     margin-bottom: 0.2em;
   }
 }
+
+@include respond-min(36em){
+  .human_and_legal {
+    @include grid-row();
+
+    & > div:first-child {
+      @include grid-column(
+        $columns: 7,
+        $collapse: true
+      );
+
+      & + div {
+        @include grid-column(
+          $columns: 4,
+          $last-column: true,
+          $offset: 1,
+          $collapse: true
+        );
+        padding-left: 2em;
+      }
+    }
+  }
+}
+
+.human_and_legal > div:first-child + div {
+  color: lighten($body-font-color, 50%);
+  font-size: 0.9em;
+  line-height: 1.4em;
+
+  a {
+    color: mix($link-color, #fff, 80%);
+
+    &:hover, &:focus, &:active {
+      color: $link-color-hover;
+    }
+  }
+}
+
 
 /* Front page */
 /* Drop the extract indentation on small screens */
