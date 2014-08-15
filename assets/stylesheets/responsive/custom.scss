@@ -587,6 +587,14 @@ div.controller_help {
   }
 }
 
+.table_of_contents {
+  list-style: disc;
+
+  li {
+    margin-bottom: 0.2em;
+  }
+}
+
 /* Front page */
 /* Drop the extract indentation on small screens */
 #frontpage_examples .excerpt {
