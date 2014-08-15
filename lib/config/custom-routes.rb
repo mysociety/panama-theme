@@ -9,4 +9,6 @@ Rails.application.routes.draw do
         match '/change_company_number' => 'user#signchangecompanynumber', :as => :signchangecompanynumber
         match '/change_incorporation_date' => 'user#signchangecompanyincdate', :as => :signchangeincdate
     end
+
+    match '/help/transparency' => 'help#transparency', :as => :help_transparency
 end
