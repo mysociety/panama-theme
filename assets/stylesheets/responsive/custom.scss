@@ -643,7 +643,59 @@ div.controller_help {
     }
 }
 
-#sign_in_reason > :last-child {
-  padding-bottom: 1em;
-  border-bottom: 1px solid $antai-pale-grey;
+#sign_together {
+  @include grid-row();
+}
+
+#sign_in_reason {
+  & > :last-child {
+    padding-bottom: 1em;
+    border-bottom: 1px solid $antai-pale-grey;
+  }
+
+  p {
+    font-size: 1.2em;
+  }
+}
+
+#sign-together__sign-in,
+#sign-together__sign-up {
+  @include grid-column(12);
+}
+
+.sign-in-form-pretitle {
+  display: none;
+}
+
+@include respond-min( $main_menu-mobile_menu_cutoff ){
+  #sign-together__sign-in {
+    @include grid-column(
+      $columns: 4,
+      $push: 8
+    );
+    margin-top: 1.5em;
+  }
+
+  #sign-together__sign-up {
+    @include grid-column(
+      $columns: 7,
+      $pull: 4
+    );
+  }
+
+  .sign-in-form-pretitle {
+    display: block;
+    color: darken($antai-light-teal, 20%);
+    margin-bottom: 0.2em;
+  }
+
+  .sign-in-form-wrapper {
+    background: mix($antai-light-teal, #fff, 20%);
+    border-radius: 4px;
+    padding: 1em;
+
+    h1 {
+      margin-top: 0;
+    }
+  }
 }
