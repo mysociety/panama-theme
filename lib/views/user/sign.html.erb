@@ -28,30 +28,29 @@
       <% if !@post_redirect.nil? %>
         <div id="sign_in_reason">
           <% if @post_redirect.reason_params[:web].empty? %>
-            <h1><%= _('Please sign in or make a new account.') %></h1>
+            <h1><%= _('Please sign in or create an account.') %></h1>
           <% else %>
             <%# special case if they're in the middle of the FOI request creation flow %>
             <% if @post_redirect.post_params[:controller] == 'request' and @post_redirect.post_params[:action] == 'new' %>
               <h1><%= _('4. Send your request') %></h1>
-              <p><%= _('Almost there! {{reason}}, please sign in or make a new account.', :reason => @post_redirect.reason_params[:web]) %></p>
+              <p><%= _('Almost there! {{reason}}, please create an account or sign in with your existing details.', :reason => @post_redirect.reason_params[:web]) %></p>
             <% else %>
-              <h1><%= _('{{reason}}, please sign in or make a new account.', :reason => @post_redirect.reason_params[:web]) %></h1>
+              <h1><%= _('{{reason}}, please create an account or sign in with your existing details.', :reason => @post_redirect.reason_params[:web]) %></h1>
             <% end %>
           <% end %>
         </div>
       <% end %>
-        <div id="left_half">
-          <h1><%= _('Sign in') %></h1>
-          <%= render :partial => 'signin', :locals => { :sign_in_as_existing_user => false } %>
+        <div id="sign-together__sign-in">
+          <div class="sign-in-form-wrapper">
+            <p class="sign-in-form-pretitle">Got an account?</p>
+            <h1><%= _('Sign in') %></h1>
+            <%= render :partial => 'signin', :locals => { :sign_in_as_existing_user => false } %>
+          </div>
         </div>
-        <div id="middle_strip">
-        <%= _('- or -') %>
-        </div>
-        <div id="right_half">
-          <h1><%= _('Sign up') %></h1>
+        <div id="sign-together__sign-up">
+          <h1><%= _('Create an account') %></h1>
           <%= render :partial => 'signup' %>
         </div>
-        <div style="clear:both"></div>
     </div>
 
 <% end %>
