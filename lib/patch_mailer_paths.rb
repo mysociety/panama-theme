@@ -41,7 +41,14 @@ Rails.configuration.to_prepare do
       )
       now = Time.now
       for info_request in info_requests
+        begin
         alert_event_id = info_request.last_event_forming_initial_request.id
+        rescue => e
+          logger.error "An error occured trying to get the last event from: #{info_request}"
+          logger.error e.message
+          logger.error e.backtrace.join("\n")
+          next
+        end
         calculated_status = info_request.calculate_status
         alert_type = 'nearing_overdue_1'
         if calculated_status == 'waiting_response' && now > info_request.date_nearly_overdue_by
