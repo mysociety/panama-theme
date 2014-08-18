@@ -1,3 +1,5 @@
+<%= render :partial => 'general/localised_datepicker'  %>
+
 <script type="text/javascript">
 (function() {
   function show_correct_user_type_fields() {
@@ -97,7 +99,7 @@
             </p>
             <p>
                 <label class="form_label" for="user_incorporation_date"><%= _('Incorporation Date:')%></label>
-                <%= text_field 'user_signup', 'incorporation_date', { :size => 20 } %>
+                <%= text_field 'user_signup', 'incorporation_date', { :class => "use-datepicker", :size => 11, :style => 'width:auto' } %>
             </p>
         </div>
     </div>
