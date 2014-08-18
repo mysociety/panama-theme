@@ -1,3 +1,5 @@
+<%= render :partial => 'general/localised_datepicker'  %>
+
 <% @title = _('Change your company incorporation date used on {{site_name}}', :site_name => site_name) %>
 
 <% raise _('internal error') if not @user %>
@@ -12,7 +14,7 @@
     </div>
 
     <label class="form_label" for="signchangecompanyincdate_new_incorporation_date"> <%= _('New company incorporation date:')%></label>
-    <%= text_field 'signchangecompanyincdate', 'new_incorporation_date', { :size => 20, :value => @user.incorporation_date } %>
+    <%= text_field 'signchangecompanyincdate', 'new_incorporation_date', { :class => 'use-datepicker', :size => 10, :value => @user.incorporation_date } %>
     </p>
 
     <p>
