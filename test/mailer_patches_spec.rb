@@ -50,6 +50,8 @@ describe RequestMailer, " when sending nearly overdue alerts to public bodies" d
 
   before(:each) do
     user = User.first
+    # We need to add some more Panama-specific details to this user
+    user.address = "Test street, test town, testville"
     public_body = PublicBody.first
     second_public_body = PublicBody.last
 
@@ -136,6 +138,8 @@ describe RequestMailer, " when sending overdue alerts to public bodies" do
 
   before(:each) do
     user = User.first
+    # We need to add some more Panama-specific details to this user
+    user.address = "Test street, test town, testville"
     public_body = PublicBody.first
     second_public_body = PublicBody.last
 
