@@ -34,15 +34,15 @@
             <%= link_to _('Change profile photo'), set_profile_photo_path %> |
         <% end %>
         <%= link_to _('Change your password'), signchangepassword_path %> |
-        <%= link_to _('Change your email'), signchangeemail_path %>
-        <%= link_to _('Change your contact number'), signchangephone_path %>
+        <%= link_to _('Change your email'), signchangeemail_path %> |
+        <%= link_to _('Change your contact number'), signchangephone_path %> |
 
         <% if @display_user.is_individual? %>
-            <%= link_to _('Change your national ID number'), signchangenationalid_path %>
+            <%= link_to _('Change your national ID number'), signchangenationalid_path %> |
             <%= link_to _('Change your address'), signchangeaddress_path %>
         <% else %>
-            <%= link_to _('Change your company name'), signchangecompanyname_path %>
-            <%= link_to _('Change your company number'), signchangecompanynumber_path %>
+            <%= link_to _('Change your company name'), signchangecompanyname_path %> |
+            <%= link_to _('Change your company number'), signchangecompanynumber_path %> |
             <%= link_to _('Change your incorporation date'), signchangeincdate_path %>
         <% end %>
     </p>
