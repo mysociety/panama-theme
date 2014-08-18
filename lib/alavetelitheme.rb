@@ -2,6 +2,9 @@ theme_name = File.split(File.expand_path("../..", __FILE__))[1]
 theme_name.gsub!('-', '_')
 THEME_NAME = theme_name
 
+# Add in some new config values if they're not already set
+AlaveteliConfiguration::DEFAULTS[:REPLY_NEARLY_LATE_AFTER_DAYS] ||= 10
+
 class ActionController::Base
     before_filter :set_view_paths
 

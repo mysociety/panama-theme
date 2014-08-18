@@ -1,0 +1,7 @@
+<%= _('You haven\'t responded to a {{law_used_short}} request yet.', :law_used_short => @info_request.law_used_short)%>
+
+<%= _('You have not yet replied to a {{law_used_short}} request - {{title}}. Note that it is required by law that you respond promptly.', :law_used_short => @info_request.law_used_short, :title => @info_request.title)%>.
+
+<%= _('This message is to remind you to reply. You can do so by replying directly to the original request email, or by sending a new email to {{response_email}}.', :response_email => @info_request.incoming_email) %>
+
+-- <%= _('the {{site_name}} team', :site_name=>site_name) %>

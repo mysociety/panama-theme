@@ -28,3 +28,9 @@ end
 
 # Create any necessary global Censor rules
 require File.expand_path(File.dirname(__FILE__) + '/lib/censor_rules')
+
+# Add the new table for storing alerts sent to public bodies
+unless ActiveRecord::Base.connection.table_exists? :body_info_request_sent_alerts
+    require File.expand_path '../db/migrate/panamatheme_create_body_info_request_sent_alerts', __FILE__
+    PanamaThemeCreateBodyInfoRequestSentAlerts.change
+end
