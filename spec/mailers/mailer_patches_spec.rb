@@ -1,43 +1,6 @@
 # If defined, ALAVETELI_TEST_THEME will be loaded in config/initializers/theme_loader
 ALAVETELI_TEST_THEME = 'panama-theme'
-require File.expand_path(File.join(File.dirname(__FILE__),'..','..','..','..','spec','spec_helper'))
-
-describe BodyInfoRequestSentAlert do
-  before(:each) do
-    @public_body = mock_model(PublicBody)
-    @info_request = mock_model(InfoRequest)
-    @info_request_event = mock_model(InfoRequestEvent)
-  end
-
-  it "can create a body info_request sent alert" do
-    sent_alert = BodyInfoRequestSentAlert.new
-    sent_alert.info_request = @info_request
-    sent_alert.public_body = @public_body
-    sent_alert.info_request_event = @info_request_event
-    sent_alert.alert_type = 'nearing_overdue_1'
-    sent_alert.save!
-  end
-end
-
-describe InfoRequest, " when patched to add a date_nearly_overdue_by method" do
-  before do
-    @ir = info_requests(:naughty_chicken_request)
-    AlaveteliConfiguration.stub!(:working_or_calendar_days).and_return('calendar')
-    AlaveteliConfiguration.stub!(:reply_nearly_late_after_days).and_return(10)
-  end
-
-  after do
-    AlaveteliConfiguration.unstub!(:working_or_calendar_days)
-    AlaveteliConfiguration.unstub!(:reply_nearly_late_after_days)
-  end
-
-  it "has correct nearly due date" do
-    # This assumes that we're set to calendar days above, and that replies are
-    # "nearly" late after 10 days, hence the stubbing of config values in
-    # before to make that guaranteed
-    @ir.date_nearly_overdue_by.strftime("%F").should == '2007-10-24'
-  end
-end
+require File.expand_path(File.join(File.dirname(__FILE__),'..','..','..','..','..','spec','spec_helper'))
 
 describe RequestMailer, " when sending nearly overdue alerts to public bodies" do
 
@@ -102,19 +65,19 @@ describe RequestMailer, " when sending nearly overdue alerts to public bodies" d
   it "sends alerts to the request body" do
     RequestMailer.alert_body_nearing_overdue_requests
     email = ActionMailer::Base.deliveries.first
-    assert_equal [@nearly_overdue_info_request.public_body.request_email], email.to
+    expect([@nearly_overdue_info_request.public_body.request_email]).to eq(email.to)
   end
 
   it "records the alerts it's sent" do
     RequestMailer.alert_body_nearing_overdue_requests
     sent_alert = BodyInfoRequestSentAlert.find_by_info_request_id(@nearly_overdue_info_request.id)
-    assert_equal 'nearing_overdue_1', sent_alert.alert_type
+    expect(sent_alert.alert_type).to eq('nearing_overdue_1')
   end
 
   it "doesn't send alerts twice" do
     RequestMailer.alert_body_nearing_overdue_requests
     RequestMailer.alert_body_nearing_overdue_requests
-    assert_equal 1, ActionMailer::Base.deliveries.length
+    expect(ActionMailer::Base.deliveries.length).to eq(1)
   end
 
   it "skips over errors with requests" do
@@ -190,19 +153,19 @@ describe RequestMailer, " when sending overdue alerts to public bodies" do
   it "sends alerts to the request body" do
     RequestMailer.alert_body_overdue_requests
     email = ActionMailer::Base.deliveries.first
-    assert_equal [@overdue_info_request.public_body.request_email], email.to
+    expect([@overdue_info_request.public_body.request_email]).to eq(email.to)
   end
 
   it "records the alerts it's sent" do
     RequestMailer.alert_body_overdue_requests
     sent_alert = BodyInfoRequestSentAlert.find_by_info_request_id(@overdue_info_request.id)
-    assert_equal 'overdue_1', sent_alert.alert_type
+    expect(sent_alert.alert_type).to eq('overdue_1')
   end
 
   it "doesn't send alerts twice" do
     RequestMailer.alert_body_overdue_requests
     RequestMailer.alert_body_overdue_requests
-    assert_equal 1, ActionMailer::Base.deliveries.length
+    expect(ActionMailer::Base.deliveries.length).to eq(1)
   end
 
   it "skips over errors with requests" do
