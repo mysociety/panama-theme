@@ -90,6 +90,26 @@
     </div>
 
     <div id="request_advice">
+
+        <p>
+          <% if !@user %>
+              <%= raw(_('Everything that you enter on this page, including <strong>your name</strong>,
+              will be <strong>displayed publicly</strong> on
+              this website forever (<a href="{{url}}">why?</a>).', :url => (help_privacy_path+"#public_request").html_safe)) %>
+              <%= raw(_('If you are thinking of using a pseudonym,
+              please <a href="{{url}}">read this first</a>.', :url => (help_privacy_path+"#real_name").html_safe)) %>
+          <% else %>
+              <%= raw(_('Everything that you enter on this page
+              will be <strong>displayed publicly</strong> on
+              this website forever (<a href="{{url}}">why?</a>).', :url => (help_privacy_path+"#public_request").html_safe)) %>
+          <% end %>
+        </p>
+
+        <p>
+            <%= raw(_("<strong> Can I request information about myself?</strong>\n" +
+            "\t\t\t<a href=\"{{url}}\">No! (Click here for details)</a>", :url => (help_requesting_path+"#data_protection").html_safe)) %>
+        </p>
+
         <ul>
         <li>
           <% if @info_request.public_body.info_requests.size > 0 %>
@@ -124,28 +144,6 @@
             <%= o.text_area :body, :rows => 20, :cols => 60 %>
         </p>
         <% end %>
-
-        <% if !@user %>
-            <p class="form_note">
-
-                <%= raw(_('Everything that you enter on this page, including <strong>your name</strong>,
-                will be <strong>displayed publicly</strong> on
-                this website forever (<a href="{{url}}">why?</a>).', :url => (help_privacy_path+"#public_request").html_safe)) %>
-                <%= raw(_('If you are thinking of using a pseudonym,
-                please <a href="{{url}}">read this first</a>.', :url => (help_privacy_path+"#real_name").html_safe)) %>
-            </p>
-        <% else %>
-            <p class="form_note">
-                <%= raw(_('Everything that you enter on this page
-                will be <strong>displayed publicly</strong> on
-                this website forever (<a href="{{url}}">why?</a>).', :url => (help_privacy_path+"#public_request").html_safe)) %>
-            </p>
-        <% end %>
-
-        <p class="form_note">
-            <%= raw(_("<strong> Can I request information about myself?</strong>\n" +
-            "\t\t\t<a href=\"{{url}}\">No! (Click here for details)</a>", :url => (help_requesting_path+"#data_protection").html_safe)) %>
-        </p>
 
         <div class="form_button">
             <% if @batch %>
