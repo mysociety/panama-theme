@@ -422,6 +422,25 @@ a.link_button_green_large {
 }
 
 /* Request page */
+#request_header {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 2em;
+
+  span#to_public_body {
+    display: inline;
+    margin: 0 0 0 0.1em;
+    font-size: 1em;
+  }
+}
+
+.request-header__body-to {
+  font-size: 1.1em;
+}
+
+.request-header__body-notes {
+  margin-top: 0.5em;
+}
+
 div.correspondence {
   background-color: $correspondence-bg;
   padding-bottom: 0.5em;
