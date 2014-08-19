@@ -161,21 +161,24 @@ form input[type=submit], a.link_button_green, a.link_button_green_large {
   /* This style is expressed for all borders to avoid triggering an IE9 border rendering bug */
   border-style: solid; border-color: darken($button-bg, 15%); border-width: 0 0 4px 0;
   border-radius: 0;
-  padding: 3px 7px;
-  line-height: normal;
+  padding: 3px 10px;
   font-size: 1.1rem;
-  /* Same height as form elements */
-  height: 2.3125rem;
-  @include ie8 {
-     height: 2.3125em;
-     font-size: 1.1em;
-   }
   vertical-align: top;
   &:focus, &:hover{
     text-decoration: none;
     background-color: darken($button-bg, 10%);
     border-bottom: 4px solid darken($button-bg, 20%);
   }
+}
+
+form input[type=submit] {
+  /* Same height as form elements */
+  height: 2.3125rem;
+  line-height: normal;
+  @include ie8 {
+     height: 2.3125em;
+     font-size: 1.1em;
+   }
 }
 
 @include lte-ie7 {
