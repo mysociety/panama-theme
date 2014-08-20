@@ -91,6 +91,8 @@
 
     <div id="request_advice">
 
+      <h3><%= _('Before you start:') %></h3>
+
         <p>
           <% if !@user %>
               <%= raw(_('Everything that you enter on this page, including <strong>your name</strong>,
@@ -106,9 +108,10 @@
         </p>
 
         <p>
-            <%= raw(_("<strong> Can I request information about myself?</strong>\n" +
-            "\t\t\t<a href=\"{{url}}\">No! (Click here for details)</a>", :url => (help_requesting_path+"#data_protection").html_safe)) %>
+            <%= raw(_('You can’t use this form to request information about yourself (<a href="{{url}}">why?</a>).', :url => (help_requesting_path+"#data_protection").html_safe)) %>
         </p>
+
+        <h3><%= _('Tips for successful requests:') %></h3>
 
         <ul>
         <li>

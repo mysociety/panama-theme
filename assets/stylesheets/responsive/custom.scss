@@ -441,6 +441,22 @@ a.link_button_green_large {
   margin-top: 0.5em;
 }
 
+#request_advice {
+  & > * {
+    padding-left: 40px;
+    font-size: 0.9em;
+    color: #666;
+  }
+
+  & > :first-child {
+    margin-top: 0;
+  }
+
+  p + h3 {
+    margin-top: 2em;
+  }
+}
+
 div.correspondence {
   background-color: $correspondence-bg;
   padding-bottom: 0.5em;
