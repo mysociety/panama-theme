@@ -69,6 +69,11 @@
             <% if @public_body.eir_only? %>
                 <p><%= _('You can only request information about the environment from this authority.')%></p>
             <% end %>
+
+            <div id="stats">
+                <%= render :partial => 'stats' %>
+            </div>
+
         <% else %>
             <% if @public_body.not_requestable_reason == 'not_apply' %>
                 <p><%= _('Freedom of Information law does not apply to this authority, so you cannot make

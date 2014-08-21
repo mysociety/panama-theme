@@ -48,6 +48,50 @@ Rails.configuration.to_prepare do
         end
     end
 
+    PublicBody.class_eval do
+      def get_stats
+        stats = {}
+
+        # all the requests for the current public_body that have not been hidden
+        stats[:total] = info_requests.where(
+                             :prominence => 'normal'
+                         ).count
+
+        stats[:success] = info_requests.where(
+                               :prominence => 'normal',
+                               :described_state => 'successful'
+                           ).count
+
+        stats[:partial_success] = info_requests.where(
+                                       :prominence => 'normal',
+                                       :described_state => 'partially_successful'
+                                   ).count
+
+        # where the public body has sent a response but the user
+        # hasn't responded yet
+        stats[:waiting_classification] = info_requests.where(
+                                              :prominence => 'normal',
+                                              :awaiting_description => true
+                                          ).count
+
+        stats[:rejected] = info_requests.where(
+                                :prominence => 'normal',
+                                :described_state => 'rejected'
+                            ).count
+
+        stats[:not_held] = info_requests.where(
+                                :prominence => 'normal',
+                                :described_state => 'not_held'
+                            ).count
+
+        stats[:withdrawn] = info_requests.where(
+                                 :prominence => 'normal',
+                                 :described_state => 'user_withdrawn'
+                             ).count
+        stats
+      end
+    end
+
     # A new class for storing alerts that are made to bodies
     class BodyInfoRequestSentAlert < ActiveRecord::Base
         belongs_to :public_body

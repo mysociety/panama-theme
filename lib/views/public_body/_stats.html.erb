@@ -1,0 +1,17 @@
+<% @stats = @public_body.get_stats %>
+
+<p>
+    <%= @public_body.name %> has received <%= @stats[:total] %> requests
+    <br />
+    <%= @stats[:success] %> were successful
+    <br />
+    <%= @stats[:partial_success] %> were partially successful
+    <br />
+    <%= @stats[:rejected] %> were rejected
+    <br />
+    <%= @stats[:not_held] %> were for information not held by the authority
+    <br />
+    <%= @stats[:waiting_classification] %> are awaiting classification by the requestor
+    <br />
+    <%= @stats[:withdrawn] %> were withdrawn by the requestor
+</p>
