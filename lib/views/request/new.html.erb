@@ -71,20 +71,22 @@
                     <%=h(@info_request.public_body.name)%>
                 </span>
             </p>
-          <% end %>
 
-          <% if @info_request.public_body.has_notes? %>
-            <div class="request-header__body-notes">
-              <p><%= @info_request.public_body.notes_as_html.html_safe %></p>
-            </div>
-          <% end %>
-
-          <% unless @batch %>
-              <% if !@info_request.public_body.transparency_info_url.blank? %>
-                <div id="request_header_text">
-                    <p><%= _("Check that the information you require isn't available on") %> <%= link_to _("the authority's transparency page"), @info_request.public_body.transparency_info_url %> <%= link_to _("(what should it contain?)"), help_transparency_path %></p>
+              <% if @info_request.public_body.has_notes? %>
+                <div class="request-header__body-notes">
+                  <p><%= @info_request.public_body.notes_as_html.html_safe %></p>
                 </div>
               <% end %>
+
+            <p class="request-header__transparency-info">
+              <strong><%= _('Did you know?') %></strong>
+              <% if !@info_request.public_body.transparency_info_url.blank? %>
+                <%= raw(_('Authorities in Panama are required to publish <a href="{{help_url}}">detailed transparency information</a> online. Make the most of it! Make sure the information you require isn’t already available on <a href="{{trans_url}}">{{name}}’s transparency page</a>".', :help_url => help_transparency_path, :trans_url => @info_request.public_body.transparency_info_url, :name => @info_request.public_body.name)) %>
+              <% else %>
+                <%= raw(_('Authorities in Panama are required to publish <a href="{{help_url}}">detailed transparency information</a> online. {{name}} has not. But you <em>can</em> <a href="{{auth_url}}">browse previous requests</a> they have answered.', :help_url => help_transparency_path, :auth_url => public_body_path(@info_request.public_body), :name => @info_request.public_body.name)) %>
+              <% end %>
+            </p>
+
           <% end %>
         </div>
     </div>
