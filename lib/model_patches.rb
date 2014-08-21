@@ -74,6 +74,36 @@ Rails.configuration.to_prepare do
                                               :awaiting_description => true
                                           ).count
 
+        stats[:requires_admin] = info_requests.where(
+                                     :prominence => 'normal',
+                                     :described_state => 'requires_admin'
+                                 ).count
+
+        stats[:attention_requested] = info_requests.where(
+                                          :prominence => 'normal',
+                                          :described_state => 'attention_requested'
+                                      ).count
+
+        stats[:internal_review] = info_requests.where(
+                                      :prominence => 'normal',
+                                      :described_state => 'internal_review'
+                                  ).count
+
+        stats[:gone_postal] = info_requests.where(
+                                  :prominence => 'normal',
+                                  :described_state => 'gone_postal'
+                              ).count
+
+        stats[:in_error] = info_requests.where(
+                               :prominence => 'normal',
+                               :described_state => 'error_message'
+                           ).count
+
+        stats[:waiting_clarification] = info_requests.where(
+                                            :prominence => 'normal',
+                                            :described_state => 'waiting_clarification'
+                                        ).count
+
         stats[:rejected] = info_requests.where(
                                 :prominence => 'normal',
                                 :described_state => 'rejected'
@@ -88,6 +118,12 @@ Rails.configuration.to_prepare do
                                  :prominence => 'normal',
                                  :described_state => 'user_withdrawn'
                              ).count
+
+        stats[:waiting_response] = info_requests.where(
+                                       :prominence => 'normal',
+                                       :described_state => 'waiting_response',
+                                       :awaiting_description => false
+                                   ).count
         stats
       end
     end
