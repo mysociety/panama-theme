@@ -74,4 +74,10 @@ Rails.configuration.to_prepare do
             Holiday.due_date_from(self.date_initial_request_last_sent_at, AlaveteliConfiguration::reply_nearly_late_after_days, AlaveteliConfiguration::working_or_calendar_days)
         end
     end
+
+    PublicBody.class_eval do
+
+        # Add some new fields to the csv_import_fields
+        self.csv_import_fields << ['ati_officer_details', ''] << ['transparency_info_url', '']
+    end
 end
