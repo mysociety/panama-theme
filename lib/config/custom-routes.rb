@@ -11,6 +11,8 @@ Rails.application.routes.draw do
     end
 
     match '/help/transparency' => 'help#transparency', :as => :help_transparency
+    match '/help/faq' => 'help#faq', :as => :help_faq
+    match '/help/comments' => 'help#comments', :as => :help_comments
 
     scope '/admin' do
         match '/stats/monthly_transactions_csv' => 'admin_general#stats_monthly_transactions_csv', :as => :admin_stats_monthly_transactions_csv

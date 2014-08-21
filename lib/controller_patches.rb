@@ -10,6 +10,10 @@ Rails.configuration.to_prepare do
     HelpController.class_eval do
         def transparency
         end
+        def faq
+        end
+        def comments
+        end
     end
 
     UserController.class_eval do

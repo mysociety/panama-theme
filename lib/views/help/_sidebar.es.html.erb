@@ -1,0 +1,22 @@
+<%#-*- coding: utf8 -*-%>
+<div id="right_column_flip">
+  <h2>Páginas de ayuda</h2>
+  <ul class="no_bullets">
+    <li><%= link_to_unless_current "Introducción", help_about_path %></li>
+    <li><%= link_to_unless_current "Como realizar una Solicitud", help_requesting_path %></li>
+    <li><%= link_to_unless_current "Su privacidad", help_privacy_path %></li>
+    <li><%= link_to_unless_current "Oficial de información", help_officers_path %></li>
+    <li><%= link_to_unless_current "Transparencia", help_transparency_path %></li>
+    <li><%= link_to_unless_current "Acerca de la plataforma", help_alaveteli_path %></li>
+    <li><%= link_to_unless_current "Créditos", help_credits_path %></li>
+    <li><%= link_to_unless_current "Preguntas Frecuentes", help_faq_path %></li>
+    <li><%= link_to_unless_current "Comentarios y sugerencias", help_comments_path %></li>
+  </ul>
+
+  <h2 id="contact">Contáctenos</h2>
+  <p>If your question isn't answered here, or you just wanted to let us know
+  something about the site, <a href="/help/contact">contact&nbsp;us</a>.
+    </p>
+</div>
+
+
