@@ -2,28 +2,54 @@
 
 <h2><%= @public_body.name %> <%= _('has received') %> <%= stats[:total] %> <%= _('request').pluralize %></h2>
 
+<% if stats[:success] > 0 %>
 <p class="request_icon_line icon_successful"><%= stats[:success] %> <%= stats[:success] == 1 ? _('was') : _('were') %> <%= _('successful') %></p>
+<% end %>
 
+<% if stats[:partial_success] > 0 %>
 <p class= "request_icon_line icon_partially_successful"><%= stats[:partial_success] %> <%= stats[:partial_success] == 1 ? _('was') : _('were') %> <%= _('partially successful') %></p>
+<% end %>
 
+<% if stats[:waiting_classification] > 0 %>
 <p class="request_icon_line icon_waiting_classification"><%= stats[:waiting_classification] %> <%= stats[:waiting_classification] == 1 ? _('has') : _('have') %> <%= _('received a response that is awaiting classification by the requestor') %></p>
+<% end %>
 
+<% if stats[:rejected] > 0 %>
 <p class="request_icon_line icon_rejected"><%= stats[:rejected] %> <%= stats[:rejected] == 1 ? _('was') : _('were') %> <%= _('rejected') %></p>
+<% end %>
 
+<% if stats[:not_held] > 0 %>
 <p class="request_icon_line icon_not_held"><%= stats[:not_held] %> <%= stats[:not_held] == 1 ? _('was') : _('were') %> <%= _('for information not held by the authority') %></p>
+<% end %>
 
+<% if stats[:attention_requested] > 0 %>
 <p class="request_icon_line icon_attention_requested"><%= stats[:attention_requested] %> <%= stats[:attention_requested] == 1 ? _('has') : _('have') %> <%= _('been flagged as requiring adminstrator attention') %></p>
+<% end %>
 
+<% if stats[:requires_admin] > 0 %>
 <p class="request_icon_line icon_requires_admin"><%= stats[:requires_admin] %> <%= stats[:requires_admin] == 1 ? _('has') : _('have') %> <%= _('been referred to the site administrator by the requestor') %></p>
+<% end %>
 
+<% if stats[:internal_review] > 0 %>
 <p class="request_icon_line icon_internal_review"><%= stats[:internal_review] %> <%= stats[:internal_review] == 1 ? _('is') : _('are') %> <%= _('awaiting an internal review') %></p>
+<% end %>
 
+<% if stats[:waiting_clarification] > 0 %>
 <p class="request_icon_line icon_waiting_clarification"><%= stats[:waiting_clarification] %> <%= stats[:waiting_clarification] == 1 ? _('is') : _('are') %> <%= _('waiting for more information from the requestor') %></p>
+<% end %>
 
+<% if stats[:gone_postal] > 0 %>
 <p class="request_icon_line icon_gone_postal"><%= stats[:gone_postal] %> <%= stats[:gone_postal] == 1 ? _('is') : _('are') %> <%= _('waiting for information to be sent in the post') %></p>
+<% end %>
 
+<% if stats[:in_error] > 0 %>
 <p class="request_icon_line icon_error_message"><%= stats[:in_error] %> <%= stats[:in_error] == 1 ? _('is') : _('are') %> <%= _('waiting for a delivery error to be resolved') %></p>
+<% end %>
 
+<% if stats[:withdrawn] > 0 %>
 <p class="request_icon_line icon_user_withdrawn"><%= stats[:withdrawn] %> <%= stats[:withdrawn] == 1 ? _('was') : _('were') %> <%= _('withdrawn by the requestor') %></p>
+<% end %>
 
+<% if stats[:gone_postal] > 0 %>
 <p class="request_icon_line icon_waiting_response"><%= stats[:waiting_response]%> <%= stats[:gone_postal] == 1 ? _('is') : _('are') %> <%= _('awaiting a response') %></p>
+<% end %>
