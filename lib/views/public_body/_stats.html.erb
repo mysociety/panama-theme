@@ -1,13 +1,49 @@
+<script type="text/javascript">
+(function() {
+  $(document).ready(function() {
+    $('#success_detail').hide();
+    $('#unsuccessful_detail').hide();
+    $('#unresolved_detail').hide();
+    $('#success_header').click(function() {$('#success_detail').toggle()});
+    $('#unsuccessful_header').click(function() {$('#unsuccessful_detail').toggle()});
+    $('#unresolved_header').click(function() {$('#unresolved_detail').toggle()});
+  });
+})();
+</script>
+
+<!-- this doesn't belong here - just for testing -->
+<style>
+  #success_detail,
+  #unsuccessful_detail,
+  #unresolved_detail {
+    margin-left: 2em;
+  }
+</style>
+
 <h2><%= @public_body.name %> <%= _('has received') %> <%= stats[:total] %> <%= _('request').pluralize %></h2>
 
-<p>
-    <%= stats[:success] + stats[:partial_success] %> <%= _('successful') %>
-</p>
+<p id="success_header"><%= stats[:success] + stats[:partial_success] %> <%= _('successful') %><p>
+<div id="success_detail">
+    <p><%= stats[:success] %> <%= _('successful') %></p>
+    <p><%= stats[:partial_success] %> <%= _('partially successful') %></p>
+</div>
 
-<p>
-    <%= stats[:rejected] + stats[:not_held] + stats[:withdrawn] %> <%= _('unsuccessful') %>
-</p>
+<p id="unsuccessful_header"><%= stats[:rejected] + stats[:not_held] + stats[:withdrawn] %> <%= _('unsuccessful') %><p>
+<div id="unsuccessful_detail">
+    <p><%= stats[:rejected] %> <%= _('rejected') %></p>
+    <p><%= stats[:not_held] %> <%= _('information not held') %></p>
+    <p><%= stats[:withdrawn]%> <%= _('withdrawn by requestor') %></p>
+</div>
 
-<p>
+<p id="unresolved_header">
     <%= stats[:waiting_classification] + stats[:attention_requested] + stats[:requires_admin] + stats[:internal_review] + stats[:waiting_clarification] + stats[:gone_postal] + stats[:in_error] + stats[:waiting_response] %> <%= _('unresolved') %>
 </p>
+<div id="unresolved_detail">
+    <p><%= stats[:waiting_response] %> <%= _('awaiting response') %></p>
+    <p><%= stats[:gone_postal] %> <%= _('awaiting response by post') %></p>
+    <p><%= stats[:waiting_classification] %> <%= _('response received but not yet classified by requestor') %></p>
+    <p><%= stats[:waiting_clarification] %> <%= _('awaiting clarification by requstor') %></p>
+    <p><%= stats[:internal_review] %> <%= _('requestor asked for an internal review') %></p>
+    <p><%= stats[:attention_requested] + stats[:requires_admin] %> <%= _('referred to the administrator') %></p>
+    <p><%= stats[:in_error] %> <%= _('a delivery error has occurred')%></p>
+</div>
