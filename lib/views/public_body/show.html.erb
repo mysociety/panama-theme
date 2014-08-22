@@ -1,7 +1,7 @@
 <% @title = h(@public_body.name) + _(" - view and make Freedom of Information requests") %>
 <div id="main_content">
     <div id="header_right">
-      <img src="http://placehold.it/500x500/eeeeee/cccccc/&text=pie+chart">
+      <div id="stats_chart"></div>
     </div>
 
     <div id="header_left">
@@ -192,3 +192,20 @@
         <% end %>
     </div>
 </div>
+
+<%
+stats = @public_body.get_stats
+simple_data = %Q|
+[
+  { label: '&nbsp;#{_("Successful")}', data: #{stats[:success] + stats[:partial_success]}, ident: 'success', color: '#aab26e' },
+  { label: '&nbsp;#{_("Unsuccessful")}', data: #{stats[:rejected] + stats[:not_held] + stats[:withdrawn]}, ident: 'unsuccessful', color: '#ff7959' },
+  { label: '&nbsp;#{_("Unresolved")}', data: #{stats[:waiting_classification] + stats[:attention_requested] + stats[:requires_admin] + stats[:internal_review] + stats[:waiting_clarification] + stats[:gone_postal] + stats[:in_error] + stats[:waiting_response]}, ident: 'unresolved', color: '#e69e5d' }
+]|
+%>
+
+<script type="text/javascript">
+  var data = <%= simple_data.html_safe %>;
+</script>
+
+<!--[if lte IE 8]><%= javascript_include_tag "excanvas.min.js" %><![endif]-->
+<%= javascript_include_tag "stats-authority" %>
