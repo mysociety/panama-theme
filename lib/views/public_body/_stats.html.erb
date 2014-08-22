@@ -1,0 +1,118 @@
+<!-- this doesn't belong here - just for testing -->
+<style>
+  #pie {
+    width: 550px;
+    height: 363px;
+    margin: 2em;
+  }
+</style>
+
+<h2><%= @public_body.name %> <%= _('has received') %> <%= stats[:total] %> <%= _('request').pluralize %></h2>
+
+<div id="pie"></div>
+
+<script src="/assets/jquery.flot.min.js?body=1" type="text/javascript"></script>
+<script src="/assets/jquery.flot.pie.js?body=1" type="text/javascript"></script>
+
+<% simple_data = %Q|
+[
+  { label: '#{_("Successful")}', data: #{stats[:success] + stats[:partial_success]}, ident: 'success', color: '#aab26e' },
+  { label: '#{_("Unsuccessful")}', data: #{stats[:rejected] + stats[:not_held] + stats[:withdrawn]}, ident: 'unsuccessful', color: '#ff7959' },
+  { label: '#{_("Unresolved")}', data: #{stats[:waiting_classification] + stats[:attention_requested] + stats[:requires_admin] + stats[:internal_review] + stats[:waiting_clarification] + stats[:gone_postal] + stats[:in_error] + stats[:waiting_response]}, ident: 'unresolved', color: '#e69e5d' }
+]|
+
+success_data = %Q|
+[
+  { label: '#{_("Fully successful")}', data: #{stats[:success]} },
+  { label: '#{_("Partially successful")}', data: #{stats[:partial_success]} },
+  { label: '#{_("Unsuccessful")}', data: #{stats[:rejected] + stats[:not_held] + stats[:withdrawn]}, ident: 'unsuccessful' },
+  { label: '#{_("Unresolved")}', data: #{stats[:waiting_classification] + stats[:attention_requested] + stats[:requires_admin] + stats[:internal_review] + stats[:waiting_clarification] + stats[:gone_postal] + stats[:in_error] + stats[:waiting_response]}, ident: 'unresolved' }
+]|
+
+unsuccessful_data = %Q|
+[
+  { label: '#{_("Successful")}', data: #{stats[:success] + stats[:partial_success]}, ident: 'success' },
+  { label: '#{_("Rejected")}', data: #{stats[:rejected]} },
+  { label: '#{_("Not Held")}', data: #{stats[:not_held]} },
+  { label: '#{_("Withdrawn")}', data: #{stats[:withdrawn]} },
+  { label: '#{_("Unresolved")}', data: #{stats[:waiting_classification] + stats[:attention_requested] + stats[:requires_admin] + stats[:internal_review] + stats[:waiting_clarification] + stats[:gone_postal] + stats[:in_error] + stats[:waiting_response]}, ident: 'unresolved' }
+]|
+
+unresolved_data = %Q|
+[
+  { label: '#{_("Successful")}', data: #{stats[:success] + stats[:partial_success]}, ident: 'success' },
+  { label: '#{_("Unsuccessful")}', data: #{stats[:rejected] + stats[:not_held] + stats[:withdrawn]}, ident: 'unsuccessful' },
+
+  { label: '#{_("Awaiting response")}', data: #{stats[:waiting_response]} },
+  { label: '#{_("Awaiting postal response")}', data: #{stats[:gone_postal]} },
+  { label: '#{_("Awaiting classification")}', data: #{stats[:waiting_classification]}  },
+  { label: '#{_("Awaiting info from requestor")}', data: #{ stats[:waiting_clarification]} },
+  { label: '#{_("Admin help requested")}', data: #{stats[:attention_requested] + stats[:requires_admin]} },
+  { label: '#{_("Internal review requested")}', data: #{ stats[:internal_review]} },
+  { label: '#{_("Error sending message")}', data: #{stats[:in_error]} }
+]|
+%>
+
+<script type="text/javascript">
+  (function() {
+    $(document).ready(function() {
+      var placeholder = $("#pie");
+      var data = <%= simple_data.html_safe %>;
+
+      placeholder.unbind();
+
+      $.plot(placeholder, data, {
+        series: {
+          pie: {
+            show: true
+          }
+        },
+        grid: {
+          hoverable: true,
+          clickable: true
+        }
+      });
+
+      placeholder.bind("plothover", function(event, pos, obj) {
+        if (!obj) {
+          return;
+        }
+
+        var percent = parseFloat(obj.series.percent).toFixed(2);
+        $("#hover").html("<span style='font-weight:bold; color:" + obj.series.color + "'>" + obj.series.label + " (" + percent + "%)</span>");
+      });
+
+      placeholder.bind("plotclick", function(event, pos, obj) {
+        if (!obj) {
+          return;
+        }
+
+        switch(obj.series.ident) {
+          case 'success':
+            var data2 = <%= success_data.html_safe %>;
+            break;
+          case 'unsuccessful':
+            var data2 = <%= unsuccessful_data.html_safe %>;
+            break;
+          case 'unresolved':
+            var data2 = <%= unresolved_data.html_safe %>;
+            break;
+          default:
+            var data2 = data;
+        };
+
+        $.plot(placeholder, data2, {
+          series: {
+            pie: {
+              show: true
+            }
+          },
+          grid: {
+            hoverable: true,
+            clickable: true
+          }
+        });
+      });
+    });
+  })();
+</script>
