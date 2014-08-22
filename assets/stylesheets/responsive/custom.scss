@@ -424,7 +424,7 @@ a.link_button_green_large {
 
 /* Authority page */
 .public-body__details {
-  clear: both; // clear the #header_left and #header_right above it
+  clear: both; // Clear the #header_left and #header_right above it.
 
   & > div {
     @include grid-column(12);
@@ -443,7 +443,15 @@ a.link_button_green_large {
   }
 
   h2 {
-    font-size: 1.4em; // down from default 2em
+    font-size: 1.4em; // Down from default 2em.
+  }
+
+  .public-body__links {
+    padding-left: 20px; // Down from the browser default 40px.
+
+    a img {
+      vertical-align: -3px; // Eg: the 16px RSS icon.
+    }
   }
 }
 

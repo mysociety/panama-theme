@@ -82,15 +82,24 @@
                 follower_count,
                 :count => follower_count) %>
             </p>
-            <!-- <%= render :partial => 'track/tracking_links', :locals => { :track_thing => @track_thing, :own_request => false, :location => 'sidebar' } %> -->
-            <p>
-                <%= link_to _("Track requests to this authority"), '/some_url', :class => "link_button_green" %>
-            </p>
 
-            <ul>
+          <%# This bit of logic is stolen from track/tracking_links.html.erb in core alaveteli %>
+          <%
+              if @user
+                  existing_track = TrackThing.find_existing(@user, @track_thing)
+              end
+
+              if existing_track %>
+            <p><%= @track_thing.params[:verb_on_page_already] %></p>
+            <p><%= link_to _("Unsubscribe"), {:controller => 'track', :action => 'update', :track_id => existing_track.id, :track_medium => "delete", :r => request.fullpath}, :class => "link_button_green" %></p>
+          <% else %>
+            <p><%= link_to _("Track requests to this authority"), do_track_path(@track_thing), :class => "link_button_green" %></p>
+          <% end %>
+
+            <ul class="public-body__links">
               <li>
-                <%= link_to image_tag('feed-16.png', :alt => "RSS icon"), '/another_url' %>
-                <%= link_to _('RSS feed of updates'),  '/another_url' %>
+                <%= link_to _('RSS feed of updates'),  do_track_path(@track_thing, 'feed') %>
+                <%= link_to image_tag('feed-16.png', :alt => "RSS icon"), do_track_path(@track_thing, 'feed') %>
               </li>
 
               <% if !@public_body.calculated_home_page.nil? %>
