@@ -1,53 +1,7 @@
 <% @title = h(@public_body.name) + _(" - view and make Freedom of Information requests") %>
 <div id="main_content">
     <div id="header_right">
-      <h2><%= _('Follow this authority')%></h2>
-
-      <% follower_count = TrackThing.count(:all, :conditions => ["public_body_id = ?", @public_body.id]) %>
-      <p>
-        <%= n_("{{count}} person is following this authority",
-                "{{count}} people are following this authority",
-                follower_count,
-                :count => content_tag(:span, follower_count, :id => "follow_count")) %>
-      </p>
-
-        <%= render :partial => 'track/tracking_links', :locals => { :track_thing => @track_thing, :own_request => false, :location => 'sidebar' } %>
-        <h2><%= _('More about this authority')%></h2>
-        <% if !@public_body.calculated_home_page.nil? %>
-            <%= link_to _('Home page of authority'), @public_body.calculated_home_page %><br>
-        <% end %>
-        <% if !@public_body.publication_scheme.empty? %>
-            <%= link_to _('Publication scheme'), @public_body.publication_scheme %><br>
-        <% end %>
-        <% unless @public_body.disclosure_log.empty? %>
-            <%= link_to _('Disclosure log'), @public_body.disclosure_log %><br>
-        <% end %>
-        <% if @public_body.has_tag?("charity") %>
-            <% for tag_value in @public_body.get_tag_values("charity") %>
-                <% if tag_value.match(/^SC/) %>
-                    <%= link_to _('Charity registration'), "http://www.oscr.org.uk/CharityIndexDetails.aspx?id=" + tag_value %><br>
-                <% else %>
-                    <%= link_to _('Charity registration'), "http://www.charity-commission.gov.uk/SHOWCHARITY/RegisterOfCharities/CharityFramework.aspx?RegisteredCharityNumber=" + tag_value %><br>
-                <% end %>
-            <% end %>
-        <% end %>
-        <%= link_to _('View FOI email address'), view_public_body_email_path(@public_body.url_name) %><br>
-        <%= link_to _("Ask us to update FOI email"), new_change_request_path(:body => @public_body.url_name) %><br>
-        <h2><%= _('Transparency Information') %></h2>
-        <% if !@public_body.transparency_info_url.blank? %>
-            <%= link_to _('Transparency Information'), @public_body.transparency_info_url %><br>
-        <% else %>
-            <%= _("We don't have Transparency Information for this authority yet.") %>
-        <% end %>
-        <p>
-            <%= _('All public authorities must disclose information about their organisation online') %> <%= link_to _('find out more'), help_transparency_path %>
-        </p>
-        <h2><%= _('ATI Officer') %></h2>
-        <% if !@public_body.ati_officer_details.blank? %>
-            <%= simple_format(@public_body.ati_officer_details) %><br>
-        <% else %>
-            <%= _("We don't have the ATI Officer details for this authority yet.") %>
-        <% end %>
+      <img src="http://placehold.it/500x500/eeeeee/cccccc/&text=pie+chart">
     </div>
 
     <div id="header_left">
@@ -92,6 +46,77 @@
                     <%= _("<strong>Note:</strong> Because we're testing, requests are being sent to {{email}} rather than to the actual authority.", :email => @public_body.override_request_email) %>
                 </p>
             <% end %>
+        </div>
+    </div>
+
+    <div class="public-body__details">
+
+        <div>
+            <h2><%= _('Transparency Information') %></h2>
+          <% if !@public_body.transparency_info_url.blank? %>
+            <p><%= link_to _('View this authority’s Transparency Information'), @public_body.transparency_info_url %></p>
+          <% else %>
+            <p><%= _("We don’t have Transparency Information for this authority yet.") %></p>
+          <% end %>
+            <p>
+                <%= _('All public authorities must disclose information about their organisation online.') %> <%= link_to _('Find out more.'), help_transparency_path %>
+            </p>
+        </div>
+
+        <div>
+            <h2><%= _('ATI Officer') %></h2>
+          <% if !@public_body.ati_officer_details.blank? %>
+              <%= simple_format(@public_body.ati_officer_details) %><br>
+          <% else %>
+              <%= _("We don’t have the ATI Officer details for this authority yet.") %>
+          <% end %>
+        </div>
+
+        <div>
+            <h2><%= _('Follow this authority')%></h2>
+
+            <% follower_count = TrackThing.count(:all, :conditions => ["public_body_id = ?", @public_body.id]) %>
+            <p>
+                <%= n_("{{count}} person is following this authority.",
+                "{{count}} people are following this authority.",
+                follower_count,
+                :count => follower_count) %>
+            </p>
+            <!-- <%= render :partial => 'track/tracking_links', :locals => { :track_thing => @track_thing, :own_request => false, :location => 'sidebar' } %> -->
+            <p>
+                <%= link_to _("Track requests to this authority"), '/some_url', :class => "link_button_green" %>
+            </p>
+
+            <ul>
+              <li>
+                <%= link_to image_tag('feed-16.png', :alt => "RSS icon"), '/another_url' %>
+                <%= link_to _('RSS feed of updates'),  '/another_url' %>
+              </li>
+
+              <% if !@public_body.calculated_home_page.nil? %>
+                <li><%= link_to _('Home page of authority'), @public_body.calculated_home_page %></li>
+              <% end %>
+
+              <% if !@public_body.publication_scheme.empty? %>
+                <li><%= link_to _('Publication scheme'), @public_body.publication_scheme %></li>
+              <% end %>
+
+              <% unless @public_body.disclosure_log.empty? %>
+                <li><%= link_to _('Disclosure log'), @public_body.disclosure_log %></li>
+              <% end %>
+
+              <% if @public_body.has_tag?("charity") %>
+                <% for tag_value in @public_body.get_tag_values("charity") %>
+                  <% if tag_value.match(/^SC/) %>
+                    <li><%= link_to _('Charity registration'), "http://www.oscr.org.uk/CharityIndexDetails.aspx?id=" + tag_value %></li>
+                  <% else %>
+                    <li><%= link_to _('Charity registration'), "http://www.charity-commission.gov.uk/SHOWCHARITY/RegisterOfCharities/CharityFramework.aspx?RegisteredCharityNumber=" + tag_value %></li>
+                  <% end %>
+                <% end %>
+              <% end %>
+
+                <li><%= link_to _('View FOI email address'), view_public_body_email_path(@public_body.url_name) %></li>
+                <li><%= link_to _("Ask us to update FOI email"), new_change_request_path(:body => @public_body.url_name) %></li>
         </div>
     </div>
 

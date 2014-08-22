@@ -421,6 +421,41 @@ a.link_button_green_large {
   }
 }
 
+
+/* Authority page */
+.public-body__details {
+  clear: both; // clear the #header_left and #header_right above it
+
+  & > div {
+    @include grid-column(12);
+    padding-top: 30px;
+
+    @include respond-min( $main_menu-mobile_menu_cutoff ){
+      @include grid-column($columns:4);
+      padding-top:27px;
+      @include ie8{
+        padding-left: 0.9375em;
+      }
+      @include lte-ie7 {
+        width: 17.438em;
+      }
+    }
+  }
+
+  h2 {
+    font-size: 1.4em; // down from default 2em
+  }
+}
+
+#foi_results_section {
+  padding-top: 30px;
+
+  & > :first-child {
+    margin-top: 0;
+  }
+}
+
+
 /* Request page */
 #request_header {
   border-bottom: 1px solid #ddd;
