@@ -71,7 +71,7 @@
             <% end %>
 
             <div id="stats">
-                <%= render :partial => 'stats' %>
+                <%= render :partial => 'stats', :locals => {:stats => @public_body.get_stats } %>
             </div>
 
         <% else %>
