@@ -5,6 +5,7 @@ $antai-mid-teal: #2A93AD;
 $antai-dark-teal: #007489;
 $antai-bright-blue: #00c0e9;
 $antai-bright-green: #8cc63e;
+$antai-very-pale-teal: #EBF5F7;
 
 $body-bg: #fff;
 $body-font-color: #333;
@@ -460,6 +461,41 @@ a.link_button_green_large {
 
   & > :first-child {
     margin-top: 0;
+  }
+}
+
+#filter_requests_form {
+  background: $antai-very-pale-teal;
+  padding: 20px;
+  margin-bottom: 0;
+
+  label {
+    font-size: 1em; // Down from label.form_label default of 1.1em.
+
+    &.title {
+      width: auto; // Stop "Made between" breaking onto two lines to fit into default 110px column.
+    }
+  }
+
+  input[type=text]{
+    // Make text inputs smaller, so they're less distracting.
+    height: auto;
+    padding: 6px;
+    font-size: 1em;
+    margin-bottom: 0.5em;
+  }
+
+  h3.title {
+    display: inline;
+    font-size: 1em;
+
+    &:after {
+      content: ":"
+    }
+  }
+
+  & > .list-filter-item:last-child {
+    margin: 1em 0 0 0; // Remove default 0.5em margin-bottom and add a margin-top.
   }
 }
 
