@@ -1,0 +1,58 @@
+
+<% if !@post_redirect.nil? && @post_redirect.reason_params[:user_name] %>
+    <% @title = _("Sign in") %>
+    <div id="sign_alone">
+
+        <p id="sign_in_reason">
+        <% if @post_redirect.reason_params[:web].empty? %>
+            <%= _('Please sign in as ')%><%= link_to h(@post_redirect.reason_params[:user_name]), @post_redirect.reason_params[:user_url] %>.
+        <% else %>
+            <%= @post_redirect.reason_params[:web] %>,
+             <%= _('please sign in as ')%><%= link_to h(@post_redirect.reason_params[:user_name]), @post_redirect.reason_params[:user_url] %>.
+        <% end %>
+  </p>
+        <% if @post_redirect.post_params["controller"] == "admin_general" %>
+          <% unless AlaveteliConfiguration::disable_emergency_user %>
+           <p id="superuser_message"><%= _("Don't have a superuser account yet?") %> <%= link_to _("Sign in as the emergency user"), @post_redirect.uri + "?emergency=1" %></p>
+          <% end %>
+        <% end %>
+
+    <%= render :partial => 'signin', :locals => { :sign_in_as_existing_user => true } %>
+
+    </div>
+
+<% else %>
+    <% @title = _('Sign in or make a new account') %>
+
+    <div id="sign_together">
+      <% if !@post_redirect.nil? %>
+        <div id="sign_in_reason">
+          <% if @post_redirect.reason_params[:web].empty? %>
+            <h1><%= _('Please sign in or create an account.') %></h1>
+          <% else %>
+            <%# special case if they're in the middle of the FOI request creation flow %>
+            <% if @post_redirect.post_params[:controller] == 'request' and @post_redirect.post_params[:action] == 'new' %>
+              <h1><%= _('4. Send your request') %></h1>
+              <p><%= _('Almost there! {{reason}}, please create an account or sign in with your existing details.', :reason => @post_redirect.reason_params[:web]) %></p>
+            <% else %>
+              <h1><%= _('{{reason}}, please create an account or sign in with your existing details.', :reason => @post_redirect.reason_params[:web]) %></h1>
+            <% end %>
+          <% end %>
+        </div>
+      <% end %>
+        <div id="sign-together__sign-in">
+          <div class="sign-in-form-wrapper">
+            <p class="sign-in-form-pretitle">Got an account?</p>
+            <h1><%= _('Sign in') %></h1>
+            <%= render :partial => 'signin', :locals => { :sign_in_as_existing_user => false } %>
+          </div>
+        </div>
+        <div id="sign-together__sign-up">
+          <p class="sign-up-form-pretitle">Not been here before?</p>
+          <h1><%= _('Create an account') %></h1>
+          <%= render :partial => 'signup' %>
+        </div>
+    </div>
+
+<% end %>
+
