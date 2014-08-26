@@ -1,4 +1,4 @@
 // ...
 //= require jquery.flot.min
-//= require jquery.flot.pie
+//= require jquery.flot.categories
 //= require stats-authority-graphs

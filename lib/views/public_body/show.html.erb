@@ -197,9 +197,9 @@
 stats = @public_body.get_stats
 simple_data = %Q|
 [
-  { label: '&nbsp;#{_("Successful")}', data: #{stats[:success] + stats[:partial_success]}, ident: 'success', color: '#aab26e' },
-  { label: '&nbsp;#{_("Unsuccessful")}', data: #{stats[:rejected] + stats[:not_held] + stats[:withdrawn]}, ident: 'unsuccessful', color: '#ff7959' },
-  { label: '&nbsp;#{_("Unresolved")}', data: #{stats[:waiting_classification] + stats[:attention_requested] + stats[:requires_admin] + stats[:internal_review] + stats[:waiting_clarification] + stats[:gone_postal] + stats[:in_error] + stats[:waiting_response]}, ident: 'unresolved', color: '#e69e5d' }
+  ['#{_("Successful")}',  #{stats[:success] + stats[:partial_success]}],
+  ['#{_("Unsuccessful")}', #{stats[:rejected] + stats[:not_held] + stats[:withdrawn]}],
+  ['#{_("Unresolved")}', #{stats[:waiting_classification] + stats[:attention_requested] + stats[:requires_admin] + stats[:internal_review] + stats[:waiting_clarification] + stats[:gone_postal] + stats[:in_error] + stats[:waiting_response]}]
 ]|
 %>
 
