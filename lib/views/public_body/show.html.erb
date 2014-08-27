@@ -1,24 +1,34 @@
-<% @title = h(@public_body.name) + _(" - view and make Freedom of Information requests") %>
-<% stats = @public_body.get_stats %>
+<%
+@title = h(@public_body.name) + _(" - view and make Freedom of Information requests")
+stats = @public_body.get_stats
+successful = stats[:success] + stats[:partial_success]
+unsuccessful = stats[:rejected] + stats[:not_held] + stats[:withdrawn]
+unresolved = stats[:waiting_classification] + stats[:attention_requested] + stats[:requires_admin] + stats[:internal_review] + stats[:waiting_clarification] + stats[:gone_postal] + stats[:in_error] + stats[:waiting_response]
+simple_data = [
+  [_("Successful"), successful],
+  [_("Unsuccessful"), unsuccessful],
+  [_("Unresolved"), unresolved]
+]
+%>
 <div id="main_content">
     <div id="header_right">
       <h2 class="stats-chart__header"><%= _("Request outcomes") %></h2>
-      <div id="stats_chart">
+      <div id="stats_chart" data-stats="<%= simple_data.to_json  %>">
         <table class="stats_chart__table">
           <tr>
             <th>Outcome</th><th>Number of requests</th>
           </tr>
           <tr>
             <td class="stats_chart__table__left"><%= _("Successful") %></td>
-            <td class="stats_chart__table__right"><%= stats[:success] + stats[:partial_success] %></td>
+            <td class="stats_chart__table__right"><%= successful %></td>
           </tr>
           <tr>
             <td class="stats_chart__table__left"><%= _("Unsuccessful") %></td>
-            <td class="stats_chart__table__right"><%= stats[:rejected] + stats[:not_held] + stats[:withdrawn] %></td>
+            <td class="stats_chart__table__right"><%= unsuccessful %></td>
           </tr>
           <tr>
             <td class="stats_chart__table__left"><%= _("Unresolved") %></td>
-            <td class="stats_chart__table__right"><%= stats[:waiting_classification] + stats[:attention_requested] + stats[:requires_admin] + stats[:internal_review] + stats[:waiting_clarification] + stats[:gone_postal] + stats[:in_error] + stats[:waiting_response] %></td>
+            <td class="stats_chart__table__right"><%= unresolved %></td>
           </tr>
         </table>
       </div>
@@ -212,19 +222,6 @@
         <% end %>
     </div>
 </div>
-
-<%
-simple_data = %Q|
-[
-  ['#{_("Successful")}',  #{stats[:success] + stats[:partial_success]}],
-  ['#{_("Unsuccessful")}', #{stats[:rejected] + stats[:not_held] + stats[:withdrawn]}],
-  ['#{_("Unresolved")}', #{stats[:waiting_classification] + stats[:attention_requested] + stats[:requires_admin] + stats[:internal_review] + stats[:waiting_clarification] + stats[:gone_postal] + stats[:in_error] + stats[:waiting_response]}]
-]|
-%>
-
-<script type="text/javascript">
-  var data = <%= simple_data.html_safe %>;
-</script>
 
 <!--[if lte IE 8]><%= javascript_include_tag "excanvas.min.js" %><![endif]-->
 <%= javascript_include_tag "stats-authority" %>
