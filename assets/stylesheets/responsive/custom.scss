@@ -424,6 +424,19 @@ a.link_button_green_large {
 
 
 /* Authority page */
+.stats-chart__header {
+  font-size: 1.4em; // Down from default 2em.
+}
+.stats_chart__table {
+  .stats_chart__table__left {
+    padding-right: 1em;
+    text-align: left;
+  }
+  .stats_chart__table__right {
+    padding-left: 1em;
+    text-align: center;
+  }
+}
 .public-body__details {
   clear: both; // Clear the #header_left and #header_right above it.
 

@@ -1,7 +1,27 @@
 <% @title = h(@public_body.name) + _(" - view and make Freedom of Information requests") %>
+<% stats = @public_body.get_stats %>
 <div id="main_content">
     <div id="header_right">
-      <div id="stats_chart"></div>
+      <h2 class="stats-chart__header"><%= _("Request outcomes") %></h2>
+      <div id="stats_chart">
+        <table class="stats_chart__table">
+          <tr>
+            <th>Outcome</th><th>Number of requests</th>
+          </tr>
+          <tr>
+            <td class="stats_chart__table__left"><%= _("Successful") %></td>
+            <td class="stats_chart__table__right"><%= stats[:success] + stats[:partial_success] %></td>
+          </tr>
+          <tr>
+            <td class="stats_chart__table__left"><%= _("Unsuccessful") %></td>
+            <td class="stats_chart__table__right"><%= stats[:rejected] + stats[:not_held] + stats[:withdrawn] %></td>
+          </tr>
+          <tr>
+            <td class="stats_chart__table__left"><%= _("Unresolved") %></td>
+            <td class="stats_chart__table__right"><%= stats[:waiting_classification] + stats[:attention_requested] + stats[:requires_admin] + stats[:internal_review] + stats[:waiting_clarification] + stats[:gone_postal] + stats[:in_error] + stats[:waiting_response] %></td>
+          </tr>
+        </table>
+      </div>
     </div>
 
     <div id="header_left">
@@ -194,7 +214,6 @@
 </div>
 
 <%
-stats = @public_body.get_stats
 simple_data = %Q|
 [
   ['#{_("Successful")}',  #{stats[:success] + stats[:partial_success]}],
