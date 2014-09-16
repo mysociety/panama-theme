@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     end
 
     match '/help/transparency' => 'help#transparency', :as => :help_transparency
+    match '/help/legal_support' => 'help#legal_support', :as => :help_legal_support
     match '/help/faq' => 'help#faq', :as => :help_faq
     match '/help/comments' => 'help#comments', :as => :help_comments
 
