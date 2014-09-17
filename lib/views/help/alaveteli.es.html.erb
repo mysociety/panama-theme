@@ -4,43 +4,87 @@
 <%= render :partial => 'sidebar' %>
 <div id="left_column_flip">
   <h1><%= @title %></h1>
+
+   <!-- If you add questions/answers to this page,
+     remember to update the Table of Contents. -->
+
+  <ol class="table_of_contents">
+    <li><a href="#who_for">¿Para quién está dirigida esta plataforma?</a></li>
+    <li><a href="#how_work">¿Cómo funciona?</a></li>
+    <li><a href="#why_request">¿Por qué yo haría una petición/solicitud?</a></li>
+    <li><a href="#why_reply">¿Por qué contestaría una autoridad?</a></li>
+    <li><a href="#what_unhappy">¿Qué pasa si no estoy conforme con una respuesta?</a></li>
+    <li><a href="#who_runs">¿Quién dirige la plataforma?</a></li>
+  </ol>
+
   <dl>
-    <dt>¿Para quién está dirigida esta plataforma?</dt>
+    <dt id="who_for">¿Para quién está dirigida esta plataforma? <a href="#who_for">#</a> </dt>
 
-    <dd>
-      <p>De acuerdo al artículo 43 de la Constitución Politica de la Republica de Panamá, toda persona tiene derecho a solicitar información de acceso público o de interés colectivo que repose en bases de datos o registros a cargo de servidores públicos o de personas privadas que presten servicios públicos, siempre que ese acceso no haya sido limitado por disposición escrita y por mandato de la ley, así como para exigir  su tratamiento leal y rectificación.</p>
+    <dd class="human_and_legal">
+      <div>
+        <p>De acuerdo al <a href="http://www.antai.gob.pa/publicaciones/constituciondepanama.pdf">artículo 43 de la Constitución Politica</a> de la Republica de Panamá, toda persona tiene derecho a solicitar información de acceso público o de interés colectivo que repose en bases de datos o registros a cargo de servidores públicos o de personas privadas que presten servicios públicos, siempre que ese acceso no haya sido limitado por disposición escrita y por mandato de la ley, así como para exigir  su tratamiento leal y rectificación.</p>
+      </div>
+      <div>
+        <h3>CONSTITUCIÓN POLÍTICA DE LA REPÚBLICA DE PANAMÁ</h3>
+        <p><strong>Articulo 43.</strong> Toda persona tiene derecho a solicitar información de acceso público o de interés colectivo que repose en bases de datos o registros a cargo de servidores públicos o de personas privadas que presten servicios públicos, siempre que ese acceso no haya sido limitado por disposición escrita y por mandato de la Ley, así como para exigir su tratamiento leal y rectificación.<br/><a href="http://www.antai.gob.pa/publicaciones/constituciondepanama.pdf">Lea la ley completa &raquo;</a></p>
     </dd>
 
-    <dt>¿Cómo funciona?</dt>
+    <dt id="how_work">¿Cómo funciona? <a href="#how_work">#</a> </dt>
 
-    <dd>
-      <p>Las personas interesadas en solicitar información a una institución pública, realiza una solicitud mediante esta plataforma electrónica.  Una vez el sistema registra la solicitud, la envía electrónicamente al oficial de información la cual dentro de tiempo 30 días a partir de la fecha de la presentación de la solicitud, le contestara mediante esta plataforma electrónica.  De tratarse de una solicitud compleja o extensa, el funcionario informara, dentro de los 30 días calendarios antes señalados, la necesidad de extender el término para recopilar la información solicitada.</p>
+    <dd class="human_and_legal">
+      <div>
+        <p>Las personas interesadas en solicitar información a una institución pública, realiza una solicitud mediante esta plataforma electrónica.  Una vez el sistema registra la solicitud, la envía electrónicamente al oficial de información la cual dentro de tiempo 30 días a partir de la fecha de la presentación de la solicitud, le contestara mediante esta plataforma electrónica.  De tratarse de una solicitud compleja o extensa, el funcionario informara, dentro de los 30 días calendarios antes señalados, la necesidad de extender el término para recopilar la información solicitada. <a href="http://www.antai.gob.pa/publicaciones/Ley-6-de-22-enero-2002.pdf">Artículo 7 de la ley 6 del 2002</a></p>
+      </div>
+      <div>
+        <h3>Ley 6 del 22 de enero del 2002</h3>
+        <p>Artículo 7. El funcionario receptor tendrá treinta días calendario a partir de la fecha de la presentación de la solicitud, para contestarla por escrito, y, en caso de que ésta no posea el o los documentos o registros solicitados, así lo informará. Si el funcionario tiene conocimiento que otra institución tiene o pueda tener en su poder dichos documentos o documentos similares, estará obligado a indicárselo al solicitante. De tratarse de una solicitud compleja o extensa, el funcionario informará por escrito, dentro de los treinta días calendario antes señalados, la necesidad de extender el término para recopilar la información solicitada. En ningún caso, dicho término podrá exceder de treinta días calendarios adicionales. Se deberá prever un mecanismo claro y simple de constancia de la entrega efectiva de la información al solicitante, que puede hacerse también a través de correo electrónico cuando se disponga de tal facilidad y, en todo caso, cuando la solicitud hubiere sido presentada por esa vía.</p>
+
+        <p>En caso de que la información solicitada por la persona ya esté disponible al público en medios impresos tales como libros, compendios, trípticos, archivos públicos de la administración, así como también en formatos electrónicos disponibles en Internet o en cualquier otro medio, se le hará saber la fuente, el lugar y la forma en que puede tener acceso a dicha información previamente publicada.<br/><a href="http://www.antai.gob.pa/publicaciones/Ley-6-de-22-enero-2002.pdf">Lea la ley completa &raquo;</a></p>
+      </div>
     </dd>
 
-    <dt>¿Por qué yo haría una petición/solicitud?</dt>
+    <dt id="why_request">¿Por qué yo haría una petición/solicitud? <a href="#why_request">#</a> </dt>
 
     <dd>
       <p>Porque tiene interés en solicitar información de acceso público o de interés colectivo que repose en bases de datos o registros a cargo de servidores públicos o de personas privadas que presten servicios públicos</p>
     </dd>
 
-    <dt>¿Por qué contestaría una autoridad?</dt>
+    <dt id="why_reply">¿Por qué contestaría una autoridad? <a href="#why_reply">#</a> </dt>
 
     <dd>
-      <p>La Ley 6 de 22 de enero de 2002 que dicta normas para la transparencia en la gestión pública, establece la acción de Habeas Data y Dicta otras disposiciones obliga a funcionario a contestar una solicitud y establece la obligación de informar por parte del Estado.</p>
+      <p>La Ley 6 de 22 de enero de 2002 que dicta normas para la transparencia en la gestión pública, establece la acción de Habeas Data y dicta otras disposiciones establece la obligación de informar por parte del Estado tal como se encuentra estipulado en el artículo 8 de la precitada ley.</p>
     </dd>
 
-    <dt>¿Qué pasa si no estoy conforme con una respuesta?</dt>
-    <dd>
-      <p>Si no está satisfecho con la información suministrada por la institución tiene 2 opciones:</p>
-      <ol>
-        <li>Acción de Habeas Data (Tribunal Superior o Pleno de la Corte, dependiendo de la jurisdicción)</li>
-        <li>Presentar un reclamo de Acceso a la Información ante la Autoridad Nacional de Transparencia y Acceso a la Información (ANTAI)</li>
-      </ol>
+    <dt id="what_unhappy">¿Qué pasa si no estoy conforme con una respuesta? <a href="#what_unhappy">#</a> </dt>
+    <dd class="human_and_legal">
+      <div>
+        <p>Si no está satisfecho con la información suministrada por la institución tiene 2 opciones:</p>
+        <ol>
+          <li>Acción de Habeas Data (Tribunal Superior o Pleno de la Corte, dependiendo de la jurisdicción). <a href="http://www.antai.gob.pa/publicaciones/Ley-6-de-22-enero-2002.pdf">Artículo 17 de la Ley 6 de 22 de enero de 2002</a></li>
+          <li>Presentar un reclamo de Acceso a la Información ante la Autoridad Nacional de Transparencia y Acceso a la Información (ANTAI). <a href="http://www.antai.gob.pa/publicaciones/ley33-25-abril-2013.pdf">Artículo 36 de la Ley 33 del 25 de abril de 2013</a></li>
+        </ol>
+      </div>
+      <div>
+        <h3>Artículo 17 de la Ley 6 de 22 de enero de 2002</h3>
+
+        <p><strong>Artículo 17.</strong> Toda persona estará legitimada para promover acción de Hábeas Data, con miras a garantizar el derecho de acceso a la información previsto en esta Ley, cuando el funcionario público titular o responsable del registro, archivo o banco de datos en el que se encuentra la información o dato personal reclamado, no le haya suministrado lo solicitado o si suministrado lo requerido se haya hecho de manera insuficiente o en forma inexacta.<br/><a href="http://www.antai.gob.pa/publicaciones/Ley-6-de-22-enero-2002.pdf">Lea la ley completa &raquo;</a></p>
+
+        <h3>Artículo 36 de la Ley 33 del 25 de abril de 2013</h3>
+
+        <p><strong>Artículo 36.</strong> Toda persona puede recurrir ante la Autoridad por el incumplimiento de los procedimientos y términos establecidos para el efectivo ejercicio del derecho de petición y derecho de acceso a la información pública en poder del Estado, previstos en las disposiciones legales, dentro de los treinta días a partir de la fecha en que se demuestre se incurrió en el incumplimiento. Para que la Autoridad gestione un reclamo por el incumplimiento del efectivo ejercicio del derecho de petición y derecho de acceso a la información pública en poder del Estado, es necesario que la persona interesada demuestre haber presentado una petición ante la institución.<br/><a href="http://www.antai.gob.pa/publicaciones/ley33-25-abril-2013.pdf">Lea la ley completa &raquo;</a></p>
+      </div>
     </dd>
 
-    <dt>¿Quién dirige la plataforma?</dt>
-    <dd>
-      <p>La plataforma electrónica para acceso a la información a nivel gubernamental es dirigida por la Autoridad Nacional de Transparencia y Acceso a la Información (ANTAI), en su calidad de agente rector en el tema de Derecho Constitucional de petición y acceso a la información.</p>
+    <dt id="who_runs">¿Quién dirige la plataforma? <a href="#who_runs">#</a> </dt>
+    <dd class="human_and_legal">
+      <div>
+        <p>La plataforma electrónica para acceso a la información a nivel gubernamental es dirigida por la Autoridad Nacional de Transparencia y Acceso a la Información (ANTAI), en su calidad de agente rector en el tema de Derecho Constitucional de petición y acceso a la información. <a href="http://www.antai.gob.pa/publicaciones/ley33-25-abril-2013.pdf">Artículo 2 de la Ley 33 del 25 de abril de 2013</a></p>
+      </div>
+      <div>
+        <h3>Artículo 2 de la Ley 33 del 25 de abril de 2013</h3>
+
+        <p>La Autoridad velará por el cumplimiento de los derechos consagrados en la Constitución Política de la República de Panamá en el tema de Derecho Constitucional de petición y de acceso a la información, así como por los derechos previstos en los convenios, acuerdos, tratados, programas internacionales y nacionales en materia de prevención contra la corrupción y por la inserción e implementación de las nuevas políticas de prevención en la gestión pública a nivel gubernamental por iniciativa propia o por propuestas nacionales o internacionales.<a href="http://www.antai.gob.pa/publicaciones/ley33-25-abril-2013.pdf">Lea la ley completa &raquo;</a></p>
+      </div>
     </dd>
   </dl>
   <div id="hash_link_padding"></div>
