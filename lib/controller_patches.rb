@@ -14,8 +14,6 @@ Rails.configuration.to_prepare do
         end
         def faq
         end
-        def comments
-        end
     end
 
     UserController.class_eval do
