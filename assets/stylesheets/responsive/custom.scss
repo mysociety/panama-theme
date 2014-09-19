@@ -761,7 +761,7 @@ div.controller_help {
 }
 
 .human_and_legal > div:first-child + div {
-  color: lighten($body-font-color, 50%);
+  color: lighten($body-font-color, 30%);
   font-size: 0.9em;
   line-height: 1.4em;
 
@@ -771,6 +771,10 @@ div.controller_help {
     &:hover, &:focus, &:active {
       color: $link-color-hover;
     }
+  }
+
+  p {
+    text-align: justify;
   }
 }
 
