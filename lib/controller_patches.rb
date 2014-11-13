@@ -180,6 +180,14 @@ Rails.configuration.to_prepare do
                 end
             end
         end
+
+        def user_params(key = :user)
+            # Override user_params whitelist to allow our additional fields
+            params[key].slice(:name, :email, :password, :password_confirmation,
+                              :phone_number, :user_type, :address,
+                              :national_id_number, :company_name,
+                              :company_number, :incorporation_date)
+        end
     end
 
     AdminGeneralController.class_eval do

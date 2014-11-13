@@ -37,6 +37,26 @@ describe UserController do
     get :signchangecompanyincdate
     expect(response.status).to eq(200)
   end
+
+  it "should override user_params" do
+    params = {
+      :user => {
+        :name => 'test',
+        :email => 'test@example.com',
+        :password => 'password',
+        :password_confirmation => 'password',
+        :phone_number => '123456789',
+        :user_type => 'individual',
+        :address => '1, street, town, country, POSTCODE',
+        :national_id_number => 'aab123464678',
+        :spurious_parameter => 'spurious'
+      }
+    }
+    expected_params = params[:user].clone
+    expected_params.delete(:spurious_parameter)
+    controller.params = params
+    expect(controller.user_params).to eq expected_params
+  end
 end
 
 describe AdminGeneralController, "when the stats action is patched" do
