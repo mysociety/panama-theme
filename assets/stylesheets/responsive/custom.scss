@@ -690,6 +690,12 @@ div.controller_help {
     margin-top: 10px;
   }
 
+  #left_column_flip {
+    p, ol li, dd div {
+      text-align: justify;
+    }
+  }
+
   dt, h1 {
     &:hover > a {
       color: $link-color-hover;
