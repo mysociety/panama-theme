@@ -690,12 +690,6 @@ div.controller_help {
     margin-top: 10px;
   }
 
-  #left_column_flip {
-    p, ol li, dd div {
-      text-align: justify;
-    }
-  }
-
   dt, h1 {
     &:hover > a {
       color: $link-color-hover;
@@ -743,6 +737,28 @@ div.controller_help {
   }
 }
 
+.human_and_legal > div:first-child + div {
+  color: lighten($body-font-color, 30%);
+  font-size: 0.9em;
+  line-height: 1.4em;
+  text-align: left;
+  margin-top: 1em;
+
+  h3 {
+    margin: 0 0 0.6em 0;
+    font-size: 1.2em;
+    color: inherit;
+  }
+
+  a {
+    color: mix($link-color, #fff, 80%);
+
+    &:hover, &:focus, &:active {
+      color: $link-color-hover;
+    }
+  }
+}
+
 @include respond-min(36em){
   .human_and_legal {
     @include grid-row();
@@ -760,27 +776,9 @@ div.controller_help {
           $offset: 1,
           $collapse: true
         );
-        padding-left: 2em;
+        margin-top: 0;
       }
     }
-  }
-}
-
-.human_and_legal > div:first-child + div {
-  color: lighten($body-font-color, 30%);
-  font-size: 0.9em;
-  line-height: 1.4em;
-
-  a {
-    color: mix($link-color, #fff, 80%);
-
-    &:hover, &:focus, &:active {
-      color: $link-color-hover;
-    }
-  }
-
-  p {
-    text-align: justify;
   }
 }
 
