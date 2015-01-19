@@ -745,9 +745,21 @@ div.controller_help {
   margin-top: 1em;
 
   h3 {
-    margin: 0 0 0.6em 0;
+    margin: 0;
     font-size: 1.2em;
     color: inherit;
+  }
+
+  .full_law {
+    display: block;
+    font-size: 0.9em;
+    font-weight: bold;
+    margin: 0.6em 0;
+  }
+
+  // In the unlikely event that there isn't a full_law link
+  h3 + p {
+    margin-top: 0.8em;
   }
 
   a {
