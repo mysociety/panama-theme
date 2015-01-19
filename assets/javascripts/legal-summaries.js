@@ -1,15 +1,14 @@
 (function($) {
 
-  var summarise = function(){
+  var summarise = function summarise(){
     var $div = $(this);
     var $firstP = $('p:first-of-type', $div);
     var $extraElements = $firstP.nextAll();
 
     if($extraElements.length > 0){
 
-      if($('html').attr('lang') == 'es'){
-        var readMore = '(Ver mas)';
-      } else {
+      var readMore = '(Ver mas)';
+      if($('html').attr('lang') != 'es'){
         var readMore = '(Read more)';
       }
 
