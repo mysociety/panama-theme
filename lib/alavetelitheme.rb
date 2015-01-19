@@ -42,7 +42,7 @@ $alaveteli_route_extensions << 'custom-routes.rb'
     Rails.application.config.assets.paths.unshift theme_asset_path
 end
 # Tell Rails to pre-compile our JS files
-Rails.application.config.assets.precompile += ['stats-authority.js']
+Rails.application.config.assets.precompile += ['stats-authority.js', 'legal-summaries.js']
 
 # Tell FastGettext about the theme's translations: look in the theme's
 # locale-theme directory for a translation in the first place, and if
