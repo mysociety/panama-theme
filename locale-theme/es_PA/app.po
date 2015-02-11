@@ -1,18 +1,20 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
+# Translators:
+# Liz Conlan <liz@mysociety.org>, 2015
 # vdiaz <vdiaz@antai.gob.pa>, 2014
 # Victor Diaz <victor.diaz@cwpanama.net>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: panama-theme\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-16 12:13+0000\n"
-"PO-Revision-Date: 2014-11-24 16:04+0000\n"
-"Last-Translator: vdiaz <vdiaz@antai.gob.pa>\n"
-"Language-Team: Spanish (http://www.transifex.com/projects/p/panama-theme/language/es/)\n"
+"POT-Creation-Date: 2015-01-02 12:13+0000\n"
+"PO-Revision-Date: 2015-02-11 11:05+0000\n"
+"Last-Translator: Liz Conlan <liz@mysociety.org>\n"
+"Language-Team: Spanish (Panama) (http://www.transifex.com/projects/p/panama-theme/language/es_PA/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -920,4 +922,15 @@ msgid ""
 "<p>If you write about this request (for example in a forum or a blog) please"
 " link to this page, and add an\\n            annotation below telling people"
 " about your writing.</p>"
-msgstr "<p>¡Tu solicitud {{law_used_full}} ha sido realizada y <strong>se encuentra en camino</strong></p>\n\n<p><strong>Te enviaremos un correo electronico</strong> cuando haya respuesta, o después de {{late_number_of_days}} días calendario si el organismo público no te ha respondido.</p>\n\n<p>Si escribes sobre tu solicitud en alguna página web o blog, por favor enlaza a esta página, y añade un comentario explicándole a la gente porque realizas esta solicitud.</p>"
+msgstr "<p>¡Tu solicitud {{law_used_full}} ha sido realizada y <strong>se encuentra en camino</strong></p>\\n\\n<p><strong>Te enviaremos un correo electronico</strong> cuando haya respuesta, o después de {{late_number_of_days}} días calendario si el organismo público no te ha respondido.</p>\\n\\n<p>Si escribes sobre tu solicitud en alguna página web o blog, por favor enlaza a esta página, y añade un comentario explicándole a la gente porque realizas esta solicitud.</p>"
+
+msgid "Your <strong>Right to Know</strong>"
+msgstr "Su <strong>Derecho a Saber</strong>"
+
+msgid ""
+"Every citizen has the right to access information held by public bodies. "
+"<strong>By law, they have to respond</strong>."
+msgstr "Todo ciudadano tiene derecho a acceder a la información que se encuentra en poder de las instituciones públicas. <strong>Quienes por Ley, tienen que responder</strong>."
+
+msgid "Find out more about"
+msgstr "Haga clic para saber más acerca de"
