@@ -326,9 +326,6 @@ a.link_button_green_large {
   }
 
   #logged_in_links {
-    top: auto;
-    bottom: 1em;
-
     .greeting, a {
       font-weight: normal;
       color: $banner-link-color;
@@ -355,9 +352,69 @@ a.link_button_green_large {
   }
 }
 
+// Override default header element positions on non-mobile screens to
+// make room for ANTAI and Government logos below user/language links
+@include respond-min( $main_menu-mobile_menu_cutoff ){
+
+  #user_locale_switcher,
+  #logged_in_bar,
+  #logged_in_bar #logged_in_links {
+    position: static; // disable positioning, we'll use floats instead
+  }
+
+  #user_locale_switcher,
+  #logged_in_bar {
+    float: right;
+    margin-top: 0.5em;
+    font-size: 0.9em; // slightly smaller, now the line might be longer
+  }
+
+  #user_locale_switcher {
+    margin-right: 1em; // 1em gutter from edge of container
+  }
+
+  #logged_in_bar {
+    width: auto;
+    padding: 0.5em 0;
+  }
+
+  #logged_in_links {
+    display: inline;
+
+    &:after {
+      content: "\2022";
+      display: inline;
+      color: rgba(255, 255, 255, 0.5);
+      margin-left: 1em;
+      font-size: 0.8em;
+    }
+  }
+
+  #banner #logo_wrapper {
+    width: auto;
+    margin: 0;
+    padding: 2em 1em;
+  }
+
+}
+
+#partners {
+  display: none;
+
+  @include respond-min( $main_menu-mobile_menu_cutoff ){
+    display: block;
+    position: absolute;
+    bottom: 2.2em;
+    right: 1em; // 1em gutter from edge of container
+
+    a {
+      margin-left: 2em;
+    }
+  }
+}
+
 
 #banner {
-
   /* Hide the greeting on smaller devices */
   .greeting {
     display: none;
