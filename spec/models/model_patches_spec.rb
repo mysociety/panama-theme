@@ -103,3 +103,14 @@ describe InfoRequest, " when patched to add a date_nearly_overdue_by method" do
     expect(@ir.date_nearly_overdue_by.strftime("%F")).to eq('2007-10-24')
   end
 end
+
+describe InfoRequest, " when patched to remove mixed case validation" do
+  it "allows all lower-case titles" do
+    request = InfoRequest.new(
+      :title => 'all lower case',
+      :public_body_id => 2,
+      :user_id => 1
+    )
+    expect(request).to be_valid
+  end
+end
