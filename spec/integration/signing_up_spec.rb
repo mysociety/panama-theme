@@ -17,7 +17,7 @@ describe "Signing up" do
 
     click_button "Sign up"
 
-    assert_contain("Now check your email")
+    expect(page).to have_text("Now check your email")
 
     expect(User.where(:email => "test@example.com",
                       :user_type => 'individual',
@@ -41,7 +41,7 @@ describe "Signing up" do
 
     click_button "Sign up"
 
-    assert_contain("Now check your email")
+    expect(page).to have_text("Now check your email")
 
     expect(User.where(:email => "test@example.com",
                       :user_type => 'business',

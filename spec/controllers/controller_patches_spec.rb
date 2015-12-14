@@ -5,7 +5,7 @@ require File.expand_path(File.join(File.dirname(__FILE__),'..','..','..','..','.
 describe UserController do
 
   before(:each) do
-    controller.stub(:authenticated?).and_return(true)
+    allow(controller).to receive(:authenticated?).and_return(true)
   end
 
   it "should get signchangeaddress" do
@@ -61,7 +61,7 @@ end
 
 describe AdminGeneralController, "when the stats action is patched" do
   before(:each) do
-    controller.stub(:authenticated?).and_return(true)
+    allow(controller).to receive(:authenticated?).and_return(true)
   end
 
   it "should add the datestamp of the first request into the context" do
@@ -72,7 +72,7 @@ end
 
 describe AdminGeneralController, "when generating a stats csv" do
   before(:each) do
-    controller.stub(:authenticated?).and_return(true)
+    allow(controller).to receive(:authenticated?).and_return(true)
   end
 
   it "should generate the correct csv" do

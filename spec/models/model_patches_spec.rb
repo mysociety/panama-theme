@@ -14,7 +14,7 @@ describe User do
         }
     )
     expect(user.company_name).to eq("Fake Company")
-    expect(user.is_company?).to be_true
+    expect(user.is_company?).to eq true
 
     user.save
     expect(user.errors.messages.keys).to eq([:email, :name, :hashed_password])
@@ -30,7 +30,7 @@ describe User do
         }
     )
     expect(user.national_id_number).to eq("1")
-    expect(user.is_individual?).to be_true
+    expect(user.is_individual?).to eq true
 
     user.save
     expect(user.errors.messages.keys).to eq([:email, :name, :hashed_password])
@@ -43,9 +43,9 @@ describe User do
         }
     )
     user.save
-    expect(user.errors.messages.keys.include?(:phone_number)).to be_true
-    expect(user.errors.messages.keys.include?(:address)).to be_true
-    expect(user.errors.messages.keys.include?(:national_id_number)).to be_true
+    expect(user.errors.messages.keys.include?(:phone_number)).to eq true
+    expect(user.errors.messages.keys.include?(:address)).to eq true
+    expect(user.errors.messages.keys.include?(:national_id_number)).to eq true
   end
 
   it "missing fields for businesses creates errors" do
@@ -55,10 +55,10 @@ describe User do
         }
     )
     user.save
-    expect(user.errors.messages.keys.include?(:phone_number)).to be_true
-    expect(user.errors.messages.keys.include?(:company_name)).to be_true
-    expect(user.errors.messages.keys.include?(:company_number)).to be_true
-    expect(user.errors.messages.keys.include?(:incorporation_date)).to be_true
+    expect(user.errors.messages.keys.include?(:phone_number)).to eq true
+    expect(user.errors.messages.keys.include?(:company_name)).to eq true
+    expect(user.errors.messages.keys.include?(:company_number)).to eq true
+    expect(user.errors.messages.keys.include?(:incorporation_date)).to eq true
   end
 
   it "user_type should default to individual" do
@@ -87,13 +87,8 @@ end
 describe InfoRequest, " when patched to add a date_nearly_overdue_by method" do
   before do
     @ir = info_requests(:naughty_chicken_request)
-    AlaveteliConfiguration.stub!(:working_or_calendar_days).and_return('calendar')
-    AlaveteliConfiguration.stub!(:reply_nearly_late_after_days).and_return(10)
-  end
-
-  after do
-    AlaveteliConfiguration.unstub!(:working_or_calendar_days)
-    AlaveteliConfiguration.unstub!(:reply_nearly_late_after_days)
+    allow(AlaveteliConfiguration).to receive(:working_or_calendar_days).and_return('calendar')
+    allow(AlaveteliConfiguration).to receive(:reply_nearly_late_after_days).and_return(10)
   end
 
   it "has correct nearly due date" do
