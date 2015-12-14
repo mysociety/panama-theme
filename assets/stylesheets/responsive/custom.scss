@@ -350,6 +350,12 @@ a.link_button_green_large {
       margin: 0 -0.2em 0 0.8em; // 1em of spacing between links
     }
   }
+
+  // make sure the current locale (which isn't a link in Alaveteli 0.23) gets
+  // the same color as the links do
+  .current-locale {
+    @extend %selected-menu-item;
+  }
 }
 
 // Override default header element positions on non-mobile screens to
@@ -460,6 +466,76 @@ a.link_button_green_large {
 
 
 /* Footer */
+
+// This bit cargo-culted from Alaveteli pre-0.23, because we don't want to
+// change to the new footer layout.
+// https://github.com/mysociety/alaveteli/blob/0.22.4.7/app/assets/stylesheets/responsive/_footer_layout.scss
+
+/* Footer layout */
+#footer {
+  width:100%;
+  margin:5em 0 0;
+  padding:0.5em 0;
+}
+
+#footer-nav{
+
+  @include grid-row();
+  @include ie8{
+    width: $main_menu-mobile_menu_cutoff;
+  }
+  img {
+    display: none;
+  }
+
+  ul{
+    padding: 0;
+    list-style: none outside none;
+  }
+
+  @include respond-min( $main_menu-mobile_menu_cutoff ){
+    ul {
+      @include block-grid(4);
+    }
+    @include ie8{
+      #footer-nav ul > li:nth-child(4n+1) {
+        padding-left: 0em;
+        padding-right: 1.40625em;
+      }
+      #footer-nav ul > li:nth-child(4n+2) {
+        padding-left: 0.46875rem;
+        padding-right: 0.9375rem;
+      }
+      #footer-nav ul > li:nth-child(4n+3) {
+        padding-left: 0.9375em;
+        padding-right: 0.46875em;
+      }
+      #footer-nav ul > li:nth-child(4n) {
+        padding-left: 1.40625em;
+        padding-right: 0em;
+      }
+    }
+
+    img {
+      display: inherit;
+      @include lte-ie7 {
+        display: block;
+      }
+    }
+
+  }
+}
+
+// This bit cargo-culted from
+// https://github.com/mysociety/alaveteli/blob/0.22.4.7/app/assets/stylesheets/responsive/_footer_style.scss
+// Because we don't want to switch to the new footer styles in 0.23
+/* Footer styles */
+#footer {
+  text-align: center;
+  font-size:0.85em;
+}
+
+// This bit our actual custom styles for the footer
 #footer {
   background-color: $footer-bg;
   color: $footer-color;
