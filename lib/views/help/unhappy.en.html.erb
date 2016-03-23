@@ -2,59 +2,75 @@
 
 
 <% if !@info_request.nil? %>
-<h1>Unhappy about the response you got
-to your request '<%=request_link(@info_request) %>'?
-</h1>
+  <h1>Unhappy about the response you got
+    to your request '<%=request_link(@info_request) %>'?
+  </h1>
 <% else %>
-<h1>Unhappy about the response you got?</h1>
+  <h1>Unhappy about the response you got?</h1>
 <% end %>
 
 <p>If ...</p>
 
 <ul>
-<li>You didn't get a reply within 20 working days</li>
-<li>You did not get all of the information that you requested <strong>or</strong></li>
-<li>Your request was refused, but without a reason valid under the law</li>
+  <li>You didn't get a reply within 20 working days</li>
+  <li>You did not get all of the information that you requested <strong>or</strong></li>
+  <li>Your request was refused, but without a reason valid under the law</li>
 </ul>
 
 <p>... you can</p>
 
 <ol>
-<li>Ask for an <strong>internal review</strong> at the public authority.</li>
-<li>If that doesn't help, forward the case to <strong>ANTAI</strong>.</li>
-<li>Either way, also <strong>use other means</strong> to answer your question.</li>
+  <li>Ask for an <strong>internal review</strong> at the public authority.</li>
+  <li>If that doesn't help, complain to <strong>ANTAI</strong>.</li>
+  <li>Either way, also <strong>use other means</strong> to answer your question.</li>
 </ol>
 
 <h1 id="internal_review">1. Asking for an internal review <a class="hover_a" href="#internal_review">#</a> </h1>
 
 <p>
-<% if !@info_request.nil? %>
-    <%= link_to "Request an internal review", show_response_no_followup_path(:id => @info_request.id, :incoming_message_id => nil) + "?internal_review=1#followup", :class => 'link_button_green' %> and then write a message asking the authority to review your request.
-<% else %>
+  <% if !@info_request.nil? %>
+    <%= link_to "Request an internal review", new_request_followup_path(:request_id => @info_request.id) + "?internal_review=1#followup", :class => 'link_button_green request-internal-review-action' %> and then write a message asking the authority to review your request.
+  <% else %>
     At the bottom of the relevant request page on <%= site_name %> choose
     "request an internal review". Then write a message asking for an internal
     review of your request. You may want to include a link to the
     request page, to make it clear which request you are talking about.
-<% end %>
+  <% end %>
 </p>
 
 <p>Internal reviews should be quick. If one takes longer than 20 working days
-then the authority should write and let you know, and it should never take
-longer than 40 working days.
-You will then either get the information that
-you originally requested, or you will be told that the review upholds the
-original decision.
+  then the authority should write and let you know, and it should never take
+  longer than 40 working days.
+  You will then either get the information that
+  you originally requested, or you will be told that the review upholds the
+  original decision.
 </p>
 
 <h1 id="antai">2. Forwarding the case to ANTAI <a class="hover_a" href="#antai">#</a> </h1>
 
 <p>If you are still unhappy after the public authority has done their internal review,
-then you can forward the case to ANTAI. To do this: <strong>TODO</strong>.
+  then you can forward this to ANTAI.
+
+  TODO: How do you complain to ANTAI?
+</p>
+
+<p>To make it easier to send the relevant information to ANTAI, either
+  <% if !@info_request.nil? %>
+    include a link to your request
+    <strong><%=h request_url(@info_request) %></strong>
+  <% else %>
+    include a link to your request on <%= site_name %>
+<% end %>
+in your complaint or print out the whole page of your request and all attachments.
 </p>
 
 <p><%= site_name %> has no special facilities for handling a request at this stage - it
-passes into ANTAI's system. You can leave annotations on your
-request keeping people informed of progress.</p>
+  passes into ANTAI's system.
+  <% if AlaveteliConfiguration::enable_annotations %>
+    You can leave annotations on your request keeping people informed of
+    progress.
+  <% end %>
+</p>
 
 <p>You can also try and get the information by <strong>other means...</strong></p>
 
@@ -62,17 +78,33 @@ request keeping people informed of progress.</p>
 
 <p>You can try persuing your problem or your research in other ways.
 
-<ul>
-<li>Make a <strong>new ATI request</strong> for summary information, or for
-documentation relating indirectly to matters in your refused request.
-<a href="<%= help_contact_path %>">Ask us for ideas</a> if you're stuck.</li>
-<li>If any <strong>other public authorities</strong> or publicly owned companies are involved,
-then make ATI requests to them.</li>
-<li>Ask <strong>other researchers</strong> who are interested in a similar
-issue to yours for ideas. You can sometimes find them by browsing this site;
-contact any registered user from their page. There may be an Internet
-forum or group that they hang out in.</li>
-</ul>
-
-
-
+  <ul>
+    <li>Make a <strong>new ATI request</strong> for summary information, or for
+      documentation relating indirectly to matters in your refused request.
+      <a href="<%= help_contact_path %>">Ask us for ideas</a> if you're stuck.</li>
+    <li>If any <strong>other public authorities</strong> or publicly owned companies are involved,
+      then make ATI requests to them.</li>
+    <li>Write to <strong>your MP</strong> or other politician using <a
+         href="http://www.writetothem.com">WriteToThem</a> and ask for their help
+       finding the answer. MPs can write directly to ministers or departments, and
+       can ask written questions in the House of Commons. Councillors in local authorities
+       can talk directly to council officers.</li>
+    <% if can_ask_the_eu?(@country_code) %>
+      <li>
+        Try <%= link_to 'asking for the information from the European Union',
+        'http://www.asktheeu.org' %>. Every one of the 500 million people
+        living in the European Union (both citizens and residents) has the
+        legally guaranteed right to ask for information from EU authorities.
+        <%= link_to 'Ask The EU', 'http://www.asktheeu.org' %> is a version of
+        this website for the European Union.
+      </li>
+    <% end %>
+    <li>Ask <strong>other researchers</strong> who are interested in a similar
+      issue to yours for ideas. You can sometimes find them by browsing this site;
+      contact any registered user from their page. There may be an Internet
+      forum or group that they hang out in. If it is a local matter, use <a
+         href="http://www.groupsnearyou.com">GroupsNearYou</a> to find such a
+       forum.</li>
+    <li>You could form a small local campaign group and arrange a meeting
+      with staff from the authority.</li>
+  </ul>
