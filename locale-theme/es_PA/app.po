@@ -9,9 +9,9 @@
 # Victor Diaz <victor.diaz@cwpanama.net>, 2014
 msgid ""
 msgstr ""
-"Project-Id-Version: alaveteli\n"
+"Project-Id-Version: version 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-01-02 12:13+0000\n"
+"POT-Creation-Date: 2016-03-24 16:37+0000\n"
 "PO-Revision-Date: 2015-02-11 11:05+0000\n"
 "Last-Translator: Liz Conlan <liz@mysociety.org>\n"
 "Language-Team: Spanish (Panama) (http://www.transifex.com/projects/p/panama-theme/language/es_PA/)\n"
@@ -20,6 +20,9 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid " (or <a href=\"{{signin_path}}\">sign in</a>)"
+msgstr ""
 
 msgid " - view and make Freedom of Information requests"
 msgstr "- visualizar y realizar solicitudes de acceso a la información"
@@ -36,14 +39,8 @@ msgstr "2. Solicite información"
 msgid "4. Send your request"
 msgstr "4. Envíe su solicitud"
 
-msgid "<p>Thank you! Your request is long overdue, by more than {{very_late_number_of_days}} working days. Most requests should be answered within {{late_number_of_days}} working days. You might like to complain about this, see below.</p>"
-msgstr "<p>¡Gracias! Tu solicitud está muy retrasada, han pasado más de {{very_late_number_of_days}} días calendario. La mayoría de las solicitudes deberían ser respondidas en {{late_number_of_days}} días calendario. Puede reclamar sobre esta situación, como se explica más abajo.</p>"
-
-msgid "<p>Your {{law_used_full}} request has been <strong>sent on its way</strong>!</p>\\n            <p><strong>We will email you</strong> when there is a response, or after {{late_number_of_days}} working days if the authority still hasn't\\n            replied by then.</p>\\n            <p>If you write about this request (for example in a forum or a blog) please link to this page, and add an\\n            annotation below telling people about your writing.</p>"
-msgstr "<p>¡Tu solicitud {{law_used_full}} ha sido realizada y <strong>se encuentra en camino</strong></p>\\n\\n<p><strong>Te enviaremos un correo electronico</strong> cuando haya respuesta, o después de {{late_number_of_days}} días calendario si el organismo público no te ha respondido.</p>\\n\\n<p>Si escribes sobre tu solicitud en alguna página web o blog, por favor enlaza a esta página, y añade un comentario explicándole a la gente porque realizas esta solicitud.</p>"
-
-msgid "<strong>Note:</strong> Because we're testing, requests are being sent to {{email}} rather than to the actual authority."
-msgstr "<strong>Nota:</strong> Debido a que estamos en prueba, las solicitudes se enviarán a {{email}} en lugar de enviarlas a la institución."
+msgid "<a href=\"{{new_request_path}}\">Go here</a> to make a request, in public, for information\\n                from public authorities."
+msgstr ""
 
 msgid "?"
 msgstr "¿?"
@@ -68,6 +65,9 @@ msgstr "Solicite <strong>específicamente</strong> documentos o información pú
 
 msgid "Ask us to update FOI email"
 msgstr "Solicite actualizar una dirección de correo electrónico para acceso a la información pública"
+
+msgid "Asking for private information about yourself?\\n                Please read our\\n                <a href=\"{{help_requesting_path}}\">help page"
+msgstr ""
 
 msgid "Authorities in Panama are required to publish <a href=\"{{help_url}}\">detailed transparency information</a> online. Make the most of it! Make sure the information you require isn’t already available on <a href=\"{{trans_url}}\">{{name}}’s transparency page</a>\"."
 msgstr "Las instituciones en Panamá están obligadas a publicar <a href=\"{{help_url}}\">información detallada de transparencia</a> en sus sitios web. ¡Ahorre tiempo! Verifique si la información que usted requiere se encuentra disponible en <a href=\"{{trans_url}}\">{{name}} sección de transparencia</a>\"."
@@ -180,8 +180,17 @@ msgstr "Confirmar contraseña:"
 msgid "Contact Phone Number"
 msgstr "Número de teléfono"
 
+msgid "Contact an authority to get official information"
+msgstr ""
+
 msgid "Contact phone number:"
 msgstr "Numero de teléfono:"
+
+msgid "Contact the {{site_name}} team"
+msgstr ""
+
+msgid "Contact {{site_name}}"
+msgstr ""
 
 msgid "Create an account"
 msgstr "Crear una cuenta"
@@ -225,11 +234,11 @@ msgstr "Descubra más."
 msgid "Follow this authority"
 msgstr "Seguir a esta institución pública"
 
-msgid "For an unknown reason, it is not possible to make a request to this authority."
-msgstr "Por alguna razón desconocida no es posible hacer una solicitud a esta institución."
+msgid "Follow us on twitter"
+msgstr ""
 
-msgid "Freedom of Information law does not apply to this authority, so you cannot make\\n                a request to it."
-msgstr "La ley de acceso a la información no aplica a esta institución, por lo tanto no puede realizar solicitudes a la misma."
+msgid "Freedom of Information"
+msgstr "Acceso a la información"
 
 msgid "Freedom of Information requests made"
 msgstr "Solicitudes de acceso a la información realizadas"
@@ -237,8 +246,8 @@ msgstr "Solicitudes de acceso a la información realizadas"
 msgid "Freedom of Information requests made using this site"
 msgstr "Solicitudes de acceso a la información realizadas a través de este sitio  "
 
-msgid "Freedom of information requests to"
-msgstr "Solicitud de acceso a la información para"
+msgid "Hello, {{username}}!"
+msgstr ""
 
 msgid "Home page"
 msgstr "Página de inicio"
@@ -251,6 +260,12 @@ msgstr "Tipo de solicitante: "
 
 msgid "If you are thinking of using a pseudonym,\\n              please <a href=\"{{url}}\">read this first</a>."
 msgstr "Si está pensando utilizar un seudónimo, <a href=\"{{url}}\"> lea esto primero </a>."
+
+msgid "Include link to authority:"
+msgstr ""
+
+msgid "Include link to request:"
+msgstr ""
 
 msgid "Incorporation Date"
 msgstr "Fecha de constitución"
@@ -273,6 +288,12 @@ msgstr "Sea <strong>específico</strong>, será más fácil conseguir la informa
 msgid "Legal person"
 msgstr "Persona jurídica"
 
+msgid "Make a new<br/>\\n  <strong>Freedom <span>of</span><br/>\\n  Information<br/>\\n  request</strong>"
+msgstr "Realiza una<br/>\\n <strong>solicitud<br/>\\nAcceso <span>de la</span> información</strong>"
+
+msgid "Make a request"
+msgstr "Realice una solicitud"
+
 msgid "Make a request to this authority"
 msgstr "Solicite información a esta institución pública "
 
@@ -281,6 +302,18 @@ msgstr "Realice una solicitud de {{law_used_short}}"
 
 msgid "Make an {{law_used_short}} request to '{{public_body_name}}'"
 msgstr "Realice una solicitud de {{law_used_short}} a '{{public_body_name}}'"
+
+msgid "Message to website:"
+msgstr ""
+
+msgid "My profile"
+msgstr ""
+
+msgid "My requests"
+msgstr "Mis solicitudes"
+
+msgid "My wall"
+msgstr ""
 
 msgid "Name"
 msgstr "Nombre"
@@ -324,6 +357,9 @@ msgstr "Sólo se muestran las solicitudes realizadas mediante {{site_name}}."
 msgid "Phone number"
 msgstr "Número de teléfono "
 
+msgid "Please describe more what the request is about in the subject. There is no need to say it is an FOI request, we add that on anyway."
+msgstr ""
+
 msgid "Please enter a contact phone number"
 msgstr "Por favor ingrese su número de teléfono "
 
@@ -341,6 +377,9 @@ msgstr "Por favor ingrese la fecha de constitución de su empresa "
 
 msgid "Please enter your national ID number"
 msgstr "Por favor ingrese su número de cédula o identificación personal "
+
+msgid "Please keep the summary short, like in the subject of an email. You can use a phrase, rather than a full sentence."
+msgstr ""
 
 msgid "Please sign in as "
 msgstr "Por favor inicie sesión como"
@@ -378,10 +417,11 @@ msgstr "Estadísticas"
 msgid "Requestor"
 msgstr "Solicitante"
 
-msgid "Search within the {{count}} Freedom of Information requests to {{public_body_name}}"
-msgid_plural "Search within the {{count}} Freedom of Information requests made to {{public_body_name}}"
-msgstr[0] ""
-msgstr[1] ""
+msgid "Send message to ANTAI"
+msgstr ""
+
+msgid "Sending..."
+msgstr ""
 
 msgid "Short name"
 msgstr "Nombre corto"
@@ -395,8 +435,17 @@ msgstr "Inicie sesión como un usuario de emergencia"
 msgid "Sign in or make a new account"
 msgstr " Iniciar sesión o crear una cuenta nueva"
 
+msgid "Sign in or sign up"
+msgstr ""
+
+msgid "Sign out"
+msgstr "Registrarse"
+
 msgid "Sign up"
 msgstr "Registrarse"
+
+msgid "Subject:"
+msgstr ""
 
 msgid "Successful"
 msgstr "Resueltas"
@@ -433,9 +482,6 @@ msgstr "Entonces podrá cambiar su número de cédula o identificación personal
 
 msgid "There were no requests matching your query."
 msgstr "No hubo solicitudes que coincidan con su consulta."
-
-msgid "This authority no longer exists, so you cannot make a request to it."
-msgstr "Esta institución pública ha dejado de existir, por tal razón no puede solicitarle información. "
 
 msgid "This message is to remind you to reply. You can do so by replying directly to the original request email, or by sending a new email to {{response_email}}."
 msgstr "Este mensaje es para recordarle que debe responder a esta solicitud de acceso a la información pública. Puede hacerlo respondiendo directamente a través del correo electrónico original, o mediante el envío de un nuevo correo electrónico a {{response_email}}."
@@ -560,6 +606,9 @@ msgstr "Dirección:"
 msgid "Your e-mail:"
 msgstr "Dirección de correo electrónico:"
 
+msgid "Your email:"
+msgstr "Dirección de correo electrónico:"
+
 msgid "Your name:"
 msgstr "Nombre:"
 
@@ -593,6 +642,9 @@ msgstr "error interno "
 msgid "please sign in as "
 msgstr "por favor inicie sesión como"
 
+msgid "remove"
+msgstr ""
+
 msgid "set to <strong>blank</strong> (empty string) if can't find an address; these emails are <strong>public</strong> as anyone can view with a CAPTCHA"
 msgstr "dejar <strong>en blanco</strong> (empty string) si no cuenta con una dirección; estos correos electrónicos son <strong>públicos</strong> cualquiera puede verlos con un CAPTCHA."
 
@@ -602,13 +654,13 @@ msgstr "el equipo de {{site_name}} "
 msgid "unknown status "
 msgstr "estatus desconocido"
 
-msgid "{{count}} Freedom of Information request to {{public_body_name}}"
-msgid_plural "{{count}} Freedom of Information requests to {{public_body_name}}"
+msgid "{{count}} person is following this authority."
+msgid_plural "{{count}} people are following this authority."
 msgstr[0] ""
 msgstr[1] ""
 
-msgid "{{count}} person is following this authority."
-msgid_plural "{{count}} people are following this authority."
+msgid "{{count}} request"
+msgid_plural "{{count}} requests"
 msgstr[0] ""
 msgstr[1] ""
 
@@ -617,3 +669,6 @@ msgstr "{{existing_request_user}} ha realizado la misma solicitud el día {{date
 
 msgid "{{reason}}, please create an account or sign in with your existing details."
 msgstr "{{reason}}, por favor crear una cuenta o iniciar sesión con sus datos existentes."
+
+msgid "« Back to search results"
+msgstr ""

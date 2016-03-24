@@ -1,289 +1,651 @@
+msgid " (or <a href=\"{{signin_path}}\">sign in</a>)"
+msgstr ""
+
 msgid " - view and make Freedom of Information requests"
 msgstr " - view and make Access to Information requests"
 
-msgid " What are you investigating using Freedom of Information? "
-msgstr " What are you investigating using Access to Information? "
+msgid "(hide)"
+msgstr ""
 
-# working days -> calendar days
-msgid "<p>Thank you! Your request is long overdue, by more than {{very_late_number_of_days}} working days. Most requests should be answered within {{late_number_of_days}} working days. You might like to complain about this, see below.</p>"
-msgstr "<p>Thank you! Your request is long overdue, by more than {{very_late_number_of_days}} calendar days. Most requests should be answered within {{late_number_of_days}} calendar days. You might like to complain about this, see below.</p>"
+msgid "(show)"
+msgstr ""
 
-msgid "<p>Your {{law_used_full}} request has been <strong>sent on its way</strong>!</p>\\n            <p><strong>We will email you</strong> when there is a response, or after {{late_number_of_days}} working days if the authority still hasn't\\n            replied by then.</p>\\n            <p>If you write about this request (for example in a forum or a blog) please link to this page, and add an\\n            annotation below telling people about your writing.</p>"
-msgstr "<p>Your {{law_used_full}} request has been <strong>sent on its way</strong>!</p>\\n            <p><strong>We will email you</strong> when there is a response, or after {{late_number_of_days}} calendar days if the authority still hasn't\\n            replied by then.</p>\\n            <p>If you write about this request (for example in a forum or a blog) please link to this page, and add an\\n            annotation below telling people about your writing.</p>"
+msgid "2. Ask for Information"
+msgstr ""
 
-msgid "<strong>Caveat emptor!</strong> To use this data in an honourable way, you will need \\na good internal knowledge of user behaviour on {{site_name}}. How, \\nwhy and by whom requests are categorised is not straightforward, and there will\\nbe user error and ambiguity. You will also need to understand FOI law, and the\\nway authorities use it. Plus you'll need to be an elite statistician.  Please\\n<a href=\"{{contact_path}}\">contact us</a> with questions."
-msgstr "<strong>Caveat emptor!</strong> To use this data in an honourable way, you will need \\na good internal knowledge of user behaviour on {{site_name}}. How, \\nwhy and by whom requests are categorised is not straightforward, and there will\\nbe user error and ambiguity. You will also need to understand ATI law, and the\\nway authorities use it. Plus you'll need to be an elite statistician.  Please\\n<a href=\"{{contact_path}}\">contact us</a> with questions."
+msgid "4. Send your request"
+msgstr ""
 
-msgid "A Freedom of Information request"
-msgstr "An Access to Information request"
+msgid "<a href=\"{{new_request_path}}\">Go here</a> to make a request, in public, for information\\n                from public authorities."
+msgstr ""
 
-msgid "A full history of my FOI request and all correspondence is available on the Internet at this address: {{url}}"
-msgstr "A full history of my ATI request and all correspondence is available on the Internet at this address: {{url}}"
+msgid "?"
+msgstr ""
+
+msgid "ATI Officer"
+msgstr ""
+
+msgid "Address"
+msgstr ""
+
+msgid "All public authorities must disclose information about their organisation online."
+msgstr ""
+
+msgid "Almost there! {{reason}}, please create an account or sign in with your existing details."
+msgstr ""
+
+msgid "As a private citizen, you need you to tell us your national ID number and address as this information is required to make a valid ATI request under Panamanian law. This information will only be shared with the authority you are requesting information from."
+msgstr ""
+
+msgid "Ask for <strong>specific</strong> documents or information, this site is not suitable for general enquiries."
+msgstr ""
 
 msgid "Ask us to update FOI email"
 msgstr "Ask us to update ATI email"
 
-msgid "Clarify your FOI request - "
-msgstr "Clarify your ATI request - "
+msgid "Asking for private information about yourself?\\n                Please read our\\n                <a href=\"{{help_requesting_path}}\">help page"
+msgstr ""
 
-msgid "Classify an FOI response from "
-msgstr "Classify an ATI response from "
+msgid "Authorities in Panama are required to publish <a href=\"{{help_url}}\">detailed transparency information</a> online. Make the most of it! Make sure the information you require isnt already available on <a href=\"{{trans_url}}\">{{name}}s transparency page</a>\"."
+msgstr ""
 
-msgid "Confirm you want to follow all successful FOI requests"
-msgstr "Confirm you want to follow all successful ATI requests"
+msgid "Authorities in Panama are required to publish <a href=\"{{help_url}}\">detailed transparency information</a> online. {{name}} has not. But you <em>can</em> <a href=\"{{auth_url}}\">browse previous requests</a> they have answered."
+msgstr ""
 
-msgid "Confirm your FOI request to {{public_body_name}}"
-msgstr "Confirm your ATI request to {{public_body_name}}"
+msgid "Authority has transferred your request to a different public body."
+msgstr ""
 
-msgid "Considered by administrators as not an FOI request and hidden from site."
-msgstr "Considered by administrators as not an ATI request and hidden from site."
+msgid "Before you start:"
+msgstr ""
 
-msgid "Delayed response to your FOI request - "
-msgstr "Delayed response to your ATI request - "
+msgid "Browse <a href='{{url}}'>other requests to {{public_body_name}}</a> for examples of how to word your request."
+msgstr ""
 
-msgid "FOI"
-msgstr "ATI"
+msgid "Browse <a href='{{url}}'>other requests</a> for examples of how to word your request."
+msgstr ""
 
-msgid "FOI email address for {{public_body}}"
-msgstr "FOI email address for {{public_body}}"
+msgid "Change address on {{site_name}}"
+msgstr ""
 
-msgid "FOI request  {{title}}"
-msgstr "ATI request  {{title}}"
+msgid "Change company incorporation date on {{site_name}}"
+msgstr ""
 
-msgid "FOI requests"
-msgstr "ATI requests"
+msgid "Change company name on {{site_name}}"
+msgstr ""
 
-msgid "FOI requests by '{{user_name}}'"
-msgstr "ATI requests by '{{user_name}}'"
+msgid "Change company number on {{site_name}}"
+msgstr ""
 
-msgid "FOI requests {{start_count}} to {{end_count}} of {{total_count}}"
-msgstr "ATI requests {{start_count}} to {{end_count}} of {{total_count}}"
+msgid "Change contact phone number on {{site_name}}"
+msgstr ""
 
-msgid "FOI response requires admin ({{reason}}) - {{title}}"
-msgstr "ATI response requires admin ({{reason}}) - {{title}}"
+msgid "Change national ID number on {{site_name}}"
+msgstr ""
+
+msgid "Change profile photo"
+msgstr ""
+
+msgid "Change your address"
+msgstr ""
+
+msgid "Change your address used on {{site_name}}"
+msgstr ""
+
+msgid "Change your company incorporation date used on {{site_name}}"
+msgstr ""
+
+msgid "Change your company name"
+msgstr ""
+
+msgid "Change your company name used on {{site_name}}"
+msgstr ""
+
+msgid "Change your company number"
+msgstr ""
+
+msgid "Change your company number used on {{site_name}}"
+msgstr ""
+
+msgid "Change your contact number"
+msgstr ""
+
+msgid "Change your contact phone number used on {{site_name}}"
+msgstr ""
+
+msgid "Change your email"
+msgstr ""
+
+msgid "Change your incorporation date"
+msgstr ""
+
+msgid "Change your national ID number"
+msgstr ""
+
+msgid "Change your national ID number used on {{site_name}}"
+msgstr ""
+
+msgid "Change your password"
+msgstr ""
+
+msgid "Charity registration"
+msgstr ""
+
+msgid "Choose a password:"
+msgstr ""
+
+msgid "Company Name"
+msgstr ""
+
+msgid "Company Name:"
+msgstr ""
+
+msgid "Company Number"
+msgstr ""
+
+msgid "Company name"
+msgstr ""
+
+msgid "Company number"
+msgstr ""
+
+msgid "Company number:"
+msgstr ""
+
+msgid "Confirm password:"
+msgstr ""
+
+msgid "Contact Phone Number"
+msgstr ""
+
+msgid "Contact an authority to get official information"
+msgstr ""
+
+msgid "Contact phone number:"
+msgstr ""
+
+msgid "Contact the {{site_name}} team"
+msgstr ""
+
+msgid "Contact {{site_name}}"
+msgstr ""
+
+msgid "Create an account"
+msgstr ""
+
+msgid "Default locale"
+msgstr ""
+
+msgid "Did you know?"
+msgstr ""
+
+msgid "Disclosure log"
+msgstr ""
+
+msgid "Disclosure log URL"
+msgstr ""
+
+msgid "Don't have a superuser account yet?"
+msgstr ""
+
+msgid "Environmental Information Regulations requests made"
+msgstr ""
+
+msgid "Environmental Information Regulations requests made using this site"
+msgstr ""
+
+msgid "Every citizen has the right to access information held by public bodies. <strong>By law, they have to respond</strong>."
+msgstr ""
+
+msgid "Everything that you enter on this page, including <strong>your name</strong>,\\n              will be <strong>displayed publicly</strong> on\\n              this website forever (<a href=\"{{url}}\">why?</a>)."
+msgstr ""
+
+msgid "Everything that you enter on this page\\n              will be <strong>displayed publicly</strong> on\\n              this website forever (<a href=\"{{url}}\">why?</a>)."
+msgstr ""
+
+msgid "Find out more about"
+msgstr ""
+
+msgid "Find out more."
+msgstr ""
+
+msgid "Follow this authority"
+msgstr ""
+
+msgid "Follow us on twitter"
+msgstr ""
 
 msgid "Freedom of Information"
 msgstr "Access to Information"
 
-msgid "Freedom of Information Act"
-msgstr "Access to Information Act"
-
-msgid "Freedom of Information law does not apply to this authority, so you cannot make\\n                a request to it."
-msgstr "Access to Information law does not apply to this authority, so you cannot make\\n                a request to it."
-
-msgid "Freedom of Information law no longer applies to"
-msgstr "Access to Information law no longer applies to"
-
-msgid "Freedom of Information law no longer applies to this authority.Follow up messages to existing requests are sent to "
-msgstr "Access to Information law no longer applies to this authority.Follow up messages to existing requests are sent to "
-
 msgid "Freedom of Information requests made"
 msgstr "Access to Information requests made"
-
-msgid "Freedom of Information requests made by this person"
-msgstr "Access to Information requests made by this person"
-
-msgid "Freedom of Information requests made by you"
-msgstr "Access to Information requests made by you"
 
 msgid "Freedom of Information requests made using this site"
 msgstr "Access to Information requests made using this site"
 
-msgid "Freedom of information requests to"
-msgstr "Access to information requests to"
+msgid "Hello, {{username}}!"
+msgstr ""
 
-msgid "I am writing to request an internal review of {{public_body_name}}'s handling of my FOI request '{{info_request_title}}'."
-msgstr "I am writing to request an internal review of {{public_body_name}}'s handling of my ATI request '{{info_request_title}}'."
+msgid "Home page"
+msgstr ""
 
-msgid "If the error was a delivery failure, and you can find an up to date FOI email address for the authority, please tell us using the form below."
-msgstr "If the error was a delivery failure, and you can find an up to date ATI email address for the authority, please tell us using the form below."
+msgid "Home page of authority"
+msgstr ""
 
-msgid "If you find this service useful as an FOI officer, please ask your web manager to link to us from your organisation's FOI page."
-msgstr "If you find this service useful as an ATI officer, please ask your web manager to link to us from your organisation's ATI page."
+msgid "I am a"
+msgstr ""
 
-msgid "Listing FOI requests"
-msgstr "Listing ATI requests"
+msgid "If you are thinking of using a pseudonym,\\n              please <a href=\"{{url}}\">read this first</a>."
+msgstr ""
 
-msgid "Make a new FOI request"
-msgstr "Make a new ATI request"
+msgid "Include link to authority:"
+msgstr ""
+
+msgid "Include link to request:"
+msgstr ""
+
+msgid "Incorporation Date"
+msgstr ""
+
+msgid "Incorporation Date:"
+msgstr ""
+
+msgid "Incorporation date"
+msgstr ""
+
+msgid "Individual"
+msgstr ""
+
+msgid "Is {{email_address}} the wrong address for {{type_of_request}} requests to {{public_body_name}}? If so, please contact us using this form:"
+msgstr ""
+
+msgid "Keep it <strong>focused</strong>, you'll be more likely to get what you want (<a href=\"{{url}}\">why?</a>)."
+msgstr ""
+
+msgid "Legal person"
+msgstr ""
 
 msgid "Make a new<br/>\\n  <strong>Freedom <span>of</span><br/>\\n  Information<br/>\\n  request</strong>"
 msgstr "Make a new<br/>\\n  <strong>Access <span>to</span><br/>\\n  Information<br/>\\n  request</strong>"
 
-msgid "Make and browse Freedom of Information (FOI) requests"
-msgstr "Make and browse Access to Information (ATI) requests"
+msgid "Make a request"
+msgstr ""
 
-msgid "New Freedom of Information requests"
-msgstr "New Access to Information requests"
+msgid "Make a request to this authority"
+msgstr ""
 
-msgid "New response to your FOI request - "
-msgstr "New response to your ATI request - "
+msgid "Make an {{law_used_short}} request"
+msgstr ""
+
+msgid "Make an {{law_used_short}} request to '{{public_body_name}}'"
+msgstr ""
+
+msgid "Message to website:"
+msgstr ""
+
+msgid "My profile"
+msgstr ""
+
+msgid "My requests"
+msgstr ""
+
+msgid "My wall"
+msgstr ""
+
+msgid "Name"
+msgstr ""
+
+msgid "National ID Number"
+msgstr ""
+
+msgid "National ID Number:"
+msgstr ""
+
+msgid "National ID number"
+msgstr ""
+
+msgid "New address:"
+msgstr ""
+
+msgid "New company incorporation date:"
+msgstr ""
+
+msgid "New company name:"
+msgstr ""
+
+msgid "New company number:"
+msgstr ""
+
+msgid "New contact phone number:"
+msgstr ""
+
+msgid "New national ID number:"
+msgstr ""
 
 msgid "Nobody has made any Freedom of Information requests to {{public_body_name}} using this site yet."
 msgstr "Nobody has made any Access to Information requests to {{public_body_name}} using this site yet."
 
-msgid "Not a valid FOI request"
-msgstr "Not a valid ATI request"
+msgid "Only put in abbreviations which are really used, otherwise leave blank. Short or long name is used in the URL  don't worry about breaking URLs through renaming, as the history is used to redirect"
+msgstr ""
 
-msgid "One FOI request found"
-msgstr "One ATI request found"
+msgid "Only requests made using {{site_name}} are shown."
+msgstr ""
+
+msgid "Phone number"
+msgstr ""
 
 msgid "Please describe more what the request is about in the subject. There is no need to say it is an FOI request, we add that on anyway."
 msgstr "Please describe more what the request is about in the subject. There is no need to say it is an ATI request, we add that on anyway."
 
-msgid "Please pass this on to the person who conducts Freedom of Information reviews."
-msgstr "Please pass this on to the person who conducts Access to Information reviews."
-
-msgid "Requests for personal information and vexatious requests are not considered valid for FOI purposes (<a href=\"/help/about\">read more</a>)."
-msgstr "Requests for personal information and vexatious requests are not considered valid for ATI purposes (<a href=\"/help/about\">read more</a>)."
-
-msgid "Respond to the FOI request '{{request}}' made by {{user}}"
-msgstr "Respond to the ATI request '{{request}}' made by {{user}}"
-
-msgid "Search Freedom of Information requests, public authorities and users"
-msgstr "Search Access to Information requests, public authorities and users"
-
-msgid "Search within the {{count}} Freedom of Information requests to {{public_body_name}}"
-msgid_plural "Search within the {{count}} Freedom of Information requests made to {{public_body_name}}"
-msgstr[0] "Search within the {{count}} Access to Information requests to {{public_body_name}}"
-msgstr[1] "Search within the {{count}} Access to Information requests made to {{public_body_name}}"
-
-msgid "Some notes have been added to your FOI request - "
-msgstr "Some notes have been added to your ATI request - "
-
-msgid "Somebody added a note to your FOI request - "
-msgstr "Somebody added a note to your ATI request - "
-
-msgid "Successful Freedom of Information requests"
-msgstr "Successful Access to Information requests"
-
-msgid "Thank you for responding to this FOI request! Your response has been published below, and a link to your response has been emailed to "
-msgstr "Thank you for responding to this ATI request! Your response has been published below, and a link to your response has been emailed to "
-
-msgid "The Freedom of Information Act <strong>does not apply</strong> to"
-msgstr "The Access to Information Act <strong>does not apply</strong> to"
-
-msgid "The authority say that they <strong>need a postal\\n            address</strong>, not just an email, for it to be a valid FOI request"
-msgstr "The authority say that they <strong>need a postal\\n            address</strong>, not just an email, for it to be a valid ATI request"
-
-msgid "The contact email address for FOI requests to the authority."
+msgid "Please enter a contact phone number"
 msgstr ""
 
-msgid "Then you can classify the FOI response you have got from "
-msgstr "Then you can classify the ATI response you have got from "
+msgid "Please enter your address"
+msgstr ""
 
-msgid "Then you can upload an FOI response. "
-msgstr "Then you can upload an ATI response. "
+msgid "Please enter your company name"
+msgstr ""
 
-msgid "Then you will be following all new FOI requests."
-msgstr "Then you will be following all new ATI requests."
+msgid "Please enter your company number"
+msgstr ""
 
-msgid "Then you will be notified whenever an FOI request succeeds."
-msgstr "Then you will be notified whenever an ATI request succeeds."
+msgid "Please enter your company's incorporation date"
+msgstr ""
 
-msgid "Then you'll be allowed to send FOI requests."
-msgstr "Then you'll be allowed to send ATI requests."
+msgid "Please enter your national ID number"
+msgstr ""
 
-msgid "Then your FOI request to {{public_body_name}} will be sent."
-msgstr "Then your ATI request to {{public_body_name}} will be sent."
+msgid "Please keep the summary short, like in the subject of an email. You can use a phrase, rather than a full sentence."
+msgstr ""
 
-msgid "This is a plain-text version of the Freedom of Information request \"{{request_title}}\".  The latest, full version is available online at {{full_url}}"
-msgstr "This is a plain-text version of the Access to Information request \"{{request_title}}\".  The latest, full version is available online at {{full_url}}"
+msgid "Please sign in as "
+msgstr ""
 
-msgid "This is an HTML version of an attachment to the Freedom of Information request"
-msgstr "This is an HTML version of an attachment to the Access to Information request"
+msgid "Please sign in or create an account."
+msgstr ""
 
-msgid "This person has made no Freedom of Information requests using this site."
-msgstr "This person has made no Access to Information requests using this site."
+msgid "Please use this email address for all replies to this request:"
+msgstr ""
 
-msgid "This person's {{count}} Freedom of Information request"
-msgid_plural "This person's {{count}} Freedom of Information requests"
-msgstr[0] "This person's {{count}} Access to Information request"
-msgstr[1] "This person's {{count}} Access to Information requests"
+msgid "Preview your public request"
+msgstr ""
 
-msgid "This request has been <strong>hidden</strong> from the site, because an administrator considers it not to be an FOI request"
-msgstr "This request has been <strong>hidden</strong> from the site, because an administrator considers it not to be an ATI request"
+msgid "Public notes"
+msgstr ""
 
-msgid "To classify the response to this FOI request"
-msgstr "To classify the response to this ATI request"
+msgid "Publication scheme"
+msgstr ""
 
-msgid "To send your FOI request"
-msgstr "To send your ATI request"
+msgid "Publication scheme URL"
+msgstr ""
 
-msgid "To update the status of this FOI request"
-msgstr "To update the status of this ATI request"
+msgid "RSS feed of updates"
+msgstr ""
 
-msgid "To view the email address that we use to send FOI requests to {{public_body_name}}, please enter these words."
-msgstr "To view the email address that we use to send ATI requests to {{public_body_name}}, please enter these words."
+msgid "Read more about making a request."
+msgstr ""
 
-msgid "Unfortunately we don't know the FOI\\nemail address for that authority, so we can't validate this.\\nPlease <a href=\"{{url}}\">contact us</a> to sort it out."
-msgstr "Unfortunately we don't know the ATI\\nemail address for that authority, so we can't validate this.\\nPlease <a href=\"{{url}}\">contact us</a> to sort it out."
+msgid "Request email"
+msgstr ""
 
-msgid "Upload FOI response"
-msgstr "Upload ATI response"
+msgid "Request outcomes"
+msgstr ""
+
+msgid "Requestor"
+msgstr ""
+
+msgid "Send message to ANTAI"
+msgstr ""
+
+msgid "Sending..."
+msgstr ""
+
+msgid "Short name"
+msgstr ""
+
+msgid "Sign in"
+msgstr ""
+
+msgid "Sign in as the emergency user"
+msgstr ""
+
+msgid "Sign in or make a new account"
+msgstr ""
+
+msgid "Sign in or sign up"
+msgstr ""
+
+msgid "Sign out"
+msgstr ""
+
+msgid "Sign up"
+msgstr ""
+
+msgid "Subject:"
+msgstr ""
+
+msgid "Successful"
+msgstr ""
+
+msgid "Summary:"
+msgstr ""
+
+msgid "Tags"
+msgstr ""
+
+msgid "Tags (separated by a space):"
+msgstr ""
+
+msgid "The search index is currently offline, so we can't show the Freedom of Information requests that have been made to this authority."
+msgstr ""
+
+msgid "Then you can change your address used on {{site_name}}"
+msgstr ""
+
+msgid "Then you can change your company incorporation date used on {{site_name}}"
+msgstr ""
+
+msgid "Then you can change your company name used on {{site_name}}"
+msgstr ""
+
+msgid "Then you can change your company number used on {{site_name}}"
+msgstr ""
+
+msgid "Then you can change your contact phone number used on {{site_name}}"
+msgstr ""
+
+msgid "Then you can change your national ID number used on {{site_name}}"
+msgstr ""
+
+msgid "There were no requests matching your query."
+msgstr ""
+
+msgid "This message is to remind you to reply. You can do so by replying directly to the original request email, or by sending a new email to {{response_email}}."
+msgstr ""
+
+msgid "Tips for successful requests:"
+msgstr ""
+
+msgid "To change your address used on {{site_name}}"
+msgstr ""
+
+msgid "To change your company incorporation date used on {{site_name}}"
+msgstr ""
+
+msgid "To change your company name used on {{site_name}}"
+msgstr ""
+
+msgid "To change your company number used on {{site_name}}"
+msgstr ""
+
+msgid "To change your contact phone number used on {{site_name}}"
+msgstr ""
+
+msgid "To change your national ID number used on {{site_name}}"
+msgstr ""
+
+msgid "To request information on behalf of a company, you need you to tell us your company name, number and incorporation date as this information is required to make a valid ATI request under Panamanian law."
+msgstr ""
+
+msgid "To:"
+msgstr ""
+
+msgid "Track requests to this authority"
+msgstr ""
+
+msgid "Transferred."
+msgstr ""
+
+msgid "Transparency Information"
+msgstr ""
+
+msgid "Unresolved"
+msgstr ""
+
+msgid "Unsubscribe"
+msgstr ""
+
+msgid "Unsuccessful"
+msgstr ""
+
+msgid "User type must be 'business' or 'individual'"
+msgstr ""
 
 msgid "View FOI email address"
 msgstr "View ATI email address"
 
-msgid "View FOI email address for '{{public_body_name}}'"
-msgstr "View ATI email address for '{{public_body_name}}'"
+msgid "View this authoritys Transparency Information"
+msgstr ""
 
-msgid "View FOI email address for {{public_body_name}}"
-msgstr "View ATI email address for {{public_body_name}}"
+msgid "We dont have Transparency Information for this authority yet."
+msgstr ""
 
-msgid "View Freedom of Information requests made by {{user_name}}:"
-msgstr "View Access to Information requests made by {{user_name}}:"
+msgid "We dont have the ATI Officer details for this authority yet."
+msgstr ""
 
-msgid "Was the response you got to your FOI request any good?"
-msgstr "Was the response you got to your ATI request any good?"
+msgid "We will not reveal your email address to anybody unless you or\\n        the law tell us to (<a href=\"{{url}}\">details</a>). "
+msgstr ""
 
-msgid "We consider it is not a valid FOI request, and have therefore hidden it from other users."
-msgstr "We consider it is not a valid ATI request, and have therefore hidden it from other users."
+msgid "We will not reveal your phone number to anybody unless you or\\n        the law tell us to (<a href=\"{{url}}\">details</a>). "
+msgstr ""
 
-msgid "Write your FOI follow up message to "
-msgstr "Write your ATI follow up message to "
+msgid "Write your request in <strong>simple, precise language</strong>."
+msgstr ""
 
-msgid "You have made no Freedom of Information requests using this site."
-msgstr "You have made no Access to Information requests using this site."
+msgid "You already created the same batch of requests on {{date}}.   You can either view the <a href=\"{{existing_batch}}\">existing batch</a>, or edit the details below to make a new but similar batch of requests."
+msgstr ""
 
-# Your theme's locale files will override the core locale files.  This
-# is a good place to put both translations specific to your theme, and
-# "translations" of the core English words (e.g. you might want to
-# call FOI "RTI" throughout)
-# Freedom of Information (FOI) -> Access to Information (ATI)
+msgid "You can only request information about the environment from this authority."
+msgstr ""
+
+msgid "You cant use this form to request information about yourself (<a href=\"{{url}}\">why?</a>)."
+msgstr ""
+
+msgid "You have not yet replied to a {{law_used_short}} request - {{title}}. Note that it is required by law that you respond promptly and your response is now overdue."
+msgstr ""
+
+msgid "You have not yet replied to a {{law_used_short}} request - {{title}}. Note that it is required by law that you respond promptly."
+msgstr ""
+
+msgid "You have now changed your address used on {{site_name}}"
+msgstr ""
+
+msgid "You have now changed your company incorporation date used on {{site_name}}"
+msgstr ""
+
+msgid "You have now changed your company name used on {{site_name}}"
+msgstr ""
+
+msgid "You have now changed your company number used on {{site_name}}"
+msgstr ""
+
+msgid "You have now changed your contact phone number used on {{site_name}}"
+msgstr ""
+
+msgid "You have now changed your national ID number used on {{site_name}}"
+msgstr ""
+
+msgid "You haven't responded to a {{law_used_short}} request yet."
+msgstr ""
+
 msgid "You haven't yet responded to the FOI request - "
 msgstr "You haven't yet responded to the ATI request - "
 
-msgid "You're long overdue a response to your FOI request - "
-msgstr "You're long overdue a response to your ATI request - "
+msgid "Your <strong>Right to Know</strong>"
+msgstr ""
 
-msgid "Your response to an FOI request was not delivered"
-msgstr "Your response to an ATI request was not delivered"
+msgid "Your <strong>name will appear publicly</strong>\\n        (<a href=\"{{why_url}}\">why?</a>)\\n        on this website and in search engines. If you\\n        are thinking of using a pseudonym, please\\n        <a href=\"{{help_url}}\">read this first</a>."
+msgstr ""
+
+msgid "Your address:"
+msgstr ""
+
+msgid "Your e-mail:"
+msgstr ""
+
+msgid "Your email:"
+msgstr ""
+
+msgid "Your name:"
+msgstr ""
+
+msgid "Your request:"
+msgstr ""
+
+msgid "Your response to a {{law_used_short}} request is overdue."
+msgstr ""
 
 msgid "Your response to the FOI request - "
 msgstr "Your response to the ATI request - "
 
-msgid "Your {{count}} Freedom of Information request"
-msgid_plural "Your {{count}} Freedom of Information requests"
-msgstr[0] "Your {{count}} Access to Information request"
-msgstr[1] "Your {{count}} Access to Information requests"
+msgid "Your selected authorities"
+msgstr ""
 
-msgid "[FOI #{{request}} email]"
-msgstr "[ATI #{{request}} email]"
+msgid "a one line summary of the information you are requesting, \\n\t\t\te.g."
+msgstr ""
 
-msgid "the main FOI contact address for {{public_body}}"
-msgstr "the main ATI contact address for {{public_body}}"
+msgid "admin"
+msgstr ""
 
-msgid "the main FOI contact at {{public_body}}"
-msgstr "the main ATI contact at {{public_body}}"
+msgid "also called {{public_body_short_name}}"
+msgstr ""
 
-msgid "{{count}} FOI requests found"
-msgstr "{{count}} ATI requests found"
+msgid "edit text about you"
+msgstr ""
 
-msgid "{{count}} Freedom of Information request to {{public_body_name}}"
-msgid_plural "{{count}} Freedom of Information requests to {{public_body_name}}"
-msgstr[0] "{{count}} Access to Information request to {{public_body_name}}"
-msgstr[1] "{{count}} Access to Information requests to {{public_body_name}}"
+msgid "internal error"
+msgstr ""
 
-msgid "{{title}} - a Freedom of Information request to {{public_body}}"
-msgstr "{{title}} - a Access to Information request to {{public_body}}"
+msgid "please sign in as "
+msgstr ""
+
+msgid "remove"
+msgstr ""
+
+msgid "set to <strong>blank</strong> (empty string) if can't find an address; these emails are <strong>public</strong> as anyone can view with a CAPTCHA"
+msgstr ""
+
+msgid "the {{site_name}} team"
+msgstr ""
+
+msgid "unknown status "
+msgstr ""
+
+msgid "{{count}} person is following this authority."
+msgid_plural "{{count}} people are following this authority."
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "{{count}} request"
+msgid_plural "{{count}} requests"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "{{existing_request_user}} already\\n      created the same request on {{date}}. You can either view the <a href=\"{{existing_request}}\">existing request</a>,\\n      or edit the details below to make a new but similar request."
+msgstr ""
+
+msgid "{{reason}}, please create an account or sign in with your existing details."
+msgstr ""
+
+msgid " Back to search results"
+msgstr ""
