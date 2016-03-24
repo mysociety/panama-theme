@@ -149,13 +149,6 @@ msgstr[1] "Your {{count}} Access to Information requests"
 msgid "Make and browse Freedom of Information (FOI) requests"
 msgstr "Make and browse Access to Information (ATI) requests"
 
-msgid "{{count}} Freedom of Information request to {{public_body_name}}"
-msgid_plural ""
-"{{count}} Freedom of Information requests to {{public_body_name}}"
-msgstr[0] "{{count}} Access to Information request to {{public_body_name}}"
-msgstr[1] ""
-"{{count}} Access to Information requests to {{public_body_name}}"
-
 msgid "{{title}} - a Freedom of Information request to {{public_body}}"
 msgstr "{{title}} - a Access to Information request to {{public_body}}"
 
@@ -353,14 +346,11 @@ msgstr  ""
 msgid "Upload FOI response"
 msgstr "Upload ATI response"
 
-msgid "View FOI email address"
-msgstr "View ATI email address"
-
 msgid "View FOI email address for '{{public_body_name}}'"
 msgstr "View ATI email address for '{{public_body_name}}'"
 
 msgid "View FOI email address for {{public_body_name}}"
-msgstr "View ATI email address for '{{public_body_name}}'"
+msgstr "View ATI email address for {{public_body_name}}"
 
 msgid "Was the response you got to your FOI request any good?"
 msgstr "Was the response you got to your ATI request any good?"
