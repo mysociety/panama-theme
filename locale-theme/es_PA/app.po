@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # Translators:
 # Liz Conlan <liz@mysociety.org>, 2015
@@ -9,928 +9,611 @@
 # Victor Diaz <victor.diaz@cwpanama.net>, 2014
 msgid ""
 msgstr ""
-"Project-Id-Version: panama-theme\n"
+"Project-Id-Version: alaveteli\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-01-02 12:13+0000\n"
 "PO-Revision-Date: 2015-02-11 11:05+0000\n"
 "Last-Translator: Liz Conlan <liz@mysociety.org>\n"
 "Language-Team: Spanish (Panama) (http://www.transifex.com/projects/p/panama-theme/language/es_PA/)\n"
+"Language: es_PA\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: es_PA\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: lib/themes/panama-theme/lib/controller_patches.rb:22
-msgid "To change your address used on {{site_name}}"
-msgstr "Para cambiar la dirección que utiliza en {{site_name}}"
-
-#: lib/themes/panama-theme/lib/controller_patches.rb:23
-msgid "Then you can change your address used on {{site_name}}"
-msgstr "Después podrá cambiar la dirección que utiliza en  {{site_name}}"
-
-#: lib/themes/panama-theme/lib/controller_patches.rb:24
-#: lib/themes/panama-theme/lib/views/user/signchangeaddress.html.erb:1
-#: lib/themes/panama-theme/lib/views/user/signchangeaddress.html.erb:11
-msgid "Change your address used on {{site_name}}"
-msgstr "Cambie la dirección que utiliza en {{site_name}} "
-
-#: lib/themes/panama-theme/lib/controller_patches.rb:42
-msgid "You have now changed your address used on {{site_name}}"
-msgstr "Usted ha cambiado su dirección en {{site_name}}"
-
-#: lib/themes/panama-theme/lib/controller_patches.rb:50
-msgid "To change your national ID number used on {{site_name}}"
-msgstr "Para cambiar su número de cédula o identificación personal utilizado en {{site_name}}"
-
-#: lib/themes/panama-theme/lib/controller_patches.rb:51
-msgid "Then you can change your national ID number used on {{site_name}}"
-msgstr "Entonces podrá cambiar su número de cédula o identificación personal utilizado en {{site_name}}."
-
-#: lib/themes/panama-theme/lib/controller_patches.rb:52
-#: lib/themes/panama-theme/lib/views/user/signchangenationalid.html.erb:1
-#: lib/themes/panama-theme/lib/views/user/signchangenationalid.html.erb:11
-msgid "Change your national ID number used on {{site_name}}"
-msgstr "Cambie su número de cédula o identificación personal utilizado en {{site_name}}"
-
-#: lib/themes/panama-theme/lib/controller_patches.rb:70
-msgid "You have now changed your national ID number used on {{site_name}}"
-msgstr "Usted ha cambiado su número de cédula o identificación personal utilizado en {{site_name}}"
-
-#: lib/themes/panama-theme/lib/controller_patches.rb:78
-msgid "To change your contact phone number used on {{site_name}}"
-msgstr "Para cambiar su número de teléfono utilizado en {{site_name}}"
-
-#: lib/themes/panama-theme/lib/controller_patches.rb:79
-msgid "Then you can change your contact phone number used on {{site_name}}"
-msgstr "Entonces podrá cambiar el número de teléfono utilizado en {{site_name}}"
-
-#: lib/themes/panama-theme/lib/controller_patches.rb:80
-#: lib/themes/panama-theme/lib/views/user/signchangephone.html.erb:1
-#: lib/themes/panama-theme/lib/views/user/signchangephone.html.erb:11
-msgid "Change your contact phone number used on {{site_name}}"
-msgstr "Cambie su número de teléfono utilizado en {{site_name}}"
-
-#: lib/themes/panama-theme/lib/controller_patches.rb:97
-msgid "You have now changed your contact phone number used on {{site_name}}"
-msgstr "Se ha cambiado su número de teléfono utilizado en {{site_name}}"
-
-#: lib/themes/panama-theme/lib/controller_patches.rb:105
-msgid "To change your company name used on {{site_name}}"
-msgstr "Para cambiar el nombre de la empresa utilizado en {{site_name}}"
-
-#: lib/themes/panama-theme/lib/controller_patches.rb:106
-msgid "Then you can change your company name used on {{site_name}}"
-msgstr "Entonces podrá cambiar el nombre de su empresa utilizada en {{site_name}}."
-
-#: lib/themes/panama-theme/lib/controller_patches.rb:107
-#: lib/themes/panama-theme/lib/views/user/signchangecompanyname.html.erb:1
-#: lib/themes/panama-theme/lib/views/user/signchangecompanyname.html.erb:11
-msgid "Change your company name used on {{site_name}}"
-msgstr "Cambie el nombre de su empresa utilizado en {{site_name}}"
-
-#: lib/themes/panama-theme/lib/controller_patches.rb:124
-msgid "You have now changed your company name used on {{site_name}}"
-msgstr "Se ha cambiado el nombre de su empresa utilizado en {{site_name}}"
-
-#: lib/themes/panama-theme/lib/controller_patches.rb:132
-msgid "To change your company number used on {{site_name}}"
-msgstr "Para cambiar el número de teléfono de su empresa utilizado en {{site_name}}"
-
-#: lib/themes/panama-theme/lib/controller_patches.rb:133
-msgid "Then you can change your company number used on {{site_name}}"
-msgstr "Entonces podrá cambiar el número de teléfono de su empresa utilizado en {{site_name}}."
-
-#: lib/themes/panama-theme/lib/controller_patches.rb:134
-#: lib/themes/panama-theme/lib/views/user/signchangecompanynumber.html.erb:1
-#: lib/themes/panama-theme/lib/views/user/signchangecompanynumber.html.erb:11
-msgid "Change your company number used on {{site_name}}"
-msgstr "Cambie el número de teléfono de su empresa utilizado en {{site_name}}"
-
-#: lib/themes/panama-theme/lib/controller_patches.rb:151
-msgid "You have now changed your company number used on {{site_name}}"
-msgstr "Usted ha cambiado el número de teléfono de su empresa utilizado en {{site_name}}"
-
-#: lib/themes/panama-theme/lib/controller_patches.rb:159
-msgid "To change your company incorporation date used on {{site_name}}"
-msgstr "Para cambiar la fecha de constitución de su empresa utilizada en {{site_name}}"
-
-#: lib/themes/panama-theme/lib/controller_patches.rb:160
-msgid ""
-"Then you can change your company incorporation date used on {{site_name}}"
-msgstr "Entonces podrá cambiar la fecha de constitución de su empresa utilizada en {{site_name}}."
-
-#: lib/themes/panama-theme/lib/controller_patches.rb:161
-#: lib/themes/panama-theme/lib/views/user/signchangecompanyincdate.html.erb:3
-#: lib/themes/panama-theme/lib/views/user/signchangecompanyincdate.html.erb:13
-msgid "Change your company incorporation date used on {{site_name}}"
-msgstr "Cambie el número de constitución de su empresa utilizado en {{site_name}}"
-
-#: lib/themes/panama-theme/lib/controller_patches.rb:178
-msgid ""
-"You have now changed your company incorporation date used on {{site_name}}"
-msgstr "Usted ha cambiado el número de constitución de su empresa utilizado en {{site_name}}"
-
-#: lib/themes/panama-theme/lib/customstates.rb:25
-msgid "Transferred."
-msgstr "Transferido."
-
-#: lib/themes/panama-theme/lib/customstates.rb:27
-msgid "unknown status "
-msgstr "estatus desconocido"
-
-#: lib/themes/panama-theme/lib/customstates.rb:43
-msgid "Authority has transferred your request to a different public body."
-msgstr "Esta institución pública ha transferido su solicitud a la institución que corresponde."
-
-#: lib/themes/panama-theme/lib/model_patches.rb:25
-msgid "User type must be 'business' or 'individual'"
-msgstr "El tipo de usuario debe ser \"persona jurídica\" o \"persona natural\"."
-
-#: lib/themes/panama-theme/lib/model_patches.rb:28
-msgid "Please enter a contact phone number"
-msgstr "Por favor ingrese su número de teléfono "
-
-#: lib/themes/panama-theme/lib/model_patches.rb:32
-msgid "Please enter your national ID number"
-msgstr "Por favor ingrese su número de cédula o identificación personal "
-
-#: lib/themes/panama-theme/lib/model_patches.rb:35
-msgid "Please enter your address"
-msgstr "Por favor ingrese su dirección  "
-
-#: lib/themes/panama-theme/lib/model_patches.rb:39
-msgid "Please enter your company name"
-msgstr "Por favor ingrese el nombre de su empresa"
-
-#: lib/themes/panama-theme/lib/model_patches.rb:42
-msgid "Please enter your company number"
-msgstr "Por favor ingrese el número de teléfono de su empresa "
-
-#: lib/themes/panama-theme/lib/model_patches.rb:45
-msgid "Please enter your company's incorporation date"
-msgstr "Por favor ingrese la fecha de constitución de su empresa "
-
-#: lib/themes/panama-theme/lib/patch_mailer_paths.rb:146
-msgid "You haven't yet responded to the FOI request - "
-msgstr "Usted todavía no ha respondido a la solicitud de acceso a la información -"
-
-#: lib/themes/panama-theme/lib/patch_mailer_paths.rb:158
-msgid "Your response to the FOI request - "
-msgstr "Su respuesta a la solicitud de acceso a la información -"
-
-#: lib/themes/panama-theme/lib/views/admin_public_body/_form.html.erb:10
-msgid "Default locale"
-msgstr "Configuración regional predeterminada"
-
-#: lib/themes/panama-theme/lib/views/admin_public_body/_form.html.erb:36
-msgid "Short name"
-msgstr "Nombre corto"
-
-#: lib/themes/panama-theme/lib/views/admin_public_body/_form.html.erb:39
-msgid ""
-"Only put in abbreviations which are really used, otherwise leave blank. "
-"Short or long name is used in the URL – don't worry about breaking URLs "
-"through renaming, as the history is used to redirect"
-msgstr "Sólo coloque las abreviaturas que se utilizan realmente, de lo contrario dejar en blanco. El nombre corto o largo se utiliza en la URL. No se preocupe por romper las URL al cambiar el nombre, ya que el historial se utiliza para redirigir."
-
-#: lib/themes/panama-theme/lib/views/admin_public_body/_form.html.erb:43
-msgid "Request email"
-msgstr "Solicite correo electrónico"
-
-#: lib/themes/panama-theme/lib/views/admin_public_body/_form.html.erb:46
-msgid ""
-"set to <strong>blank</strong> (empty string) if can't find an address; these"
-" emails are <strong>public</strong> as anyone can view with a CAPTCHA"
-msgstr "dejar <strong>en blanco</strong> (empty string) si no cuenta con una dirección; estos correos electrónicos son <strong>públicos</strong> cualquiera puede verlos con un CAPTCHA."
-
-#: lib/themes/panama-theme/lib/views/admin_public_body/_form.html.erb:50
-msgid "Publication scheme URL"
-msgstr "Esquema de publicación URL"
-
-#: lib/themes/panama-theme/lib/views/admin_public_body/_form.html.erb:56
-msgid "Public notes"
-msgstr "Notas públicas"
-
-#: lib/themes/panama-theme/lib/views/admin_public_body/_form.html.erb:74
-msgid "Tags"
-msgstr "Etiquetas"
-
-#: lib/themes/panama-theme/lib/views/admin_public_body/_form.html.erb:81
-msgid "Home page"
-msgstr "Página de inicio"
-
-#: lib/themes/panama-theme/lib/views/admin_public_body/_form.html.erb:88
-msgid "Disclosure log URL"
-msgstr "Registro de divulgación de URL "
-
-#: lib/themes/panama-theme/lib/views/outgoing_mailer/initial_request.text.erb:5
-msgid "Please use this email address for all replies to this request:"
-msgstr "Por favor utilice esta dirección de correo electrónico para todas las respuestas a esta solicitud:"
-
-#: lib/themes/panama-theme/lib/views/outgoing_mailer/initial_request.text.erb:8
-msgid "Requestor"
-msgstr "Solicitante"
-
-#: lib/themes/panama-theme/lib/views/outgoing_mailer/initial_request.text.erb:11
-msgid "Name"
-msgstr "Nombre"
-
-#: lib/themes/panama-theme/lib/views/outgoing_mailer/initial_request.text.erb:12
-msgid "Phone number"
-msgstr "Número de teléfono "
-
-#: lib/themes/panama-theme/lib/views/outgoing_mailer/initial_request.text.erb:14
-msgid "National ID number"
-msgstr "Número de cédula o identificación personal "
-
-#: lib/themes/panama-theme/lib/views/outgoing_mailer/initial_request.text.erb:17
-msgid "Company name"
-msgstr "Nombre de la empresa"
-
-#: lib/themes/panama-theme/lib/views/outgoing_mailer/initial_request.text.erb:18
-msgid "Company number"
-msgstr "Número de teléfono de la empresa "
-
-#: lib/themes/panama-theme/lib/views/outgoing_mailer/initial_request.text.erb:19
-msgid "Incorporation date"
-msgstr "Fecha de constitución "
-
-#: lib/themes/panama-theme/lib/views/outgoing_mailer/initial_request.text.erb:24
-msgid ""
-"Is {{email_address}} the wrong address for {{type_of_request}} requests to "
-"{{public_body_name}}? If so, please contact us using this form:"
-msgstr "¿Es {{email_address}} la dirección incorrecta para {{type_of_request}} solicitadas a {{public_body_name}}? Si es así por favor contáctenos utilizando este formulario:"
-
-#: lib/themes/panama-theme/lib/views/public_body/show.html.erb:2
 msgid " - view and make Freedom of Information requests"
 msgstr "- visualizar y realizar solicitudes de acceso a la información"
 
-#: lib/themes/panama-theme/lib/views/public_body/show.html.erb:8
-#: lib/themes/panama-theme/lib/views/public_body/show.html.erb:22
-msgid "Successful"
-msgstr "Resueltas"
+msgid "(hide)"
+msgstr "(ocultar)"
 
-#: lib/themes/panama-theme/lib/views/public_body/show.html.erb:9
-#: lib/themes/panama-theme/lib/views/public_body/show.html.erb:26
-msgid "Unsuccessful"
-msgstr "Negadas"
+msgid "(show)"
+msgstr "(mostrar)"
 
-#: lib/themes/panama-theme/lib/views/public_body/show.html.erb:10
-#: lib/themes/panama-theme/lib/views/public_body/show.html.erb:30
-msgid "Unresolved"
-msgstr "En trámite"
+msgid "2. Ask for Information"
+msgstr "2. Solicite información"
 
-#: lib/themes/panama-theme/lib/views/public_body/show.html.erb:15
-msgid "Request outcomes"
-msgstr "Estadísticas"
+msgid "4. Send your request"
+msgstr "4. Envíe su solicitud"
 
-#: lib/themes/panama-theme/lib/views/public_body/show.html.erb:38
-msgid "Freedom of information requests to"
-msgstr "Solicitud de acceso a la información para"
+msgid "<p>Thank you! Your request is long overdue, by more than {{very_late_number_of_days}} working days. Most requests should be answered within {{late_number_of_days}} working days. You might like to complain about this, see below.</p>"
+msgstr "<p>¡Gracias! Tu solicitud está muy retrasada, han pasado más de {{very_late_number_of_days}} días calendario. La mayoría de las solicitudes deberían ser respondidas en {{late_number_of_days}} días calendario. Puede reclamar sobre esta situación, como se explica más abajo.</p>"
 
-#: lib/themes/panama-theme/lib/views/public_body/show.html.erb:43
-msgid "also called {{public_body_short_name}}"
-msgstr "también conocida como {{public_body_short_name}}"
+msgid "<p>Your {{law_used_full}} request has been <strong>sent on its way</strong>!</p>\\n            <p><strong>We will email you</strong> when there is a response, or after {{late_number_of_days}} working days if the authority still hasn't\\n            replied by then.</p>\\n            <p>If you write about this request (for example in a forum or a blog) please link to this page, and add an\\n            annotation below telling people about your writing.</p>"
+msgstr "<p>¡Tu solicitud {{law_used_full}} ha sido realizada y <strong>se encuentra en camino</strong></p>\\n\\n<p><strong>Te enviaremos un correo electronico</strong> cuando haya respuesta, o después de {{late_number_of_days}} días calendario si el organismo público no te ha respondido.</p>\\n\\n<p>Si escribes sobre tu solicitud en alguna página web o blog, por favor enlaza a esta página, y añade un comentario explicándole a la gente porque realizas esta solicitud.</p>"
 
-#: lib/themes/panama-theme/lib/views/public_body/show.html.erb:45
-msgid "admin"
-msgstr "administrador "
-
-#: lib/themes/panama-theme/lib/views/public_body/show.html.erb:54
-msgid ""
-"You can only request information about the environment from this authority."
-msgstr "Sólo se puede solicitar información sobre temas relacionados con esta institución."
-
-#: lib/themes/panama-theme/lib/views/public_body/show.html.erb:58
-msgid ""
-"Freedom of Information law does not apply to this authority, so you cannot "
-"make\\n                a request to it."
-msgstr "La ley de acceso a la información no aplica a esta institución, por lo tanto no puede realizar solicitudes a la misma."
-
-#: lib/themes/panama-theme/lib/views/public_body/show.html.erb:61
-msgid "This authority no longer exists, so you cannot make a request to it."
-msgstr "Esta institución pública ha dejado de existir, por tal razón no puede solicitarle información. "
-
-#: lib/themes/panama-theme/lib/views/public_body/show.html.erb:63
-msgid ""
-"For an unknown reason, it is not possible to make a request to this "
-"authority."
-msgstr "Por alguna razón desconocida no es posible hacer una solicitud a esta institución."
-
-#: lib/themes/panama-theme/lib/views/public_body/show.html.erb:69
-msgid "Make a request to this authority"
-msgstr "Solicite información a esta institución pública "
-
-#: lib/themes/panama-theme/lib/views/public_body/show.html.erb:76
-msgid ""
-"<strong>Note:</strong> Because we're testing, requests are being sent to "
-"{{email}} rather than to the actual authority."
+msgid "<strong>Note:</strong> Because we're testing, requests are being sent to {{email}} rather than to the actual authority."
 msgstr "<strong>Nota:</strong> Debido a que estamos en prueba, las solicitudes se enviarán a {{email}} en lugar de enviarlas a la institución."
 
-#: lib/themes/panama-theme/lib/views/public_body/show.html.erb:85
-msgid "Transparency Information"
-msgstr "Información de Transparencia"
+msgid "?"
+msgstr "¿?"
 
-#: lib/themes/panama-theme/lib/views/public_body/show.html.erb:87
-msgid "View this authority’s Transparency Information"
-msgstr "Ver la información de transparencia de esta institución pública                                                                                                                                   "
-
-#: lib/themes/panama-theme/lib/views/public_body/show.html.erb:89
-msgid "We don’t have Transparency Information for this authority yet."
-msgstr "Todavía no contamos con información de transparencia para esta institución pública."
-
-#: lib/themes/panama-theme/lib/views/public_body/show.html.erb:92
-msgid ""
-"All public authorities must disclose information about their organisation "
-"online."
-msgstr "Todas las instituciones públicas deben revelar información de transparencia acerca de su organización en línea."
-
-#: lib/themes/panama-theme/lib/views/public_body/show.html.erb:92
-msgid "Find out more."
-msgstr "Descubra más."
-
-#: lib/themes/panama-theme/lib/views/public_body/show.html.erb:97
 msgid "ATI Officer"
 msgstr "Oficial de información"
 
-#: lib/themes/panama-theme/lib/views/public_body/show.html.erb:101
-msgid "We don’t have the ATI Officer details for this authority yet."
-msgstr "Todavía no tenemos detalles acerca del oficial de información en esta institución pública."
+msgid "Address"
+msgstr "Dirección"
 
-#: lib/themes/panama-theme/lib/views/public_body/show.html.erb:106
+msgid "All public authorities must disclose information about their organisation online."
+msgstr "Todas las instituciones públicas deben revelar información de transparencia acerca de su organización en línea."
+
+msgid "Almost there! {{reason}}, please create an account or sign in with your existing details."
+msgstr "¡Ya casi termina! {{reason}}, por favor crear una cuenta o iniciar sesión con sus datos existentes."
+
+msgid "As a private citizen, you need you to tell us your national ID number and address as this information is required to make a valid ATI request under Panamanian law. This information will only be shared with the authority you are requesting information from."
+msgstr "Como persona natural usted debe indicarnos su número de cédula o identificación personal y su dirección, ya que se requiere esta información para realizar una solicitud de acceso a la información de acuerdo a la ley 6 de transparencia. Esta información sólo será compartida con la institución pública a la cual usted le hace la petición."
+
+msgid "Ask for <strong>specific</strong> documents or information, this site is not suitable for general enquiries."
+msgstr "Solicite <strong>específicamente</strong> documentos o información pública, este sitio web no es el adecuado para consultas generales."
+
+msgid "Ask us to update FOI email"
+msgstr "Solicite actualizar una dirección de correo electrónico para acceso a la información pública"
+
+msgid "Authorities in Panama are required to publish <a href=\"{{help_url}}\">detailed transparency information</a> online. Make the most of it! Make sure the information you require isn’t already available on <a href=\"{{trans_url}}\">{{name}}’s transparency page</a>\"."
+msgstr "Las instituciones en Panamá están obligadas a publicar <a href=\"{{help_url}}\">información detallada de transparencia</a> en sus sitios web. ¡Ahorre tiempo! Verifique si la información que usted requiere se encuentra disponible en <a href=\"{{trans_url}}\">{{name}} sección de transparencia</a>\"."
+
+msgid "Authorities in Panama are required to publish <a href=\"{{help_url}}\">detailed transparency information</a> online. {{name}} has not. But you <em>can</em> <a href=\"{{auth_url}}\">browse previous requests</a> they have answered."
+msgstr "Las instituciones en Panamá están obligadas a publicar <a href=\"{{help_url}}\">información detallada de transparencia</a> en sus páginas web. {{name}} no tiene la información disponible. Usted <em>puede</em> <a href=\"{{auth_url}}\">consultar solicitudes  </a> que han contestado anteriormente."
+
+msgid "Authority has transferred your request to a different public body."
+msgstr "Esta institución pública ha transferido su solicitud a la institución que corresponde."
+
+msgid "Before you start:"
+msgstr "Antes de iniciar:"
+
+msgid "Browse <a href='{{url}}'>other requests to {{public_body_name}}</a> for examples of how to word your request."
+msgstr "Ver <a href='{{url}}'>otras solicitudes dirigidas a {{public_body_name}} </a>, para ver ejemplos de como debe redactar su solicitud."
+
+msgid "Browse <a href='{{url}}'>other requests</a> for examples of how to word your request."
+msgstr "Vea <a href='{{url}}'>otras solicitudes</a> para ver ejemplos de como redactar su solicitud."
+
+msgid "Change address on {{site_name}}"
+msgstr "Cambie la dirección en {{site_name}}"
+
+msgid "Change company incorporation date on {{site_name}}"
+msgstr "Cambie la fecha de constitución de la empresa en: {{site_name}} "
+
+msgid "Change company name on {{site_name}}"
+msgstr "Cambie el número de la empresa en {{site_name}}"
+
+msgid "Change company number on {{site_name}}"
+msgstr "Cambie el número de teléfono su empresa en {{site_name}}"
+
+msgid "Change contact phone number on {{site_name}}"
+msgstr "Cambie su número de teléfono en {{site_name}} "
+
+msgid "Change national ID number on {{site_name}}"
+msgstr "Cambie su número de cédula o identificación personal en {{site_name}}"
+
+msgid "Change profile photo"
+msgstr "Cambiar foto de perfil "
+
+msgid "Change your address"
+msgstr "Cambie su dirección"
+
+msgid "Change your address used on {{site_name}}"
+msgstr "Cambie la dirección que utiliza en {{site_name}} "
+
+msgid "Change your company incorporation date used on {{site_name}}"
+msgstr "Cambie el número de constitución de su empresa utilizado en {{site_name}}"
+
+msgid "Change your company name"
+msgstr "Cambie el nombre de su empresa"
+
+msgid "Change your company name used on {{site_name}}"
+msgstr "Cambie el nombre de su empresa utilizado en {{site_name}}"
+
+msgid "Change your company number"
+msgstr "Cambie el número de teléfono de su empresa"
+
+msgid "Change your company number used on {{site_name}}"
+msgstr "Cambie el número de teléfono de su empresa utilizado en {{site_name}}"
+
+msgid "Change your contact number"
+msgstr "Cambie su número de teléfono "
+
+msgid "Change your contact phone number used on {{site_name}}"
+msgstr "Cambie su número de teléfono utilizado en {{site_name}}"
+
+msgid "Change your email"
+msgstr "Cambie su dirección de correo electrónico "
+
+msgid "Change your incorporation date"
+msgstr "Cambie la fecha de constitución"
+
+msgid "Change your national ID number"
+msgstr "Cambie su número de cédula o identificación personal "
+
+msgid "Change your national ID number used on {{site_name}}"
+msgstr "Cambie su número de cédula o identificación personal utilizado en {{site_name}}"
+
+msgid "Change your password"
+msgstr "Cambie su contraseña "
+
+msgid "Charity registration"
+msgstr "Registro de caridad"
+
+msgid "Choose a password:"
+msgstr "Elija una contraseña:"
+
+msgid "Company Name"
+msgstr "Nombre de la empresa"
+
+msgid "Company Name:"
+msgstr "Nombre de la empresa:"
+
+msgid "Company Number"
+msgstr "Número de teléfono de la empresa"
+
+msgid "Company name"
+msgstr "Nombre de la empresa"
+
+msgid "Company number"
+msgstr "Número de teléfono de la empresa "
+
+msgid "Company number:"
+msgstr "Numero de teléfono de la empresa:"
+
+msgid "Confirm password:"
+msgstr "Confirmar contraseña:"
+
+msgid "Contact Phone Number"
+msgstr "Número de teléfono"
+
+msgid "Contact phone number:"
+msgstr "Numero de teléfono:"
+
+msgid "Create an account"
+msgstr "Crear una cuenta"
+
+msgid "Default locale"
+msgstr "Configuración regional predeterminada"
+
+msgid "Did you know?"
+msgstr "Es importante saber que: "
+
+msgid "Disclosure log"
+msgstr "Registro de divulgación"
+
+msgid "Disclosure log URL"
+msgstr "Registro de divulgación de URL "
+
+msgid "Don't have a superuser account yet?"
+msgstr "¿Todavía no tiene una cuenta de superusuario?"
+
+msgid "Environmental Information Regulations requests made"
+msgstr ""
+
+msgid "Environmental Information Regulations requests made using this site"
+msgstr ""
+
+msgid "Every citizen has the right to access information held by public bodies. <strong>By law, they have to respond</strong>."
+msgstr "Todo ciudadano tiene derecho a acceder a la información que se encuentra en poder de las instituciones públicas. <strong>Quienes por Ley, tienen que responder</strong>."
+
+msgid "Everything that you enter on this page, including <strong>your name</strong>,\\n              will be <strong>displayed publicly</strong> on\\n              this website forever (<a href=\"{{url}}\">why?</a>)."
+msgstr "Todo lo que escriba en esta página, incluyendo <strong>su nombre</strong>,\\n será <strong>mostrado públicamente</strong> en\\n esta plataforma (<a href=\"{{url}}\">¿por qué?</a>)."
+
+msgid "Everything that you enter on this page\\n              will be <strong>displayed publicly</strong> on\\n              this website forever (<a href=\"{{url}}\">why?</a>)."
+msgstr "Todo lo que escriba en esta página será <strong>mostrado públicamente</strong> en este sitio web (<a href=\"{{url}}\">¿por qué?</a>)."
+
+msgid "Find out more about"
+msgstr "Haga clic para saber más acerca de"
+
+msgid "Find out more."
+msgstr "Descubra más."
+
 msgid "Follow this authority"
 msgstr "Seguir a esta institución pública"
 
-#: lib/themes/panama-theme/lib/views/public_body/show.html.erb:110
+msgid "For an unknown reason, it is not possible to make a request to this authority."
+msgstr "Por alguna razón desconocida no es posible hacer una solicitud a esta institución."
+
+msgid "Freedom of Information law does not apply to this authority, so you cannot make\\n                a request to it."
+msgstr "La ley de acceso a la información no aplica a esta institución, por lo tanto no puede realizar solicitudes a la misma."
+
+msgid "Freedom of Information requests made"
+msgstr "Solicitudes de acceso a la información realizadas"
+
+msgid "Freedom of Information requests made using this site"
+msgstr "Solicitudes de acceso a la información realizadas a través de este sitio  "
+
+msgid "Freedom of information requests to"
+msgstr "Solicitud de acceso a la información para"
+
+msgid "Home page"
+msgstr "Página de inicio"
+
+msgid "Home page of authority"
+msgstr "Página web de la institución pública"
+
+msgid "I am a…"
+msgstr "Tipo de solicitante: "
+
+msgid "If you are thinking of using a pseudonym,\\n              please <a href=\"{{url}}\">read this first</a>."
+msgstr "Si está pensando utilizar un seudónimo, <a href=\"{{url}}\"> lea esto primero </a>."
+
+msgid "Incorporation Date"
+msgstr "Fecha de constitución"
+
+msgid "Incorporation Date:"
+msgstr "Fecha de constitución:"
+
+msgid "Incorporation date"
+msgstr "Fecha de constitución "
+
+msgid "Individual"
+msgstr "Persona natural"
+
+msgid "Is {{email_address}} the wrong address for {{type_of_request}} requests to {{public_body_name}}? If so, please contact us using this form:"
+msgstr "¿Es {{email_address}} la dirección incorrecta para {{type_of_request}} solicitadas a {{public_body_name}}? Si es así por favor contáctenos utilizando este formulario:"
+
+msgid "Keep it <strong>focused</strong>, you'll be more likely to get what you want (<a href=\"{{url}}\">why?</a>)."
+msgstr "Sea <strong>específico</strong>, será más fácil conseguir la información que desea (<a href=\"{{url}}\">¿por qué?</a>)."
+
+msgid "Legal person"
+msgstr "Persona jurídica"
+
+msgid "Make a request to this authority"
+msgstr "Solicite información a esta institución pública "
+
+msgid "Make an {{law_used_short}} request"
+msgstr "Realice una solicitud de {{law_used_short}}"
+
+msgid "Make an {{law_used_short}} request to '{{public_body_name}}'"
+msgstr "Realice una solicitud de {{law_used_short}} a '{{public_body_name}}'"
+
+msgid "Name"
+msgstr "Nombre"
+
+msgid "National ID Number"
+msgstr "Número de cédula o identificación personal"
+
+msgid "National ID Number:"
+msgstr "Número de cédula o identificación personal:"
+
+msgid "National ID number"
+msgstr "Número de cédula o identificación personal "
+
+msgid "New address:"
+msgstr "Nueva dirección:"
+
+msgid "New company incorporation date:"
+msgstr "Nueva fecha de constitución de la empresa:"
+
+msgid "New company name:"
+msgstr "Nuevo nombre de empresa:"
+
+msgid "New company number:"
+msgstr "Nuevo número de teléfono de la empresa:                              "
+
+msgid "New contact phone number:"
+msgstr "Nuevo número de teléfono:"
+
+msgid "New national ID number:"
+msgstr "Nuevo número de cédula o identificación personal:"
+
+msgid "Nobody has made any Freedom of Information requests to {{public_body_name}} using this site yet."
+msgstr "{{public_body_name}} no ha recibido solicitudes de acceso a la información, a través de este sitio. "
+
+msgid "Only put in abbreviations which are really used, otherwise leave blank. Short or long name is used in the URL – don't worry about breaking URLs through renaming, as the history is used to redirect"
+msgstr "Sólo coloque las abreviaturas que se utilizan realmente, de lo contrario dejar en blanco. El nombre corto o largo se utiliza en la URL. No se preocupe por romper las URL al cambiar el nombre, ya que el historial se utiliza para redirigir."
+
+msgid "Only requests made using {{site_name}} are shown."
+msgstr "Sólo se muestran las solicitudes realizadas mediante {{site_name}}."
+
+msgid "Phone number"
+msgstr "Número de teléfono "
+
+msgid "Please enter a contact phone number"
+msgstr "Por favor ingrese su número de teléfono "
+
+msgid "Please enter your address"
+msgstr "Por favor ingrese su dirección  "
+
+msgid "Please enter your company name"
+msgstr "Por favor ingrese el nombre de su empresa"
+
+msgid "Please enter your company number"
+msgstr "Por favor ingrese el número de teléfono de su empresa "
+
+msgid "Please enter your company's incorporation date"
+msgstr "Por favor ingrese la fecha de constitución de su empresa "
+
+msgid "Please enter your national ID number"
+msgstr "Por favor ingrese su número de cédula o identificación personal "
+
+msgid "Please sign in as "
+msgstr "Por favor inicie sesión como"
+
+msgid "Please sign in or create an account."
+msgstr "Favor iniciar sesión o crear una cuenta"
+
+msgid "Please use this email address for all replies to this request:"
+msgstr "Por favor utilice esta dirección de correo electrónico para todas las respuestas a esta solicitud:"
+
+msgid "Preview your public request"
+msgstr "Vista previa de la solicitud "
+
+msgid "Public notes"
+msgstr "Notas públicas"
+
+msgid "Publication scheme"
+msgstr "Esquema de publicación"
+
+msgid "Publication scheme URL"
+msgstr "Esquema de publicación URL"
+
+msgid "RSS feed of updates"
+msgstr "Actualizaciones RSS"
+
+msgid "Read more about making a request."
+msgstr "Lea más acerca de como realizar una solicitud."
+
+msgid "Request email"
+msgstr "Solicite correo electrónico"
+
+msgid "Request outcomes"
+msgstr "Estadísticas"
+
+msgid "Requestor"
+msgstr "Solicitante"
+
+msgid "Search within the {{count}} Freedom of Information requests to {{public_body_name}}"
+msgid_plural "Search within the {{count}} Freedom of Information requests made to {{public_body_name}}"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Short name"
+msgstr "Nombre corto"
+
+msgid "Sign in"
+msgstr "Iniciar sesión"
+
+msgid "Sign in as the emergency user"
+msgstr "Inicie sesión como un usuario de emergencia"
+
+msgid "Sign in or make a new account"
+msgstr " Iniciar sesión o crear una cuenta nueva"
+
+msgid "Sign up"
+msgstr "Registrarse"
+
+msgid "Successful"
+msgstr "Resueltas"
+
+msgid "Summary:"
+msgstr "Asunto:"
+
+msgid "Tags"
+msgstr "Etiquetas"
+
+msgid "Tags (separated by a space):"
+msgstr "Etiquetas (separadas por un espacio):"
+
+msgid "The search index is currently offline, so we can't show the Freedom of Information requests that have been made to this authority."
+msgstr "El índice de búsqueda se encuentra actualmente fuera de servicio, por tal razón no se pueden mostrar las solicitudes de información que se han hecho a esta institución."
+
+msgid "Then you can change your address used on {{site_name}}"
+msgstr "Después podrá cambiar la dirección que utiliza en  {{site_name}}"
+
+msgid "Then you can change your company incorporation date used on {{site_name}}"
+msgstr "Entonces podrá cambiar la fecha de constitución de su empresa utilizada en {{site_name}}."
+
+msgid "Then you can change your company name used on {{site_name}}"
+msgstr "Entonces podrá cambiar el nombre de su empresa utilizada en {{site_name}}."
+
+msgid "Then you can change your company number used on {{site_name}}"
+msgstr "Entonces podrá cambiar el número de teléfono de su empresa utilizado en {{site_name}}."
+
+msgid "Then you can change your contact phone number used on {{site_name}}"
+msgstr "Entonces podrá cambiar el número de teléfono utilizado en {{site_name}}"
+
+msgid "Then you can change your national ID number used on {{site_name}}"
+msgstr "Entonces podrá cambiar su número de cédula o identificación personal utilizado en {{site_name}}."
+
+msgid "There were no requests matching your query."
+msgstr "No hubo solicitudes que coincidan con su consulta."
+
+msgid "This authority no longer exists, so you cannot make a request to it."
+msgstr "Esta institución pública ha dejado de existir, por tal razón no puede solicitarle información. "
+
+msgid "This message is to remind you to reply. You can do so by replying directly to the original request email, or by sending a new email to {{response_email}}."
+msgstr "Este mensaje es para recordarle que debe responder a esta solicitud de acceso a la información pública. Puede hacerlo respondiendo directamente a través del correo electrónico original, o mediante el envío de un nuevo correo electrónico a {{response_email}}."
+
+msgid "Tips for successful requests:"
+msgstr "Consejos para realizar una solicitud exitosa:"
+
+msgid "To change your address used on {{site_name}}"
+msgstr "Para cambiar la dirección que utiliza en {{site_name}}"
+
+msgid "To change your company incorporation date used on {{site_name}}"
+msgstr "Para cambiar la fecha de constitución de su empresa utilizada en {{site_name}}"
+
+msgid "To change your company name used on {{site_name}}"
+msgstr "Para cambiar el nombre de la empresa utilizado en {{site_name}}"
+
+msgid "To change your company number used on {{site_name}}"
+msgstr "Para cambiar el número de teléfono de su empresa utilizado en {{site_name}}"
+
+msgid "To change your contact phone number used on {{site_name}}"
+msgstr "Para cambiar su número de teléfono utilizado en {{site_name}}"
+
+msgid "To change your national ID number used on {{site_name}}"
+msgstr "Para cambiar su número de cédula o identificación personal utilizado en {{site_name}}"
+
+msgid "To request information on behalf of a company, you need you to tell us your company name, number and incorporation date as this information is required to make a valid ATI request under Panamanian law."
+msgstr "Para solicitar información en representación de una empresa, es necesario que nos diga el nombre de la misma, número de teléfono, dirección y fecha de constitución, ya que esta información es necesaria para realizar una solicitud de acceso a la información válida bajo la ley 6 de transparencia."
+
+msgid "To:"
+msgstr "Para:                           "
+
+msgid "Track requests to this authority"
+msgstr "Seguir"
+
+msgid "Transferred."
+msgstr "Transferido."
+
+msgid "Transparency Information"
+msgstr "Información de Transparencia"
+
+msgid "Unresolved"
+msgstr "En trámite"
+
+msgid "Unsubscribe"
+msgstr "Dejar de seguir"
+
+msgid "Unsuccessful"
+msgstr "Negadas"
+
+msgid "User type must be 'business' or 'individual'"
+msgstr "El tipo de usuario debe ser \"persona jurídica\" o \"persona natural\"."
+
+msgid "View FOI email address"
+msgstr "Ver solicitudes de acceso a la información"
+
+msgid "View this authority’s Transparency Information"
+msgstr "Ver la información de transparencia de esta institución pública                                                                                                                                   "
+
+msgid "We don’t have Transparency Information for this authority yet."
+msgstr "Todavía no contamos con información de transparencia para esta institución pública."
+
+msgid "We don’t have the ATI Officer details for this authority yet."
+msgstr "Todavía no tenemos detalles acerca del oficial de información en esta institución pública."
+
+msgid "We will not reveal your email address to anybody unless you or\\n        the law tell us to (<a href=\"{{url}}\">details</a>). "
+msgstr "Su dirección de correo electrónico no será revelada  (<a href=\"{{url}}\">lea más</a>)."
+
+msgid "We will not reveal your phone number to anybody unless you or\\n        the law tell us to (<a href=\"{{url}}\">details</a>). "
+msgstr "Su número de teléfono no será revelado (<a href=\"{{url}}\">Lea más</a>)."
+
+msgid "Write your request in <strong>simple, precise language</strong>."
+msgstr "Escriba su solicitud en <strong>lenguaje simple y preciso </strong>."
+
+msgid "You already created the same batch of requests on {{date}}.   You can either view the <a href=\"{{existing_batch}}\">existing batch</a>, or edit the details below to make a new but similar batch of requests."
+msgstr ""
+
+msgid "You can only request information about the environment from this authority."
+msgstr "Sólo se puede solicitar información sobre temas relacionados con esta institución."
+
+msgid "You can’t use this form to request information about yourself (<a href=\"{{url}}\">why?</a>)."
+msgstr "No puede utilizar este formulario para solicitar información sobre usted (<a href=\"{{url}}\"> ¿por qué?</a>)."
+
+msgid "You have not yet replied to a {{law_used_short}} request - {{title}}. Note that it is required by law that you respond promptly and your response is now overdue."
+msgstr "Usted todavía no ha respondido a una solicitud de {{law_used_short}} - {{title}}. Tenga en cuenta que la ley 6 de transparencia requiere que responda en un término de 30 días calendario, el cual ya ha vencido."
+
+msgid "You have not yet replied to a {{law_used_short}} request - {{title}}. Note that it is required by law that you respond promptly."
+msgstr "Usted todavía no ha respondido a la solicitud de {{law_used_short}} - {{title}}. Tenga en cuenta que la ley 6 de transparencia requiere que responda con prontitud."
+
+msgid "You have now changed your address used on {{site_name}}"
+msgstr "Usted ha cambiado su dirección en {{site_name}}"
+
+msgid "You have now changed your company incorporation date used on {{site_name}}"
+msgstr "Usted ha cambiado el número de constitución de su empresa utilizado en {{site_name}}"
+
+msgid "You have now changed your company name used on {{site_name}}"
+msgstr "Se ha cambiado el nombre de su empresa utilizado en {{site_name}}"
+
+msgid "You have now changed your company number used on {{site_name}}"
+msgstr "Usted ha cambiado el número de teléfono de su empresa utilizado en {{site_name}}"
+
+msgid "You have now changed your contact phone number used on {{site_name}}"
+msgstr "Se ha cambiado su número de teléfono utilizado en {{site_name}}"
+
+msgid "You have now changed your national ID number used on {{site_name}}"
+msgstr "Usted ha cambiado su número de cédula o identificación personal utilizado en {{site_name}}"
+
+msgid "You haven't responded to a {{law_used_short}} request yet."
+msgstr "Usted todavía no ha respondido a una solicitud  de {{law_used_short}}."
+
+msgid "You haven't yet responded to the FOI request - "
+msgstr "Usted todavía no ha respondido a la solicitud de acceso a la información -"
+
+msgid "Your <strong>Right to Know</strong>"
+msgstr "Su <strong>Derecho a Saber</strong>"
+
+msgid "Your <strong>name will appear publicly</strong>\\n        (<a href=\"{{why_url}}\">why?</a>)\\n        on this website and in search engines. If you\\n        are thinking of using a pseudonym, please\\n        <a href=\"{{help_url}}\">read this first</a>."
+msgstr "Su <strong>nombre se mostrará públicamente en esta plataforma y en otros motores de búsqueda </strong>\\n (<a href=\"{{why_url}}\">¿por qué?</a>)\\n. Si está pensando en utilizar un seudónimo, por favor <a href=\"{{help_url}}\">lea esto primero</a>. "
+
+msgid "Your address:"
+msgstr "Dirección:"
+
+msgid "Your e-mail:"
+msgstr "Dirección de correo electrónico:"
+
+msgid "Your name:"
+msgstr "Nombre:"
+
+msgid "Your request:"
+msgstr "Su solicitud:"
+
+msgid "Your response to a {{law_used_short}} request is overdue."
+msgstr "Su respuesta a  la solicitud de {{law_used_short}} ha vencido."
+
+msgid "Your response to the FOI request - "
+msgstr "Su respuesta a la solicitud de acceso a la información -"
+
+msgid "Your selected authorities"
+msgstr "Sus instituciones seleccionadas"
+
+msgid "a one line summary of the information you are requesting, \\n\t\t\te.g."
+msgstr "Resuma en una línea la información que desea solicitar, \\n⇥⇥⇥ejemplo:"
+
+msgid "admin"
+msgstr "administrador "
+
+msgid "also called {{public_body_short_name}}"
+msgstr "también conocida como {{public_body_short_name}}"
+
+msgid "edit text about you"
+msgstr "Editar texto acerca de usted"
+
+msgid "internal error"
+msgstr "error interno "
+
+msgid "please sign in as "
+msgstr "por favor inicie sesión como"
+
+msgid "set to <strong>blank</strong> (empty string) if can't find an address; these emails are <strong>public</strong> as anyone can view with a CAPTCHA"
+msgstr "dejar <strong>en blanco</strong> (empty string) si no cuenta con una dirección; estos correos electrónicos son <strong>públicos</strong> cualquiera puede verlos con un CAPTCHA."
+
+msgid "the {{site_name}} team"
+msgstr "el equipo de {{site_name}} "
+
+msgid "unknown status "
+msgstr "estatus desconocido"
+
+msgid "{{count}} Freedom of Information request to {{public_body_name}}"
+msgid_plural "{{count}} Freedom of Information requests to {{public_body_name}}"
+msgstr[0] ""
+msgstr[1] ""
+
 msgid "{{count}} person is following this authority."
 msgid_plural "{{count}} people are following this authority."
 msgstr[0] ""
 msgstr[1] ""
 
-#: lib/themes/panama-theme/lib/views/public_body/show.html.erb:124
-msgid "Unsubscribe"
-msgstr "Dejar de seguir"
-
-#: lib/themes/panama-theme/lib/views/public_body/show.html.erb:126
-msgid "Track requests to this authority"
-msgstr "Seguir"
-
-#: lib/themes/panama-theme/lib/views/public_body/show.html.erb:131
-msgid "RSS feed of updates"
-msgstr "Actualizaciones RSS"
-
-#: lib/themes/panama-theme/lib/views/public_body/show.html.erb:136
-msgid "Home page of authority"
-msgstr "Página web de la institución pública"
-
-#: lib/themes/panama-theme/lib/views/public_body/show.html.erb:140
-msgid "Publication scheme"
-msgstr "Esquema de publicación"
-
-#: lib/themes/panama-theme/lib/views/public_body/show.html.erb:144
-msgid "Disclosure log"
-msgstr "Registro de divulgación"
-
-#: lib/themes/panama-theme/lib/views/public_body/show.html.erb:150
-#: lib/themes/panama-theme/lib/views/public_body/show.html.erb:152
-msgid "Charity registration"
-msgstr "Registro de caridad"
-
-#: lib/themes/panama-theme/lib/views/public_body/show.html.erb:157
-msgid "View FOI email address"
-msgstr "Ver solicitudes de acceso a la información"
-
-#: lib/themes/panama-theme/lib/views/public_body/show.html.erb:158
-msgid "Ask us to update FOI email"
-msgstr "Solicite actualizar una dirección de correo electrónico para acceso a la información pública"
-
-#: lib/themes/panama-theme/lib/views/public_body/show.html.erb:166
-msgid "Environmental Information Regulations requests made using this site"
-msgstr ""
-
-#: lib/themes/panama-theme/lib/views/public_body/show.html.erb:169
-msgid "Freedom of Information requests made using this site"
-msgstr "Solicitudes de acceso a la información realizadas a través de este sitio  "
-
-#: lib/themes/panama-theme/lib/views/public_body/show.html.erb:170
-msgid ""
-"Nobody has made any Freedom of Information requests to {{public_body_name}} "
-"using this site yet."
-msgstr "{{public_body_name}} no ha recibido solicitudes de acceso a la información, a través de este sitio. "
-
-#: lib/themes/panama-theme/lib/views/public_body/show.html.erb:179
-msgid ""
-"Search within the {{count}} Freedom of Information requests to "
-"{{public_body_name}}"
-msgid_plural ""
-"Search within the {{count}} Freedom of Information requests made to "
-"{{public_body_name}}"
-msgstr[0] ""
-msgstr[1] ""
-
-#: lib/themes/panama-theme/lib/views/public_body/show.html.erb:181
-msgid "{{count}} Freedom of Information request to {{public_body_name}}"
-msgid_plural ""
-"{{count}} Freedom of Information requests to {{public_body_name}}"
-msgstr[0] ""
-msgstr[1] ""
-
-#: lib/themes/panama-theme/lib/views/public_body/show.html.erb:207
-msgid "There were no requests matching your query."
-msgstr "No hubo solicitudes que coincidan con su consulta."
-
-#: lib/themes/panama-theme/lib/views/public_body/show.html.erb:210
-msgid "Only requests made using {{site_name}} are shown."
-msgstr "Sólo se muestran las solicitudes realizadas mediante {{site_name}}."
-
-#: lib/themes/panama-theme/lib/views/public_body/show.html.erb:211
-msgid "?"
-msgstr "¿?"
-
-#: lib/themes/panama-theme/lib/views/public_body/show.html.erb:217
-msgid "Environmental Information Regulations requests made"
-msgstr ""
-
-#: lib/themes/panama-theme/lib/views/public_body/show.html.erb:219
-msgid "Freedom of Information requests made"
-msgstr "Solicitudes de acceso a la información realizadas"
-
-#: lib/themes/panama-theme/lib/views/public_body/show.html.erb:221
-msgid ""
-"The search index is currently offline, so we can't show the Freedom of "
-"Information requests that have been made to this authority."
-msgstr "El índice de búsqueda se encuentra actualmente fuera de servicio, por tal razón no se pueden mostrar las solicitudes de información que se han hecho a esta institución."
-
-#: lib/themes/panama-theme/lib/views/request/new.html.erb:21
-msgid "Make an {{law_used_short}} request"
-msgstr "Realice una solicitud de {{law_used_short}}"
-
-#: lib/themes/panama-theme/lib/views/request/new.html.erb:23
-msgid "Make an {{law_used_short}} request to '{{public_body_name}}'"
-msgstr "Realice una solicitud de {{law_used_short}} a '{{public_body_name}}'"
-
-#: lib/themes/panama-theme/lib/views/request/new.html.erb:25
-msgid "2. Ask for Information"
-msgstr "2. Solicite información"
-
-#: lib/themes/panama-theme/lib/views/request/new.html.erb:30
-msgid ""
-"{{existing_request_user}} already\\n      created the same request on "
-"{{date}}. You can either view the <a href=\"{{existing_request}}\">existing "
-"request</a>,\\n      or edit the details below to make a new but similar "
-"request."
+msgid "{{existing_request_user}} already\\n      created the same request on {{date}}. You can either view the <a href=\"{{existing_request}}\">existing request</a>,\\n      or edit the details below to make a new but similar request."
 msgstr "{{existing_request_user}} ha realizado la misma solicitud el día {{date}}. Usted puede ver la respuesta de <a href=\"{{existing_request}}\"> solicitud ya existente </a>,\\n  o editar los detalles descritos a continuación, para hacer una nueva solicitud."
 
-#: lib/themes/panama-theme/lib/views/request/new.html.erb:39
-msgid ""
-"You already created the same batch of requests on {{date}}.   You can either"
-" view the <a href=\"{{existing_batch}}\">existing batch</a>, or edit the "
-"details below to make a new but similar batch of requests."
-msgstr ""
-
-#: lib/themes/panama-theme/lib/views/request/new.html.erb:52
-#: lib/themes/panama-theme/lib/views/request/new.html.erb:69
-msgid "To:"
-msgstr "Para:                           "
-
-#: lib/themes/panama-theme/lib/views/request/new.html.erb:54
-msgid "Your selected authorities"
-msgstr "Sus instituciones seleccionadas"
-
-#: lib/themes/panama-theme/lib/views/request/new.html.erb:55
-msgid "(hide)"
-msgstr "(ocultar)"
-
-#: lib/themes/panama-theme/lib/views/request/new.html.erb:55
-msgid "(show)"
-msgstr "(mostrar)"
-
-#: lib/themes/panama-theme/lib/views/request/new.html.erb:82
-msgid "Did you know?"
-msgstr "Es importante saber que: "
-
-#: lib/themes/panama-theme/lib/views/request/new.html.erb:84
-msgid ""
-"Authorities in Panama are required to publish <a "
-"href=\"{{help_url}}\">detailed transparency information</a> online. Make the"
-" most of it! Make sure the information you require isn’t already available "
-"on <a href=\"{{trans_url}}\">{{name}}’s transparency page</a>\"."
-msgstr "Las instituciones en Panamá están obligadas a publicar <a href=\"{{help_url}}\">información detallada de transparencia</a> en sus sitios web. ¡Ahorre tiempo! Verifique si la información que usted requiere se encuentra disponible en <a href=\"{{trans_url}}\">{{name}} sección de transparencia</a>\"."
-
-#: lib/themes/panama-theme/lib/views/request/new.html.erb:86
-msgid ""
-"Authorities in Panama are required to publish <a "
-"href=\"{{help_url}}\">detailed transparency information</a> online. {{name}}"
-" has not. But you <em>can</em> <a href=\"{{auth_url}}\">browse previous "
-"requests</a> they have answered."
-msgstr "Las instituciones en Panamá están obligadas a publicar <a href=\"{{help_url}}\">información detallada de transparencia</a> en sus páginas web. {{name}} no tiene la información disponible. Usted <em>puede</em> <a href=\"{{auth_url}}\">consultar solicitudes  </a> que han contestado anteriormente."
-
-#: lib/themes/panama-theme/lib/views/request/new.html.erb:96
-msgid "Before you start:"
-msgstr "Antes de iniciar:"
-
-#: lib/themes/panama-theme/lib/views/request/new.html.erb:100
-msgid ""
-"Everything that you enter on this page, including <strong>your "
-"name</strong>,\\n              will be <strong>displayed publicly</strong> "
-"on\\n              this website forever (<a href=\"{{url}}\">why?</a>)."
-msgstr "Todo lo que escriba en esta página, incluyendo <strong>su nombre</strong>,\\n será <strong>mostrado públicamente</strong> en\\n esta plataforma (<a href=\"{{url}}\">¿por qué?</a>)."
-
-#: lib/themes/panama-theme/lib/views/request/new.html.erb:103
-msgid ""
-"If you are thinking of using a pseudonym,\\n              please <a "
-"href=\"{{url}}\">read this first</a>."
-msgstr "Si está pensando utilizar un seudónimo, <a href=\"{{url}}\"> lea esto primero </a>."
-
-#: lib/themes/panama-theme/lib/views/request/new.html.erb:106
-msgid ""
-"Everything that you enter on this page\\n              will be "
-"<strong>displayed publicly</strong> on\\n              this website forever "
-"(<a href=\"{{url}}\">why?</a>)."
-msgstr "Todo lo que escriba en esta página será <strong>mostrado públicamente</strong> en este sitio web (<a href=\"{{url}}\">¿por qué?</a>)."
-
-#: lib/themes/panama-theme/lib/views/request/new.html.erb:113
-msgid ""
-"You can’t use this form to request information about yourself (<a "
-"href=\"{{url}}\">why?</a>)."
-msgstr "No puede utilizar este formulario para solicitar información sobre usted (<a href=\"{{url}}\"> ¿por qué?</a>)."
-
-#: lib/themes/panama-theme/lib/views/request/new.html.erb:116
-msgid "Tips for successful requests:"
-msgstr "Consejos para realizar una solicitud exitosa:"
-
-#: lib/themes/panama-theme/lib/views/request/new.html.erb:121
-msgid ""
-"Browse <a href='{{url}}'>other requests to {{public_body_name}}</a> for "
-"examples of how to word your request."
-msgstr "Ver <a href='{{url}}'>otras solicitudes dirigidas a {{public_body_name}} </a>, para ver ejemplos de como debe redactar su solicitud."
-
-#: lib/themes/panama-theme/lib/views/request/new.html.erb:123
-msgid ""
-"Browse <a href='{{url}}'>other requests</a> for examples of how to word your"
-" request."
-msgstr "Vea <a href='{{url}}'>otras solicitudes</a> para ver ejemplos de como redactar su solicitud."
-
-#: lib/themes/panama-theme/lib/views/request/new.html.erb:126
-msgid "Write your request in <strong>simple, precise language</strong>."
-msgstr "Escriba su solicitud en <strong>lenguaje simple y preciso </strong>."
-
-#: lib/themes/panama-theme/lib/views/request/new.html.erb:127
-msgid ""
-"Ask for <strong>specific</strong> documents or information, this site is not"
-" suitable for general enquiries."
-msgstr "Solicite <strong>específicamente</strong> documentos o información pública, este sitio web no es el adecuado para consultas generales."
-
-#: lib/themes/panama-theme/lib/views/request/new.html.erb:128
-msgid ""
-"Keep it <strong>focused</strong>, you'll be more likely to get what you want"
-" (<a href=\"{{url}}\">why?</a>)."
-msgstr "Sea <strong>específico</strong>, será más fácil conseguir la información que desea (<a href=\"{{url}}\">¿por qué?</a>)."
-
-#: lib/themes/panama-theme/lib/views/request/new.html.erb:134
-msgid "Summary:"
-msgstr "Asunto:"
-
-#: lib/themes/panama-theme/lib/views/request/new.html.erb:139
-msgid "a one line summary of the information you are requesting, \\n\t\t\te.g."
-msgstr "Resuma en una línea la información que desea solicitar, \\n⇥⇥⇥ejemplo:"
-
-#: lib/themes/panama-theme/lib/views/request/new.html.erb:148
-msgid "Your request:"
-msgstr "Su solicitud:"
-
-#: lib/themes/panama-theme/lib/views/request/new.html.erb:163
-msgid "Preview your public request"
-msgstr "Vista previa de la solicitud "
-
-#: lib/themes/panama-theme/lib/views/request/new.html.erb:168
-msgid "Tags (separated by a space):"
-msgstr "Etiquetas (separadas por un espacio):"
-
-#: lib/themes/panama-theme/lib/views/request_mailer/body_nearing_overdue_alert.text.erb:1
-msgid "You haven't responded to a {{law_used_short}} request yet."
-msgstr "Usted todavía no ha respondido a una solicitud  de {{law_used_short}}."
-
-#: lib/themes/panama-theme/lib/views/request_mailer/body_nearing_overdue_alert.text.erb:3
-msgid ""
-"You have not yet replied to a {{law_used_short}} request - {{title}}. Note "
-"that it is required by law that you respond promptly."
-msgstr "Usted todavía no ha respondido a la solicitud de {{law_used_short}} - {{title}}. Tenga en cuenta que la ley 6 de transparencia requiere que responda con prontitud."
-
-#: lib/themes/panama-theme/lib/views/request_mailer/body_nearing_overdue_alert.text.erb:5
-#: lib/themes/panama-theme/lib/views/request_mailer/body_overdue_alert.text.erb:5
-msgid ""
-"This message is to remind you to reply. You can do so by replying directly "
-"to the original request email, or by sending a new email to "
-"{{response_email}}."
-msgstr "Este mensaje es para recordarle que debe responder a esta solicitud de acceso a la información pública. Puede hacerlo respondiendo directamente a través del correo electrónico original, o mediante el envío de un nuevo correo electrónico a {{response_email}}."
-
-#: lib/themes/panama-theme/lib/views/request_mailer/body_nearing_overdue_alert.text.erb:7
-#: lib/themes/panama-theme/lib/views/request_mailer/body_overdue_alert.text.erb:7
-msgid "the {{site_name}} team"
-msgstr "el equipo de {{site_name}} "
-
-#: lib/themes/panama-theme/lib/views/request_mailer/body_overdue_alert.text.erb:1
-msgid "Your response to a {{law_used_short}} request is overdue."
-msgstr "Su respuesta a  la solicitud de {{law_used_short}} ha vencido."
-
-#: lib/themes/panama-theme/lib/views/request_mailer/body_overdue_alert.text.erb:3
-msgid ""
-"You have not yet replied to a {{law_used_short}} request - {{title}}. Note "
-"that it is required by law that you respond promptly and your response is "
-"now overdue."
-msgstr "Usted todavía no ha respondido a una solicitud de {{law_used_short}} - {{title}}. Tenga en cuenta que la ley 6 de transparencia requiere que responda en un término de 30 días calendario, el cual ya ha vencido."
-
-#: lib/themes/panama-theme/lib/views/user/_show_user_info.html.erb:6
-msgid "edit text about you"
-msgstr "Editar texto acerca de usted"
-
-#: lib/themes/panama-theme/lib/views/user/_show_user_info.html.erb:9
-msgid "Contact Phone Number"
-msgstr "Número de teléfono"
-
-#: lib/themes/panama-theme/lib/views/user/_show_user_info.html.erb:12
-msgid "National ID Number"
-msgstr "Número de cédula o identificación personal"
-
-#: lib/themes/panama-theme/lib/views/user/_show_user_info.html.erb:15
-msgid "Address"
-msgstr "Dirección"
-
-#: lib/themes/panama-theme/lib/views/user/_show_user_info.html.erb:18
-msgid "Company Name"
-msgstr "Nombre de la empresa"
-
-#: lib/themes/panama-theme/lib/views/user/_show_user_info.html.erb:21
-msgid "Company Number"
-msgstr "Número de teléfono de la empresa"
-
-#: lib/themes/panama-theme/lib/views/user/_show_user_info.html.erb:24
-msgid "Incorporation Date"
-msgstr "Fecha de constitución"
-
-#: lib/themes/panama-theme/lib/views/user/_show_user_info.html.erb:34
-msgid "Change profile photo"
-msgstr "Cambiar foto de perfil "
-
-#: lib/themes/panama-theme/lib/views/user/_show_user_info.html.erb:36
-msgid "Change your password"
-msgstr "Cambie su contraseña "
-
-#: lib/themes/panama-theme/lib/views/user/_show_user_info.html.erb:37
-msgid "Change your email"
-msgstr "Cambie su dirección de correo electrónico "
-
-#: lib/themes/panama-theme/lib/views/user/_show_user_info.html.erb:38
-msgid "Change your contact number"
-msgstr "Cambie su número de teléfono "
-
-#: lib/themes/panama-theme/lib/views/user/_show_user_info.html.erb:41
-msgid "Change your national ID number"
-msgstr "Cambie su número de cédula o identificación personal "
-
-#: lib/themes/panama-theme/lib/views/user/_show_user_info.html.erb:42
-msgid "Change your address"
-msgstr "Cambie su dirección"
-
-#: lib/themes/panama-theme/lib/views/user/_show_user_info.html.erb:44
-msgid "Change your company name"
-msgstr "Cambie el nombre de su empresa"
-
-#: lib/themes/panama-theme/lib/views/user/_show_user_info.html.erb:45
-msgid "Change your company number"
-msgstr "Cambie el número de teléfono de su empresa"
-
-#: lib/themes/panama-theme/lib/views/user/_show_user_info.html.erb:46
-msgid "Change your incorporation date"
-msgstr "Cambie la fecha de constitución"
-
-#: lib/themes/panama-theme/lib/views/user/_signup.html.erb:29
-msgid "Your e-mail:"
-msgstr "Dirección de correo electrónico:"
-
-#: lib/themes/panama-theme/lib/views/user/_signup.html.erb:33
-msgid ""
-"We will not reveal your email address to anybody unless you or\\n        the"
-" law tell us to (<a href=\"{{url}}\">details</a>). "
-msgstr "Su dirección de correo electrónico no será revelada  (<a href=\"{{url}}\">lea más</a>)."
-
-#: lib/themes/panama-theme/lib/views/user/_signup.html.erb:38
-msgid "Your name:"
-msgstr "Nombre:"
-
-#: lib/themes/panama-theme/lib/views/user/_signup.html.erb:42
-msgid ""
-"Your <strong>name will appear publicly</strong>\\n        (<a "
-"href=\"{{why_url}}\">why?</a>)\\n        on this website and in search "
-"engines. If you\\n        are thinking of using a pseudonym, please\\n"
-"        <a href=\"{{help_url}}\">read this first</a>."
-msgstr "Su <strong>nombre se mostrará públicamente en esta plataforma y en otros motores de búsqueda </strong>\\n (<a href=\"{{why_url}}\">¿por qué?</a>)\\n. Si está pensando en utilizar un seudónimo, por favor <a href=\"{{help_url}}\">lea esto primero</a>. "
-
-#: lib/themes/panama-theme/lib/views/user/_signup.html.erb:50
-msgid "Contact phone number:"
-msgstr "Numero de teléfono:"
-
-#: lib/themes/panama-theme/lib/views/user/_signup.html.erb:54
-msgid ""
-"We will not reveal your phone number to anybody unless you or\\n        the "
-"law tell us to (<a href=\"{{url}}\">details</a>). "
-msgstr "Su número de teléfono no será revelado (<a href=\"{{url}}\">Lea más</a>)."
-
-#: lib/themes/panama-theme/lib/views/user/_signup.html.erb:61
-msgid "I am a…"
-msgstr "Tipo de solicitante: "
-
-#: lib/themes/panama-theme/lib/views/user/_signup.html.erb:63
-msgid "Individual"
-msgstr "Persona natural"
-
-#: lib/themes/panama-theme/lib/views/user/_signup.html.erb:66
-msgid "Legal person"
-msgstr "Persona jurídica"
-
-#: lib/themes/panama-theme/lib/views/user/_signup.html.erb:71
-msgid ""
-"As a private citizen, you need you to tell us your national ID number and "
-"address as this information is required to make a valid ATI request under "
-"Panamanian law. This information will only be shared with the authority you "
-"are requesting information from."
-msgstr "Como persona natural usted debe indicarnos su número de cédula o identificación personal y su dirección, ya que se requiere esta información para realizar una solicitud de acceso a la información de acuerdo a la ley 6 de transparencia. Esta información sólo será compartida con la institución pública a la cual usted le hace la petición."
-
-#: lib/themes/panama-theme/lib/views/user/_signup.html.erb:72
-#: lib/themes/panama-theme/lib/views/user/_signup.html.erb:89
-msgid "Read more about making a request."
-msgstr "Lea más acerca de como realizar una solicitud."
-
-#: lib/themes/panama-theme/lib/views/user/_signup.html.erb:76
-msgid "Your address:"
-msgstr "Dirección:"
-
-#: lib/themes/panama-theme/lib/views/user/_signup.html.erb:80
-msgid "National ID Number:"
-msgstr "Número de cédula o identificación personal:"
-
-#: lib/themes/panama-theme/lib/views/user/_signup.html.erb:88
-msgid ""
-"To request information on behalf of a company, you need you to tell us your "
-"company name, number and incorporation date as this information is required "
-"to make a valid ATI request under Panamanian law."
-msgstr "Para solicitar información en representación de una empresa, es necesario que nos diga el nombre de la misma, número de teléfono, dirección y fecha de constitución, ya que esta información es necesaria para realizar una solicitud de acceso a la información válida bajo la ley 6 de transparencia."
-
-#: lib/themes/panama-theme/lib/views/user/_signup.html.erb:93
-msgid "Company Name:"
-msgstr "Nombre de la empresa:"
-
-#: lib/themes/panama-theme/lib/views/user/_signup.html.erb:97
-msgid "Company number:"
-msgstr "Numero de teléfono de la empresa:"
-
-#: lib/themes/panama-theme/lib/views/user/_signup.html.erb:101
-msgid "Incorporation Date:"
-msgstr "Fecha de constitución:"
-
-#: lib/themes/panama-theme/lib/views/user/_signup.html.erb:110
-msgid "Choose a password:"
-msgstr "Elija una contraseña:"
-
-#: lib/themes/panama-theme/lib/views/user/_signup.html.erb:115
-msgid "Confirm password:"
-msgstr "Confirmar contraseña:"
-
-#: lib/themes/panama-theme/lib/views/user/_signup.html.erb:126
-msgid "Sign up"
-msgstr "Registrarse"
-
-#: lib/themes/panama-theme/lib/views/user/sign.html.erb:3
-#: lib/themes/panama-theme/lib/views/user/sign.html.erb:46
-msgid "Sign in"
-msgstr "Iniciar sesión"
-
-#: lib/themes/panama-theme/lib/views/user/sign.html.erb:8
-msgid "Please sign in as "
-msgstr "Por favor inicie sesión como"
-
-#: lib/themes/panama-theme/lib/views/user/sign.html.erb:11
-msgid "please sign in as "
-msgstr "por favor inicie sesión como"
-
-#: lib/themes/panama-theme/lib/views/user/sign.html.erb:16
-msgid "Don't have a superuser account yet?"
-msgstr "¿Todavía no tiene una cuenta de superusuario?"
-
-#: lib/themes/panama-theme/lib/views/user/sign.html.erb:16
-msgid "Sign in as the emergency user"
-msgstr "Inicie sesión como un usuario de emergencia"
-
-#: lib/themes/panama-theme/lib/views/user/sign.html.erb:25
-msgid "Sign in or make a new account"
-msgstr " Iniciar sesión o crear una cuenta nueva"
-
-#: lib/themes/panama-theme/lib/views/user/sign.html.erb:31
-msgid "Please sign in or create an account."
-msgstr "Favor iniciar sesión o crear una cuenta"
-
-#: lib/themes/panama-theme/lib/views/user/sign.html.erb:35
-msgid "4. Send your request"
-msgstr "4. Envíe su solicitud"
-
-#: lib/themes/panama-theme/lib/views/user/sign.html.erb:36
-msgid ""
-"Almost there! {{reason}}, please create an account or sign in with your "
-"existing details."
-msgstr "¡Ya casi termina! {{reason}}, por favor crear una cuenta o iniciar sesión con sus datos existentes."
-
-#: lib/themes/panama-theme/lib/views/user/sign.html.erb:38
-msgid ""
-"{{reason}}, please create an account or sign in with your existing details."
+msgid "{{reason}}, please create an account or sign in with your existing details."
 msgstr "{{reason}}, por favor crear una cuenta o iniciar sesión con sus datos existentes."
-
-#: lib/themes/panama-theme/lib/views/user/sign.html.erb:52
-msgid "Create an account"
-msgstr "Crear una cuenta"
-
-#: lib/themes/panama-theme/lib/views/user/signchangeaddress.html.erb:3
-#: lib/themes/panama-theme/lib/views/user/signchangecompanyincdate.html.erb:5
-#: lib/themes/panama-theme/lib/views/user/signchangecompanyname.html.erb:3
-#: lib/themes/panama-theme/lib/views/user/signchangecompanynumber.html.erb:3
-#: lib/themes/panama-theme/lib/views/user/signchangenationalid.html.erb:3
-#: lib/themes/panama-theme/lib/views/user/signchangephone.html.erb:3
-msgid "internal error"
-msgstr "error interno "
-
-#: lib/themes/panama-theme/lib/views/user/signchangeaddress.html.erb:14
-msgid "New address:"
-msgstr "Nueva dirección:"
-
-#: lib/themes/panama-theme/lib/views/user/signchangeaddress.html.erb:21
-msgid "Change address on {{site_name}}"
-msgstr "Cambie la dirección en {{site_name}}"
-
-#: lib/themes/panama-theme/lib/views/user/signchangecompanyincdate.html.erb:16
-msgid "New company incorporation date:"
-msgstr "Nueva fecha de constitución de la empresa:"
-
-#: lib/themes/panama-theme/lib/views/user/signchangecompanyincdate.html.erb:23
-msgid "Change company incorporation date on {{site_name}}"
-msgstr "Cambie la fecha de constitución de la empresa en: {{site_name}} "
-
-#: lib/themes/panama-theme/lib/views/user/signchangecompanyname.html.erb:14
-msgid "New company name:"
-msgstr "Nuevo nombre de empresa:"
-
-#: lib/themes/panama-theme/lib/views/user/signchangecompanyname.html.erb:21
-msgid "Change company name on {{site_name}}"
-msgstr "Cambie el número de la empresa en {{site_name}}"
-
-#: lib/themes/panama-theme/lib/views/user/signchangecompanynumber.html.erb:14
-msgid "New company number:"
-msgstr "Nuevo número de teléfono de la empresa:                              "
-
-#: lib/themes/panama-theme/lib/views/user/signchangecompanynumber.html.erb:21
-msgid "Change company number on {{site_name}}"
-msgstr "Cambie el número de teléfono su empresa en {{site_name}}"
-
-#: lib/themes/panama-theme/lib/views/user/signchangenationalid.html.erb:14
-msgid "New national ID number:"
-msgstr "Nuevo número de cédula o identificación personal:"
-
-#: lib/themes/panama-theme/lib/views/user/signchangenationalid.html.erb:21
-msgid "Change national ID number on {{site_name}}"
-msgstr "Cambie su número de cédula o identificación personal en {{site_name}}"
-
-#: lib/themes/panama-theme/lib/views/user/signchangephone.html.erb:14
-msgid "New contact phone number:"
-msgstr "Nuevo número de teléfono:"
-
-#: lib/themes/panama-theme/lib/views/user/signchangephone.html.erb:21
-msgid "Change contact phone number on {{site_name}}"
-msgstr "Cambie su número de teléfono en {{site_name}} "
-
-msgid ""
-"<p>Thank you! Your request is long overdue, by more than "
-"{{very_late_number_of_days}} working days. Most requests should be answered "
-"within {{late_number_of_days}} working days. You might like to complain "
-"about this, see below.</p>"
-msgstr "<p>¡Gracias! Tu solicitud está muy retrasada, han pasado más de {{very_late_number_of_days}} días calendario. La mayoría de las solicitudes deberían ser respondidas en {{late_number_of_days}} días calendario. Puede reclamar sobre esta situación, como se explica más abajo.</p>"
-
-msgid ""
-"<p>Your {{law_used_full}} request has been <strong>sent on its "
-"way</strong>!</p>\\n            <p><strong>We will email you</strong> when "
-"there is a response, or after {{late_number_of_days}} working days if the "
-"authority still hasn't\\n            replied by then.</p>\\n            "
-"<p>If you write about this request (for example in a forum or a blog) please"
-" link to this page, and add an\\n            annotation below telling people"
-" about your writing.</p>"
-msgstr "<p>¡Tu solicitud {{law_used_full}} ha sido realizada y <strong>se encuentra en camino</strong></p>\\n\\n<p><strong>Te enviaremos un correo electronico</strong> cuando haya respuesta, o después de {{late_number_of_days}} días calendario si el organismo público no te ha respondido.</p>\\n\\n<p>Si escribes sobre tu solicitud en alguna página web o blog, por favor enlaza a esta página, y añade un comentario explicándole a la gente porque realizas esta solicitud.</p>"
-
-msgid "Your <strong>Right to Know</strong>"
-msgstr "Su <strong>Derecho a Saber</strong>"
-
-msgid ""
-"Every citizen has the right to access information held by public bodies. "
-"<strong>By law, they have to respond</strong>."
-msgstr "Todo ciudadano tiene derecho a acceder a la información que se encuentra en poder de las instituciones públicas. <strong>Quienes por Ley, tienen que responder</strong>."
-
-msgid "Find out more about"
-msgstr "Haga clic para saber más acerca de"
