@@ -354,7 +354,11 @@ a.link_button_green_large {
   // make sure the current locale (which isn't a link in Alaveteli 0.23) gets
   // the same color as the links do
   .current-locale {
-    @extend %selected-menu-item;
+    color: #fff;
+  }
+
+  .available-languages__item:first-child a {
+    margin-left: 0; // no margin before first language link
   }
 }
 
