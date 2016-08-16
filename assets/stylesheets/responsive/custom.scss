@@ -499,7 +499,7 @@ a.link_button_green_large {
 
   @include respond-min( $main_menu-mobile_menu_cutoff ){
     ul {
-      @include block-grid(4);
+      @include grid-column(4);
     }
     @include ie8{
       #footer-nav ul > li:nth-child(4n+1) {
